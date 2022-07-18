@@ -1,0 +1,7 @@
+@import "common/vars";
+
+.editor-styles-wrapper {
+  @import "common/generic";
+  @import "common/typography";
+  @import "blocks/main";
+}

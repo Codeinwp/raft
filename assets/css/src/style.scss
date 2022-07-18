@@ -1,0 +1,9 @@
+@import "common/generic";
+@import "common/typography";
+@import "common/vars";
+@import "blocks/main";
+
+body {
+  font-family: $font-family;
+  font-size: var(--wp--preset--font-size--s);
+}

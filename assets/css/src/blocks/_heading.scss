@@ -1,0 +1,30 @@
+%line {
+  display: inline-block;
+  position: initial;
+  content: '';
+  max-width: 100%;
+  flex-grow: 1;
+  background: currentColor;
+  height: 1px;
+}
+
+.is-style-raft-line-after {
+  display: flex;
+  align-items: center;
+
+  &:before {
+    @extend %line;
+    margin-right: 1rem;
+  }
+}
+
+.is-style-raft-line-before {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+
+  &:before {
+    @extend %line;
+    margin-left: 1rem;
+  }
+}

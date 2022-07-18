@@ -1,0 +1,29 @@
+@media (--tablet) {
+  body {
+    --wp--preset--font-size--xs: 12px;
+    --wp--preset--font-size--s: 16px;
+    --wp--preset--font-size--md: 20px;
+    --wp--preset--font-size--lg: 24px;
+    --wp--preset--font-size--xl: 32px;
+    --wp--preset--font-size--xxl: 40px;
+  }
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+  // No need since core already somehow has 600 weight.
+  // font-weight: 600;
+}
+
+
+//          "size": "",
+//
+//          "size": "",
+//
+//          "size": "",
+//
+//          "size": "",
+//
+//          "size": "",
+//
+//          "size": "",
