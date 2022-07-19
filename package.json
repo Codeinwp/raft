@@ -37,7 +37,8 @@
     "build": "npm-run-all build:*",
     "build:grunt": "grunt build",
     "dev": "npm-run-all dev:*",
-    "dev:grunt": "grunt watch"
+    "dev:grunt": "grunt watch",
+    "dist": "yarn run build && bash ./bin/dist.sh"
   },
   "dependencies": {}
 }

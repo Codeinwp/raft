@@ -7,6 +7,24 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html, body, .wp-site-blocks {
+  height: 100%;
+}
+
+.wp-site-blocks {
+  display: flex;
+  flex-direction: column;
+}
+
+// Push footer to bottom.
+footer {
+  margin-block-start: auto !important;
+}
+
+.wp-block-spacer {
+  margin-block-start: 0 !important;
+}
+
 /*
  * Alignment styles.
  *

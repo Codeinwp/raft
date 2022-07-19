@@ -1,5 +1,8 @@
 node_modules
 
+dist
+artifact
+
 assets/css/build
 assets/js/build
 

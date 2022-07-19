@@ -25,12 +25,6 @@ class Block_Styles {
 	 */
 	public function __construct() {
 		$this->styles = [
-			'core/image'   => [
-				[
-					'name'  => 'raft-offset-top',
-					'label' => esc_html__( 'Offset Top', 'raft' ),
-				]
-			],
 			'core/heading' => [
 				[
 					'name'  => 'raft-line-after',

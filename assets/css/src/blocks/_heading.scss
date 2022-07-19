@@ -11,20 +11,20 @@
 .is-style-raft-line-after {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
 
   &:before {
     @extend %line;
-    margin-right: 1rem;
+    margin-left: 1rem;
   }
 }
 
 .is-style-raft-line-before {
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
 
   &:before {
     @extend %line;
-    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
