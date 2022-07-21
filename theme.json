@@ -16,12 +16,12 @@
         },
         {
           "slug": "raft-bg-alt",
-          "color": "#0000000D",
+          "color": "#F2F0EF",
           "name": "Background Alt"
         },
         {
           "slug": "raft-fg-alt",
-          "color": "#696969",
+          "color": "#FDFDFD",
           "name": "Foreground Alt"
         },
         {
