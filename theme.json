@@ -38,9 +38,14 @@
       "customFontSize": true,
       "fontFamilies": [
         {
-          "fontFamily": "Readex Pro",
-          "name": "Readex Pro",
-          "slug": "primary"
+          "fontFamily": "var(--raft-body-font-family), sans-serif",
+          "name": "Body",
+          "slug": "body"
+        },
+        {
+          "fontFamily": "var(--raft-headings-font-family), sans-serif",
+          "name": "Headings",
+          "slug": "headings"
         }
       ],
       "fontSizes": [

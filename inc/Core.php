@@ -43,6 +43,7 @@ class Core {
 
 		new Block_Patterns();
 		new Block_Styles();
+		new Font_Manager();
 	}
 
 	/**
@@ -92,11 +93,11 @@ class Core {
 	 * @return void
 	 */
 	public function enqueue() {
-		wp_register_style( 'raft-style', RAFT_URL . 'assets/css/build/style.css', [], RAFT_VERSION );
-		wp_style_add_data( 'raft-style', 'rtl', 'replace' );
-		wp_enqueue_style( 'raft-style' );
+		$handle = Constants::ASSETS_SLUGS['frontend-css'];
 
-		wp_add_inline_style( 'raft-style', $this->get_webfonts_inline_style() );
+		wp_register_style( $handle, RAFT_URL . 'assets/css/build/style.css', [], RAFT_VERSION );
+		wp_style_add_data( $handle, 'rtl', 'replace' );
+		wp_enqueue_style( $handle );
 	}
 
 	/**
@@ -105,41 +106,9 @@ class Core {
 	 * @return void
 	 */
 	public function add_editor_styles() {
-		wp_register_style( 'raft-editor', RAFT_URL . 'assets/css/build/editor.css', [], RAFT_VERSION );
-		wp_style_add_data( 'raft-editor', 'rtl', 'replace' );
-		wp_enqueue_style( 'raft-editor' );
-
-		wp_add_inline_style( 'raft-editor', $this->get_webfonts_inline_style() );
-	}
-
-	/**
-	 * Webfonts inline CSS.
-	 *
-	 * @return string
-	 */
-	private function get_webfonts_inline_style(): string {
-		$vendor_file = RAFT_DIR . 'vendor/wptt/webfont-loader/wptt-webfont-loader.php';
-
-		if ( ! is_readable( $vendor_file ) ) {
-			return '';
-		}
-
-		require_once $vendor_file;
-
-		$families = [
-			'Readex Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600',
-		];
-
-		$fonts_url = add_query_arg(
-			[
-				'family'  => implode( '&family=', $families ),
-				'display' => 'swap',
-			],
-			'https://fonts.googleapis.com/css2'
-		);
-
-		$contents = wptt_get_webfont_url( esc_url_raw( $fonts_url ), 'woff' );
-
-		return "@import url({$contents});";
+		$handle = Constants::ASSETS_SLUGS['editor-css'];
+		wp_register_style( $handle, RAFT_URL . 'assets/css/build/editor.css', [], RAFT_VERSION );
+		wp_style_add_data( $handle, 'rtl', 'replace' );
+		wp_enqueue_style( $handle );
 	}
 }
