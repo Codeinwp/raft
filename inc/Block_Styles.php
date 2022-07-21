@@ -34,6 +34,12 @@ class Block_Styles {
 					'name'  => 'raft-line-before',
 					'label' => esc_html__( 'Line Before', 'raft' ),
 				]
+			],
+			'core/categories' => [
+				[
+					'name'  => 'raft-pills',
+					'label' => esc_html__( 'Pills', 'raft' ),
+				]
 			]
 		];
 

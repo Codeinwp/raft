@@ -1,75 +1,73 @@
 <!-- wp:template-part {"slug":"Header","theme":"raft","tagName":"header"} /-->
 
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"6vw","bottom":"6vw"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true}} -->
+<div class="wp-block-group has-raft-bg-alt-background-color has-background"
+     style="margin-top:0px;margin-bottom:0px;padding-top:6vw;padding-bottom:6vw">
+    <!-- wp:heading {"textAlign":"center","level":1,"fontSize":"xxl"} -->
+    <h1 class="has-text-align-center has-xxl-font-size">Our awesome blog</h1>
+    <!-- /wp:heading -->
+</div>
+<!-- /wp:group -->
 
-<!-- wp:query {"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} -->
-<div class="wp-block-query">
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"6vw","bottom":"6vw"}}},"layout":{"inherit":true}} -->
+<div class="wp-block-group" style="padding-top:6vw;padding-bottom:6vw">
+    <!-- wp:query {"queryId":4,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"layout":{"inherit":true}} -->
+    <div class="wp-block-query">
+        <!-- wp:post-template -->
+        <!-- wp:group {"layout":{"inherit":true}} -->
+        <div class="wp-block-group">
+            <!-- wp:post-featured-image {"isLink":true,"height":"300px","style":{"color":{}}} /-->
 
-    <!-- wp:spacer {"height":"60px"} -->
-    <div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
-    <!-- /wp:spacer -->
+            <!-- wp:post-title {"textAlign":"center","isLink":true,"fontSize":"x-large"} /-->
 
-    <!-- wp:post-template -->
+            <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"},"fontSize":"small"} -->
+            <div class="wp-block-group has-small-font-size">
+                <!-- wp:post-terms {"term":"category"} /-->
 
-    <!-- wp:group {"layout":{"inherit":true}} -->
-    <div class="wp-block-group">
-        <!-- wp:post-title {"textAlign":"center","isLink":true,"fontSize":"huge"} /-->
-
-        <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"},"fontSize":"small"} -->
-        <div class="wp-block-group has-small-font-size">
-            <!-- wp:post-terms {"term":"category"} /-->
-            <!-- wp:post-date /-->
+                <!-- wp:post-date /-->
+            </div>
+            <!-- /wp:group -->
         </div>
         <!-- /wp:group -->
 
+        <!-- wp:spacer {"height":"60px"} -->
+        <div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+        <!-- /wp:spacer -->
+
+        <!-- /wp:post-template -->
+
+        <!-- wp:separator {"className":"is-style-wide"} -->
+        <hr class="wp-block-separator has-alpha-channel-opacity is-style-wide"/>
+        <!-- /wp:separator -->
+
+        <!-- wp:group {"style":{"spacing":{"margin":{"top":"24px"}}}} -->
+        <div class="wp-block-group" style="margin-top:24px">
+            <!-- wp:query-pagination {"textColor":"raft-fg","layout":{"type":"flex","justifyContent":"space-between"}} -->
+            <!-- wp:query-pagination-previous /-->
+
+            <!-- wp:query-pagination-numbers /-->
+
+            <!-- wp:query-pagination-next /-->
+            <!-- /wp:query-pagination -->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- wp:query-no-results -->
+        <!-- wp:paragraph {"align":"center","placeholder":"Add text or blocks that will display when the query returns no results.","backgroundColor":"raft-bg-alt"} -->
+        <p class="has-text-align-center has-raft-bg-alt-background-color has-background">Unfortunately no posts were found</p>
+        <!-- /wp:paragraph -->
+        <!-- /wp:query-no-results -->
     </div>
-    <!-- /wp:group -->
-
-    <!-- wp:spacer {"height":"60px"} -->
-    <div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
-    <!-- /wp:spacer -->
-
-    <!-- /wp:post-template -->
-
-
-    <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
-    <!-- wp:query-pagination-previous /-->
-    <!-- wp:query-pagination-numbers /-->
-    <!-- wp:query-pagination-next /-->
-    <!-- /wp:query-pagination -->
-
-    <!-- wp:spacer {"height":"60px"} -->
-    <div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
-    <!-- /wp:spacer -->
-
-    <!-- wp:query-no-results -->
-    <!-- wp:spacer {"height":"60px"} -->
-    <div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
-    <!-- /wp:spacer -->
-    <!-- wp:paragraph {"align":"center","placeholder":"Add text or blocks that will display when the query returns no results."} -->
-    <p class="has-text-align-center">No posts found.</p>
-    <!-- /wp:paragraph -->
-    <!-- wp:spacer {"height":"60px"} -->
-    <div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
-    <!-- /wp:spacer -->
-    <!-- /wp:query-no-results -->
+    <!-- /wp:query -->
 </div>
-<!-- /wp:query -->
+<!-- /wp:group -->
 
-<!-- wp:group {"backgroundColor":"raft-bg-alt","layout":{"type":"default"}} -->
-<div class="wp-block-group has-raft-bg-alt-background-color has-background">
-
-    <!-- wp:spacer {"height":"60px"} -->
-    <div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
-    <!-- /wp:spacer -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"6vw","bottom":"6vw"}}},"backgroundColor":"raft-bg-alt","layout":{"type":"default"}} -->
+<div class="wp-block-group has-raft-bg-alt-background-color has-background" style="padding-top:6vw;padding-bottom:6vw">
 
     <!-- wp:paragraph {"align":"center","fontSize":"large"} -->
     <p class="has-text-align-center has-large-font-size">Power-up your Gutenberg layouts with Otter</p>
     <!-- /wp:paragraph -->
-
-
-    <!-- wp:spacer {"height":"20px"} -->
-    <div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
-    <!-- /wp:spacer -->
 
     <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
     <div class="wp-block-buttons">
@@ -79,12 +77,7 @@
     </div>
     <!-- /wp:buttons -->
 
-    <!-- wp:spacer {"height":"60px"} -->
-    <div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
-    <!-- /wp:spacer -->
-
 </div>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"Footer","theme":"raft","tagName":"footer"} /-->
-

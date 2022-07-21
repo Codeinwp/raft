@@ -53,6 +53,8 @@ class Block_Patterns {
 
 		$patterns = [
 			'hero',
+			'cta-image',
+			'cta-ribbon',
 		];
 
 		$this->categories = apply_filters( 'raft_block_patterns_categories', $categories );
