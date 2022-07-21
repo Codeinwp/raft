@@ -53,7 +53,7 @@ class Core {
 	private function run_hooks() {
 		add_action( 'after_setup_theme', [ $this, 'setup' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue' ] );
-		add_action( 'enqueue_block_assets', [ $this, 'add_editor_styles' ] );
+		add_action( 'enqueue_block_editor_assets', [ $this, 'add_editor_styles' ] );
 	}
 
 	/**
