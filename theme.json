@@ -16,7 +16,7 @@
         },
         {
           "slug": "raft-bg-alt",
-          "color": "#F2F0EF",
+          "color": "rgba(0, 0, 0, 0.03)",
           "name": "Background Alt"
         },
         {
