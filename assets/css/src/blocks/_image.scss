@@ -3,7 +3,8 @@
   font-size: var(--wp--preset--font-size--small);
 }
 
-
+// Gallery & Image captions.
+.wp-block-gallery.has-nested-images,
 figure.wp-block-image {
   figcaption {
     @extend %figcaption;
@@ -12,6 +13,7 @@ figure.wp-block-image {
   }
 }
 
+// Gallery image captions
 .wp-block-gallery.has-nested-images {
   figure.wp-block-image figcaption {
     @extend %figcaption;

@@ -3,3 +3,5 @@
 @import "common/vars";
 @import "elements/main";
 @import "blocks/main";
+
+@custom-media --tablet (max-width: 769px);

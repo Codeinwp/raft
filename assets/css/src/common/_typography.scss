@@ -1,3 +1,5 @@
+@import "vars";
+
 @media (--tablet) {
   body {
     --wp--preset--font-size--small: 12px;
@@ -7,4 +9,28 @@
     --wp--preset--font-size--x-large: 32px;
     --wp--preset--font-size--huge: 40px;
   }
+}
+
+.has-huge-font-size {
+  line-height: $line-height-fs-huge;
+}
+
+.has-x-large-font-size {
+  line-height: $line-height-fs-x-large;
+}
+
+.has-large-font-size {
+  line-height: $line-height-fs-large;
+}
+
+.has-medium-font-size {
+  line-height: $line-height-fs-medium;
+}
+
+.has-normal-font-size {
+  line-height: $line-height-fs-normal;
+}
+
+.has-small-font-size {
+  line-height: $line-height-fs-small;
 }
