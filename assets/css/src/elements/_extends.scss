@@ -2,6 +2,7 @@
   background: var(--wp--preset--color--raft-bg);
   border: 2px solid var(--wp--preset--color--raft-fg);
   border-radius: 5px;
+  color: var(--wp--preset--color--raft-fg)
 }
 
 @mixin button-base {
