@@ -15,11 +15,20 @@ figure.wp-block-image {
 
 // Gallery image captions
 .wp-block-gallery.has-nested-images {
-  figure.wp-block-image figcaption {
-    @extend %figcaption;
-    background: rgba(0, 0, 0, 0.3);
-    margin: 0;
-    padding: 8px;
-    opacity: 1;
+  figure.wp-block-image {
+    figcaption {
+      @extend %figcaption;
+      background: rgba(0, 0, 0, 0.3);
+      margin: 0;
+      padding: 8px;
+      opacity: 1;
+    }
+
+    &.is-style-rounded {
+      figcaption {
+        opacity: .6;
+        background: 0;
+      }
+    }
   }
 }
