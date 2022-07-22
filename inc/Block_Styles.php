@@ -25,16 +25,6 @@ class Block_Styles {
 	 */
 	public function __construct() {
 		$this->styles = [
-			'core/heading' => [
-				[
-					'name'  => 'raft-line-after',
-					'label' => esc_html__( 'Line After', 'raft' ),
-				],
-				[
-					'name'  => 'raft-line-before',
-					'label' => esc_html__( 'Line Before', 'raft' ),
-				]
-			],
 			'core/categories' => [
 				[
 					'name'  => 'raft-pills',

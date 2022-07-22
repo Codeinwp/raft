@@ -1,0 +1,23 @@
+%figcaption {
+  text-align: left;
+  font-size: var(--wp--preset--font-size--small);
+}
+
+
+figure.wp-block-image {
+  figcaption {
+    @extend %figcaption;
+    color: var(--wp--preset--color--raft-fg);
+    opacity: .6;
+  }
+}
+
+.wp-block-gallery.has-nested-images {
+  figure.wp-block-image figcaption {
+    @extend %figcaption;
+    background: rgba(0, 0, 0, 0.3);
+    margin: 0;
+    padding: 8px;
+    opacity: 1;
+  }
+}

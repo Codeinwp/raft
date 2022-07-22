@@ -292,6 +292,11 @@
             }
           }
         }
+      },
+      "core/search": {
+        "border": {
+          "radius": "5px"
+        }
       }
     }
   },

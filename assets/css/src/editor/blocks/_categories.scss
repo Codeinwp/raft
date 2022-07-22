@@ -1,9 +1,13 @@
 .is-style-raft-pills {
-    .wp-block-categories__list {
-      padding: 0;
-      display: flex;
-      list-style: none;
-      align-items: center;
-      font-size: var(--wp--preset--font-size--small);
-    }
+  .wp-block-categories__list {
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    font-size: var(--wp--preset--font-size--small);
+  }
+
+  .wp-block-post-terms__separator {
+    display: none;
+  }
 }
