@@ -7,6 +7,10 @@
 .wp-block-navigation__responsive-container.is-menu-open {
   --navigation-layout-justification-setting: center;
 
+  > .wp-block-navigation__container {
+    gap: 0;
+  }
+
   // Root menu.
   .wp-block-navigation__container {
     gap: 24px !important;
@@ -20,8 +24,4 @@
   .wp-block-navigation__submenu-container {
     gap: 24px !important;
   }
-}
-
-.wp-block-navigation__container {
-  gap: 0;
 }
