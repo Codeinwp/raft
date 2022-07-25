@@ -14,4 +14,13 @@
       display: none;
     }
   }
+
+
+  &.has-text-align-center {
+    justify-content: center;
+  }
+
+  &.has-text-align-right {
+    justify-content: flex-end;
+  }
 }
