@@ -219,32 +219,6 @@
           "fontWeight": "600"
         }
       },
-      "core/post-terms": {
-        "elements": {
-          "link": {
-            "spacing": {
-              "padding": {
-                "bottom": "8px",
-                "left": "24px",
-                "right": "24px",
-                "top": "8px"
-              },
-              "margin": {
-                "bottom": "5px",
-                "left": "5px",
-                "right": "5px",
-                "top": "5px"
-              }
-            },
-            "color": {
-              "background": "var(--wp--preset--color--raft-bg-alt)"
-            },
-            "border": {
-              "radius": "25px"
-            }
-          }
-        }
-      },
       "core/comment-content": {
         "border": {
           "radius": "5px"

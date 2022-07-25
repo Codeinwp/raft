@@ -2,6 +2,7 @@
   .wp-block-categories__list {
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     align-items: center;
     font-size: var(--wp--preset--font-size--small);

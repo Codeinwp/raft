@@ -1,0 +1,17 @@
+.wp-block-post-terms {
+  display: flex;
+  flex-wrap: wrap;
+
+  &.taxonomy-category {
+    a {
+      padding: 8px 24px;
+      margin: 5px;
+      background-color: var(--wp--preset--color--raft-bg-alt);
+      border-radius: 25px;
+    }
+
+    .wp-block-post-terms__separator {
+      display: none;
+    }
+  }
+}

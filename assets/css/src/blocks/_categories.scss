@@ -2,8 +2,10 @@
   &.is-style-raft-pills {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     list-style: none;
     font-size: var(--wp--preset--font-size--small);
+    padding-left: 0;
 
     li {
       margin: 5px;
@@ -12,8 +14,4 @@
       padding: 8px 24px;
     }
   }
-}
-
-.wp-block-post-terms__separator {
-  display: none;
 }
