@@ -1,22 +1,22 @@
 %input-base {
+  border-radius: 5px;
+  color: var(--wp--preset--color--raft-fg);
   background: var(--wp--preset--color--raft-bg);
   border: 2px solid var(--wp--preset--color--raft-fg);
-  border-radius: 5px;
-  color: var(--wp--preset--color--raft-fg)
 }
 
 @mixin button-base {
-  padding: 16px 32px;
+  border: 0;
+  box-shadow: none;
   font-weight: 600;
+  padding: 16px 32px;
   border-radius: 3px;
   font-size: var(--wp--preset--font-size--normal);
-  box-shadow: none;
-  border: 0;
 }
 
 %button {
   @include button-base;
-  background: var(--wp--preset--color--raft-accent);
   color: var(--wp--preset--color--raft-fg-alt);
+  background: var(--wp--preset--color--raft-accent);
   border-color: var(--wp--preset--color--raft-accent);
 }
