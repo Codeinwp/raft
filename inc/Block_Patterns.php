@@ -52,9 +52,17 @@ class Block_Patterns {
 		];
 
 		$patterns = [
-			'hero',
+			'cover-background',
 			'cta-image',
 			'cta-ribbon',
+			'cta-ribbon-2',
+			'faq-section',
+			'hero',
+			'image-gallery',
+			'image-text-columns',
+			'image-text-columns-2',
+			'latest-posts',
+			'latest-posts-2',
 		];
 
 		$this->categories = apply_filters( 'raft_block_patterns_categories', $categories );
@@ -84,6 +92,10 @@ class Block_Patterns {
 	private function register_patterns() {
 		foreach ( $this->patterns as $pattern ) {
 			$file = RAFT_DIR . 'inc/patterns/' . $pattern . '.php';
+
+			if ( ! is_file( $file ) ) {
+				continue;
+			}
 
 			register_block_pattern( 'raft/' . $pattern, require $file );
 		}

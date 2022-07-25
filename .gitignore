@@ -9,3 +9,5 @@ assets/js/build
 *.log
 *.map
 /vendor/
+
+.DS_Store

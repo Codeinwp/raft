@@ -1,16 +1,15 @@
 <?php
 /**
- * Hero Section.
+ * Call to action ribbon
  *
- * slug: hero
- * title: Hero Section
+ * slug: cta-ribbon
+ * title: Call to action ribbon
  * categories: raft
- * keywords: hero, section, header, hero section, hero header, hero section header, hero header section, hero header section
- * description: The Raft front page hero section
+ * keywords: section, cta, buttons, ribbon
  */
 
 return [
-	'title'      => __( 'CTA Ribbon', 'raft' ),
+	'title'      => __( 'Call to action ribbon', 'raft' ),
 	'categories' => [ 'raft' ],
 	'content'    => '
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"6vw","bottom":"6vw"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-accent","textColor":"raft-fg-alt","layout":{"inherit":true}} -->

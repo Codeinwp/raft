@@ -1,19 +1,17 @@
 <?php
 /**
- * Hero Section.
+ * Image section with buttons
  *
- * slug: hero
- * title: Hero Section
+ * slug: cta-image
+ * title: Call to action with image
  * categories: raft
- * keywords: hero, section, header, hero section, hero header, hero section header, hero header section, hero header section
- * description: The Raft front page hero section
+ * keywords: section, cta, buttons, image
  */
 
-// TODO: change this to theme provided one.
-$image_url = 'http://awesomedog.link/wp-content/uploads/2021/06/cap-2.jpg';
+$image_url = RAFT_URL . 'assets/img/shape-04.png';
 
 return [
-	'title'      => __( 'CTA Image', 'raft' ),
+	'title'      => __( 'Call to action with image', 'raft' ),
 	'categories' => [ 'raft' ],
 	'content'    => '
 <!-- wp:group {"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"},"padding":{"top":"6vw","bottom":"6vw"}}},"layout":{"inherit":true}} -->
@@ -36,7 +34,7 @@ return [
             <div class="wp-block-buttons">
                 <!-- wp:button -->
                 <div class="wp-block-button">
-                	<a class="wp-block-button__link" href="https://awesomedog.link/coming-soon/">Yes please</a>
+                	<a class="wp-block-button__link" href="#">Yes please</a>
                 </div>
                 <!-- /wp:button -->
 

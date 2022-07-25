@@ -1,18 +1,17 @@
 <?php
 /**
- * Hero Section.
+ * Hero Section
  *
  * slug: hero
  * title: Hero Section
  * categories: raft
  * keywords: hero, section, header, hero section, hero header, hero section header, hero header section, hero header section
- * description: The Raft front page hero section
  */
 
 $hero_illustration = RAFT_URL . 'assets/img/raft-illustration.jpg';
 
 return [
-	'title'      => __( 'Hero Section', 'raft' ),
+	'title'      => __( 'Hero section', 'raft' ),
 	'categories' => [ 'raft' ],
 	'content'    => '
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"6vw","bottom":"6vw"},"blockGap":"24px","margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true}} -->
