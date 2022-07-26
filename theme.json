@@ -287,11 +287,13 @@
   ],
   "templateParts": [
     {
-      "name": "Header",
+      "name": "header",
+      "title": "Header",
       "area": "header"
     },
     {
-      "name": "Footer",
+      "name": "footer",
+      "title": "Footer",
       "area": "footer"
     }
   ]
