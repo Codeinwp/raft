@@ -1,22 +1,27 @@
 <?php
 /**
- * Image Gallery.
- *
  * slug: img-gallery
- * title: Image gallery
+ * title: Image Gallery with title
  * categories: raft
  * keywords: gallery, images
  */
 
 $illustrations = [
 	'shape-01.png',
-	'shape-02.png',
-	'shape-03.png',
-	'shape-04.png',
 	'shape-05.png',
+	'shape-04.png',
+
+	'shape-03.png',
+	'shape-02.png',
 ];
 
 $illustrations_markup = '';
+
+$strings = [
+	'title'  => __( 'Image Gallery with title', 'raft' ),
+	'byline' => __( 'Add your text, and replace with your images', 'raft' ),
+	'button' => __( 'View more photos', 'raft' ),
+];
 
 foreach ( $illustrations as $illustration ) {
 	$illustrations_markup .= '<!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->';
@@ -28,27 +33,28 @@ foreach ( $illustrations as $illustration ) {
 
 
 return [
-	'title'      => __( 'Image gallery', 'raft' ),
+	'title'      => $strings['title'],
 	'categories' => [ 'raft' ],
 	'content'    => '
-	<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"80px","right":"24px","bottom":"80px","left":"24px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true}} -->
-<div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:80px;padding-right:24px;padding-bottom:80px;padding-left:24px"><!-- wp:heading {"textAlign":"center"} -->
-<h2 class="has-text-align-center">A pattern with an image Gallery</h2>
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true}} -->
+<div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
+<!-- wp:heading {"textAlign":"center"} -->
+<h2 class="has-text-align-center">' . esc_html( $strings['title'] ) . '</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
-<p class="has-text-align-center has-medium-font-size">This is just some text.</p>
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">' . esc_html( $strings['byline'] ) . '</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:group {"align":"wide"} -->
-<div class="wp-block-group alignwide"><!-- wp:columns -->
+<div class="wp-block-group alignwide">
+<!-- wp:columns -->
 <div class="wp-block-columns">
-
 <!-- wp:column -->
 <div class="wp-block-column">
 
 <!-- wp:gallery {"imageCrop":false,"linkTo":"none","sizeSlug":"full","align":"center"} -->
-<figure class="wp-block-gallery aligncenter has-nested-images columns-default">' . $illustrations_markup . '</figure>
+<figure class="wp-block-gallery aligncenter has-nested-images columns-default">' . wp_kses_post( $illustrations_markup ) . '</figure>
 <!-- /wp:gallery -->
 
 </div>
@@ -62,13 +68,11 @@ return [
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-
 <!-- wp:button {"textColor":"raft-fg-alt"} -->
 <div class="wp-block-button">
-<a class="wp-block-button__link has-raft-fg-alt-color has-text-color">View more photos</a>
+<a class="wp-block-button__link has-raft-fg-alt-color has-text-color">' . esc_html( $strings['button'] ) . '</a>
 </div>
 <!-- /wp:button -->
-
 </div>
 <!-- /wp:buttons -->
 

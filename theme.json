@@ -276,6 +276,19 @@
         "typography": {
           "fontSize": "var(--wp--preset--font-size--large)"
         }
+      },
+      "woocommerce/mini-cart-contents": {
+        "color": {
+          "text": "var(--wp--preset--color--raft-fg)",
+          "background": "var(--wp--preset--color--raft-bg)"
+        },
+        "elements": {
+          "link": {
+            "color": {
+              "text": "var(--wp--preset--color--raft-accent)"
+            }
+          }
+        }
       }
     }
   },
@@ -283,6 +296,18 @@
     {
       "name": "template-blank",
       "title": "Blank Page - Only Content"
+    },
+    {
+      "name": "single-product",
+      "title": "WooCommerce Single Product"
+    },
+    {
+      "name": "page-checkout",
+      "title": "WooCommerce Checkout"
+    },
+    {
+      "name": "page-cart",
+      "title": "WooCommerce Cart"
     }
   ],
   "templateParts": [

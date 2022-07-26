@@ -53,16 +53,14 @@ class Block_Patterns {
 
 		$patterns = [
 			'cover-background',
-			'cta-image',
-			'cta-ribbon',
-			'cta-ribbon-2',
-			'faq-section',
-			'hero',
 			'image-gallery',
-			'image-text-columns',
-			'image-text-columns-2',
-			'latest-posts',
-			'latest-posts-2',
+			'posts-query-loop',
+			'two-columns-features',
+			'call-to-action',
+			'frequently-asked-questions',
+			'inverted-background',
+
+			'hero',
 		];
 
 		$this->categories = apply_filters( 'raft_block_patterns_categories', $categories );
