@@ -7,7 +7,7 @@
       "palette": [
         {
           "slug": "raft-bg",
-          "color": "#212442",
+          "color": "#3A3767",
           "name": "Background"
         },
         {
@@ -17,17 +17,17 @@
         },
         {
           "slug": "raft-bg-alt",
-          "color": "#000000B2",
+          "color": "rgba(0, 0, 0, 0.2)",
           "name": "Background Alt"
         },
         {
           "slug": "raft-fg-alt",
-          "color": "#ABBBE9",
+          "color": "#FFFFFF",
           "name": "Foreground Alt"
         },
         {
           "slug": "raft-accent",
-          "color": "#9747FF",
+          "color": "#DB7358",
           "name": "Accent"
         }
       ]
