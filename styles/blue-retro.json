@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "title": "Blue retro",
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "raft-bg",
+          "color": "#334FAE",
+          "name": "Background"
+        },
+        {
+          "slug": "raft-fg",
+          "color": "#EAEEFD",
+          "name": "Foreground"
+        },
+        {
+          "slug": "raft-bg-alt",
+          "color": "rgba(0, 0, 0, 0.1)",
+          "name": "Background Alt"
+        },
+        {
+          "slug": "raft-fg-alt",
+          "color": "#EAEEFD",
+          "name": "Foreground Alt"
+        },
+        {
+          "slug": "raft-accent",
+          "color": "#F9C33E",
+          "name": "Accent"
+        }
+      ]
+    }
+  }
+}
