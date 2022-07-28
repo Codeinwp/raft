@@ -7,27 +7,27 @@
       "palette": [
         {
           "slug": "raft-bg",
-          "color": "#232323",
+          "color": "#F5F4F1",
           "name": "Background"
         },
         {
           "slug": "raft-fg",
-          "color": "#FFFFFF",
+          "color": "#292E29",
           "name": "Foreground"
         },
         {
           "slug": "raft-bg-alt",
-          "color": "#00000040",
+          "color": "rgba(255, 255, 255, 0.9)",
           "name": "Background Alt"
         },
         {
           "slug": "raft-fg-alt",
-          "color": "#FEFEFE",
+          "color": "#292E29",
           "name": "Foreground Alt"
         },
         {
           "slug": "raft-accent",
-          "color": "#C26148",
+          "color": "#4D6E50",
           "name": "Accent"
         }
       ]
