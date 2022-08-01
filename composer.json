@@ -40,7 +40,6 @@
     "require-dev": {
         "codeinwp/phpcs-ruleset": "dev-main",
         "phpunit/phpunit": "^6.5",
-        "yoast/phpunit-polyfills": "^1.0",
         "automattic/vipwpcs": "^2.3",
         "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
         "wp-coding-standards/wpcs": "^2.3",
