@@ -31,7 +31,7 @@ class Font_Manager {
 	 */
 	public function add_webfonts() {
 		wp_add_inline_style(
-			current_action() === 'wp_enqueue_scripts' ? Constants::ASSETS_SLUGS['frontend-css'] : Constants::ASSETS_SLUGS['editor-css'],
+			current_action() === 'wp_enqueue_scripts' ? Assets_Manager::ASSETS_SLUGS['frontend-css'] : Assets_Manager::ASSETS_SLUGS['editor-css'],
 			$this->get_css()
 		);
 	}

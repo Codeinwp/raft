@@ -16,9 +16,8 @@ namespace Raft;
  */
 class Constants {
 
-	const ASSETS_SLUGS = array(
-		'frontend-css' => 'raft-style',
-		'editor-css'   => 'raft-editor',
+	const CACHE_KEYS = array(
+		'dismissed-welcome-notice' => 'raft-welcome-notice-dismissed',
 	);
 
 	const FONT_SLUG_BODY     = 'body';

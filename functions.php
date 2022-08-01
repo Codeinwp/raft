@@ -27,6 +27,8 @@ function bootstrap() {
 
 	maybe_add_notices();
 
+	load_sdk();
+
 	load_dependencies();
 
 	run();
@@ -55,8 +57,20 @@ function check_php() {
 				__( 'upgrading PHP to the latest version', 'raft' )
 			),
 			'7.0'
-		) 
+		)
 	);
+}
+
+/**
+ * Define theme constants.
+ *
+ * @return void
+ */
+function define_constants() {
+	define( 'RAFT_VERSION', '0.0.1' );
+	define( 'RAFT_DEBUG', defined( 'WP_DEBUG' ) && WP_DEBUG === true );
+	define( 'RAFT_DIR', trailingslashit( get_template_directory() ) );
+	define( 'RAFT_URL', trailingslashit( get_template_directory_uri() ) );
 }
 
 /**
@@ -118,20 +132,24 @@ function maybe_add_notices() {
 			global $_raft_bootstrap_errors;
 
 			printf( '<div class="notice notice-error"><p>%1$s</p></div>', wp_kses_post( $_raft_bootstrap_errors->get_error_message() ) );
-		} 
+		}
 	);
 }
 
 /**
- * Define theme constants.
+ * Load SDK.
  *
  * @return void
  */
-function define_constants() {
-	define( 'RAFT_VERSION', '0.0.1' );
-	define( 'RAFT_DEBUG', defined( 'WP_DEBUG' ) && WP_DEBUG === true );
-	define( 'RAFT_DIR', trailingslashit( get_template_directory() ) );
-	define( 'RAFT_URL', trailingslashit( get_template_directory_uri() ) );
+function load_sdk() {
+	add_filter(
+		'themeisle_sdk_products',
+		function ( $products ) {
+			$products[] = RAFT_DIR . 'style.css';
+
+			return $products;
+		} 
+	);
 }
 
 /**
@@ -140,7 +158,10 @@ function define_constants() {
  * @return void
  */
 function load_dependencies() {
-	require_once RAFT_DIR . '/vendor/autoload.php';
+	$vendor_file = RAFT_DIR . '/vendor/autoload.php';
+	if ( is_readable( $vendor_file ) ) {
+		require_once $vendor_file;
+	}
 }
 
 /**

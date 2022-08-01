@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@lodder/grunt-postcss": "^3.1.1",
+    "@wordpress/scripts": "^23.6.0",
     "cssnano": "^5.1.12",
     "grunt": "^1.5.3",
     "grunt-contrib-watch": "^1.1.0",
@@ -36,9 +37,10 @@
   "scripts": {
     "build": "npm-run-all build:*",
     "build:grunt": "grunt build",
-    "dev": "npm-run-all dev:*",
+    "build:js": "wp-scripts build assets/js/src/*.js --output-path=assets/js/build",
+    "dev": "npm-run-all --parallel dev:*",
     "dev:grunt": "grunt watch",
+    "dev:js": "wp-scripts build assets/js/src/*.js --output-path=assets/js/build --watch",
     "dist": "yarn run build && bash ./bin/dist.sh"
-  },
-  "dependencies": {}
+  }
 }
