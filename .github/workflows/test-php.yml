@@ -45,9 +45,9 @@ jobs:
       - name: Setup PHP version
         uses: shivammathur/setup-php@v1
         with:
-          php-version: '7.2'
+          php-version: '7.1'
           extensions: simplexml, mysql
-          tools: phpunit:7.5.15
+          tools: phpunit-polyfills
       - name: Checkout source code
         uses: actions/checkout@v2
       - name: Install WordPress Test Suite
