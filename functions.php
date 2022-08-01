@@ -14,7 +14,7 @@ namespace Raft;
  *
  * @return void
  */
-function __bootstrap() {
+function bootstrap() {
 	define_constants();
 	load_dependencies();
 	run();
@@ -50,4 +50,4 @@ function run() {
 	Core::get_instance();
 }
 
-__bootstrap();
+bootstrap();

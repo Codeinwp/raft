@@ -14,18 +14,24 @@ use WP_Block_Pattern_Categories_Registry;
 /**
  * Class Block_Patterns
  *
- * @package Raft
+ * @package raft
  */
 class Block_Patterns {
 
 	/**
+	 * Patterns categories.
+	 *
 	 * @var array
 	 */
-	private $categories = [];
+	private $categories = array();
 	/**
+	 * The patterns array.
+	 *
+	 * These use the file names without termination inside the `inc/patterns` directory.
+	 *
 	 * @var array
 	 */
-	private $patterns = [];
+	private $patterns = array();
 
 	/**
 	 * Block_Patterns constructor.
@@ -33,9 +39,14 @@ class Block_Patterns {
 	public function __construct() {
 		$this->setup_properties();
 
-		add_action( 'init', [ $this, 'run' ] );
+		add_action( 'init', array( $this, 'run' ) );
 	}
 
+	/**
+	 * Run the class functionality.
+	 *
+	 * @return void
+	 */
 	public function run() {
 		$this->register_categories();
 		$this->register_patterns();
@@ -47,11 +58,11 @@ class Block_Patterns {
 	 * @return void
 	 */
 	private function setup_properties() {
-		$categories = [
-			'raft' => [ 'label' => __( 'Raft Patterns', 'raft' ) ],
-		];
+		$categories = array(
+			'raft' => array( 'label' => __( 'Raft Patterns', 'raft' ) ),
+		);
 
-		$patterns = [
+		$patterns = array(
 			'cover-background',
 			'image-gallery',
 			'posts-query-loop',
@@ -61,7 +72,7 @@ class Block_Patterns {
 			'inverted-background',
 
 			'hero',
-		];
+		);
 
 		$this->categories = apply_filters( 'raft_block_patterns_categories', $categories );
 		$this->patterns   = apply_filters( 'raft_block_patterns', $patterns );

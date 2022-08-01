@@ -1,23 +1,29 @@
 <?php
 /**
+ * Pattern
+ *
+ * @author Themeisle
+ * @package raft
+ * @since 1.0.0
+ *
  * slug: inverted-background
  * title: Inverted background
  * categories: raft
  * keywords: section, background, inverted, image, features
  */
 
-$illustrations = [
+$illustrations = array(
 	'shape-01.png',
-	'shape-04.png'
-];
+	'shape-04.png',
+);
 
-$strings = [
-	'title' => __( 'Inverted background', 'raft' )
-];
+$strings = array(
+	'title' => __( 'Inverted background', 'raft' ),
+);
 
-return [
+return array(
 	'title'      => $strings['title'],
-	'categories' => [ 'raft' ],
+	'categories' => array( 'raft' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-fg","textColor":"raft-bg","layout":{"inherit":false,"wideSize":"960px"}} -->
 <div class="wp-block-group alignfull has-raft-bg-color has-raft-fg-background-color has-text-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
@@ -89,4 +95,4 @@ return [
 
 </div>
 <!-- /wp:group -->',
-];
+);

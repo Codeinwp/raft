@@ -1,27 +1,33 @@
 <?php
 /**
+ * Pattern
+ *
+ * @author Themeisle
+ * @package raft
+ * @since 1.0.0
+ *
  * slug: img-gallery
  * title: Image Gallery with title
  * categories: raft
  * keywords: gallery, images
  */
 
-$illustrations = [
+$illustrations = array(
 	'shape-01.png',
 	'shape-05.png',
 	'shape-04.png',
 
 	'shape-03.png',
 	'shape-02.png',
-];
+);
 
 $illustrations_markup = '';
 
-$strings = [
+$strings = array(
 	'title'  => __( 'Image Gallery with title', 'raft' ),
 	'byline' => __( 'Add your text, and replace with your images', 'raft' ),
 	'button' => __( 'View more photos', 'raft' ),
-];
+);
 
 foreach ( $illustrations as $illustration ) {
 	$illustrations_markup .= '<!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->';
@@ -32,9 +38,9 @@ foreach ( $illustrations as $illustration ) {
 }
 
 
-return [
+return array(
 	'title'      => $strings['title'],
-	'categories' => [ 'raft' ],
+	'categories' => array( 'raft' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true}} -->
 <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
@@ -79,4 +85,4 @@ return [
 </div>
 <!-- /wp:group -->
 ',
-];
+);

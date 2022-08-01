@@ -1,5 +1,11 @@
 <?php
 /**
+ * Pattern
+ *
+ * @author Themeisle
+ * @package raft
+ * @since 1.0.0
+ *
  * slug: cover-background
  * title: Cover title with background
  * categories: raft
@@ -8,15 +14,15 @@
 
 $hero_illustration = RAFT_URL . 'assets/img/raft-cover-bg.jpg';
 
-$strings = [
+$strings = array(
 	'title'  => __( 'This is a cover with a background image', 'raft' ),
 	'byline' => 'Lorem ipsum dolor',
 	'button' => __( 'This is a button', 'raft' ),
-];
+);
 
-return [
+return array(
 	'title'      => __( 'Cover title with background', 'raft' ),
-	'categories' => [ 'raft' ],
+	'categories' => array( 'raft' ),
 	'content'    => '
 <!-- wp:cover {"url":"' . esc_url( $hero_illustration ) . '","dimRatio":60,"overlayColor":"black","minHeight":60,"minHeightUnit":"vh","align":"full","style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}}} -->
 <div class="wp-block-cover alignfull" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px;min-height:60vh">
@@ -50,4 +56,4 @@ return [
 
 </div>
 <!-- /wp:cover -->',
-];
+);

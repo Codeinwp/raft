@@ -1,5 +1,11 @@
 <?php
 /**
+ * Pattern
+ *
+ * @author Themeisle
+ * @package raft
+ * @since 1.0.0
+ *
  * slug: faq-section
  * title: Frequently asked questions
  * categories: raft
@@ -22,13 +28,13 @@ $column_markup = '
 <!-- /wp:column -->
 ';
 
-$strings = [
+$strings = array(
 	'title' => __( 'Frequently asked questions', 'raft' ),
-];
+);
 
-return [
+return array(
 	'title'      => $strings['title'],
-	'categories' => [ 'raft' ],
+	'categories' => array( 'raft' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true}} -->
 <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
@@ -68,4 +74,4 @@ return [
 
 </div>
 <!-- /wp:group -->',
-];
+);

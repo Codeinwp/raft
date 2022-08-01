@@ -12,7 +12,7 @@ namespace Raft;
 /**
  * Class Core
  *
- * @package Raft
+ * @package raft
  */
 class Core {
 	/**
@@ -20,7 +20,7 @@ class Core {
 	 *
 	 * @var Core
 	 */
-	public static $_instance = null;
+	public static $instance = null;
 
 	/**
 	 * Get the static instance of the class.
@@ -28,11 +28,11 @@ class Core {
 	 * @return Core
 	 */
 	public static function get_instance() {
-		if ( null === self::$_instance ) {
-			self::$_instance = new self();
+		if ( null === self::$instance ) {
+			self::$instance = new self();
 		}
 
-		return self::$_instance;
+		return self::$instance;
 	}
 
 	/**
@@ -52,9 +52,9 @@ class Core {
 	 * @return void
 	 */
 	private function run_hooks() {
-		add_action( 'after_setup_theme', [ $this, 'setup' ] );
-		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue' ] );
-		add_action( 'enqueue_block_editor_assets', [ $this, 'add_editor_styles' ] );
+		add_action( 'after_setup_theme', array( $this, 'setup' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
+		add_action( 'enqueue_block_editor_assets', array( $this, 'add_editor_styles' ) );
 	}
 
 	/**
@@ -84,7 +84,7 @@ class Core {
 		);
 
 
-		register_nav_menus( [ 'primary' => esc_html__( 'Primary Menu', 'raft' ) ] );
+		register_nav_menus( array( 'primary' => esc_html__( 'Primary Menu', 'raft' ) ) );
 	}
 
 	/**
@@ -95,7 +95,7 @@ class Core {
 	public function enqueue() {
 		$handle = Constants::ASSETS_SLUGS['frontend-css'];
 
-		wp_register_style( $handle, RAFT_URL . 'assets/css/build/style.css', [], RAFT_VERSION );
+		wp_register_style( $handle, RAFT_URL . 'assets/css/build/style.css', array(), RAFT_VERSION );
 		wp_style_add_data( $handle, 'rtl', 'replace' );
 		wp_enqueue_style( $handle );
 	}
@@ -107,7 +107,7 @@ class Core {
 	 */
 	public function add_editor_styles() {
 		$handle = Constants::ASSETS_SLUGS['editor-css'];
-		wp_register_style( $handle, RAFT_URL . 'assets/css/build/editor.css', [], RAFT_VERSION );
+		wp_register_style( $handle, RAFT_URL . 'assets/css/build/editor.css', array(), RAFT_VERSION );
 		wp_style_add_data( $handle, 'rtl', 'replace' );
 		wp_enqueue_style( $handle );
 	}

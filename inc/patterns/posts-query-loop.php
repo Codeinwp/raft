@@ -1,5 +1,11 @@
 <?php
 /**
+ * Pattern
+ *
+ * @author Themeisle
+ * @package raft
+ * @since 1.0.0
+ *
  * slug: posts-query-loop
  * title: Posts Query loop
  * categories: raft
@@ -8,9 +14,9 @@
 
 $string = __( 'Go to post', 'raft' );
 
-return [
+return array(
 	'title'      => __( 'Posts Query loop', 'raft' ),
-	'categories' => [ 'raft' ],
+	'categories' => array( 'raft' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true}} -->
 <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
@@ -56,4 +62,4 @@ return [
 
 </div>
 <!-- /wp:group -->',
-];
+);

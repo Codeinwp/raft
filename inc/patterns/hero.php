@@ -1,5 +1,11 @@
 <?php
 /**
+ * Pattern
+ *
+ * @author Themeisle
+ * @package raft
+ * @since 1.0.0
+ *
  * Hero Section
  *
  * slug: hero
@@ -10,9 +16,9 @@
 
 $hero_illustration = RAFT_URL . 'assets/img/raft-illustration.jpg';
 
-return [
+return array(
 	'title'      => __( 'Hero section', 'raft' ),
-	'categories' => [ 'raft' ],
+	'categories' => array( 'raft' ),
 	'content'    => '
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"6vw","bottom":"6vw"},"blockGap":"24px","margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true}} -->
 <div class="wp-block-group has-raft-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:6vw;padding-bottom:6vw">
@@ -48,4 +54,4 @@ return [
 </div>
 <!-- /wp:group -->
 ',
-];
+);

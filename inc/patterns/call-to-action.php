@@ -1,14 +1,20 @@
 <?php
 /**
+ * Pattern
+ *
+ * @author Themeisle
+ * @package raft
+ * @since 1.0.0
+ *
  * slug: call-to-action
  * title: Call to action
  * categories: raft
  * keywords: section, cta, button
  */
 
-return [
+return array(
 	'title'      => __( 'Call to action', 'raft' ),
-	'categories' => [ 'raft' ],
+	'categories' => array( 'raft' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"40px","margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-accent","textColor":"raft-fg-alt","layout":{"inherit":true}} -->
 <div class="wp-block-group alignfull has-raft-fg-alt-color has-raft-accent-background-color has-text-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
@@ -25,4 +31,4 @@ return [
 <!-- /wp:buttons -->
 </div>
 <!-- /wp:group -->',
-];
+);
