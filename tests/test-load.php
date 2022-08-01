@@ -20,7 +20,7 @@ class Test_Loading extends WP_UnitTestCase {
 	 * Make sure debug is false.
 	 */
 	public function testDebugOff() {
-		$this->assertFalse( RAFT_DEBUG );
+		$this->assertEquals( RAFT_DEBUG, WP_DEBUG );
 	}
 
 	/**
