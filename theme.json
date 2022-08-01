@@ -204,7 +204,7 @@
         },
         "color": {
           "background": "var(--wp--preset--color--raft-accent)",
-          "text": "var(--wp--preset--color--raft-bg)"
+          "text": "var(--wp--preset--color--raft-fg-alt)"
         },
         "spacing": {
           "padding": {
