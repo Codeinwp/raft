@@ -1,10 +1,10 @@
 build:
 # Transpile SCSS
 - 'sass'
-# RTL CSS
-- 'rtlcss'
 # PostCSS
 - 'postcss'
+# RTL CSS
+- 'rtlcss'
 # Add TextDomain.
 - 'addtextdomain'
 

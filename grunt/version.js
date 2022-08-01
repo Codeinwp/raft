@@ -13,12 +13,6 @@ module.exports = {
 		},
 		src: 'style.css'
 	},
-	scssStylesheet: {
-		options: {
-			prefix: 'Version\\:\\s+'
-		},
-		src: 'assets/css/src/style.scss'
-	},
 	functions: {
 		options: {
 			prefix: 'RRAFT_VERSION\', \''

@@ -1,4 +1,3 @@
-/* jshint node:true */
 // https://github.com/MohammadYounes/grunt-rtlcss
 const ext = '-rtl.css';
 
@@ -34,20 +33,12 @@ const options = {
 };
 
 module.exports = {
-	style: {
+	css: {
 		options,
 		expand: true,
-		cwd: './',
-		dest: './',
+		cwd: '<%= paths.css %>/build',
+		dest: '<%= paths.css %>/build',
 		ext,
-		src: ['assets/css/build/style.css'],
-	},
-	editor: {
-		options,
-		expand: true,
-		cwd: './',
-		dest: './',
-		ext,
-		src: ['assets/css/build/editor.css'],
+		src: ['*.css', '!*-rtl.css'],
 	},
 };
