@@ -170,6 +170,11 @@ class Admin {
 			return false;
 		}
 
+		// User can't install plugins. We don't show it.
+		if ( ! current_user_can( 'install_plugins' ) ) {
+			return false;
+		}
+
 		// Block editor context.
 		if ( $screen->is_block_editor() ) {
 			return false;
