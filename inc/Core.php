@@ -41,9 +41,9 @@ class Core {
 	public function __construct() {
 		$this->run_hooks();
 
+		new Admin();
 		new Block_Patterns();
 		new Block_Styles();
-		new Font_Manager();
 	}
 
 	/**
@@ -93,11 +93,7 @@ class Core {
 	 * @return void
 	 */
 	public function enqueue() {
-		$handle = Constants::ASSETS_SLUGS['frontend-css'];
-
-		wp_register_style( $handle, RAFT_URL . 'assets/css/build/style.css', array(), RAFT_VERSION );
-		wp_style_add_data( $handle, 'rtl', 'replace' );
-		wp_enqueue_style( $handle );
+		Assets_Manager::enqueue_style( Assets_Manager::ASSETS_SLUGS['frontend-css'], 'style' );
 	}
 
 	/**
@@ -106,9 +102,6 @@ class Core {
 	 * @return void
 	 */
 	public function add_editor_styles() {
-		$handle = Constants::ASSETS_SLUGS['editor-css'];
-		wp_register_style( $handle, RAFT_URL . 'assets/css/build/editor.css', array(), RAFT_VERSION );
-		wp_style_add_data( $handle, 'rtl', 'replace' );
-		wp_enqueue_style( $handle );
+		Assets_Manager::enqueue_style( Assets_Manager::ASSETS_SLUGS['editor-css'], 'editor' );
 	}
 }
