@@ -19,7 +19,6 @@ Raft is distributed under the terms of the GNU GPLv2 or later
 
 == Changelog ==
 
-
 == Resources ==
 
 Fonts:
