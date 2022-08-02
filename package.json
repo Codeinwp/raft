@@ -57,7 +57,7 @@
     "format": "npm-run-all format:*",
     "lint": "npm-run-all lint:*",
     "dist": "yarn run build && bash ./bin/dist.sh",
-    "release": "npx semantic-release --dry-run",
+    "release": "npx semantic-release",
     "build:grunt": "grunt build",
     "build:js": "wp-scripts build assets/js/src/*.js --output-path=assets/js/build",
     "build:makepot": "bash ./bin/makepot.sh",
