@@ -44,7 +44,6 @@ class Core {
 		new Admin();
 		new Block_Patterns();
 		new Block_Styles();
-		new Font_Manager();
 	}
 
 	/**
