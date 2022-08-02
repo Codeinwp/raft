@@ -54,6 +54,7 @@
     "dist": "yarn run build && bash ./bin/dist.sh",
     "build:grunt": "grunt build",
     "build:js": "wp-scripts build assets/js/src/*.js --output-path=assets/js/build",
+    "build:makepot": "bash ./bin/makepot.sh",
     "dev:grunt": "grunt watch",
     "dev:js": "wp-scripts build assets/js/src/*.js --output-path=assets/js/build --watch",
     "lint:package-json": "wp-scripts lint-pkg-json ./",

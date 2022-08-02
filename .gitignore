@@ -10,4 +10,6 @@ assets/js/build
 *.map
 /vendor/
 
+languages/raft.pot
+
 .DS_Store
