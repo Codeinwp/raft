@@ -1,17 +1,18 @@
 .wp-block-categories {
-  &.is-style-raft-pills {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    list-style: none;
-    font-size: var(--wp--preset--font-size--small);
-    padding-left: 0;
 
-    li {
-      margin: 5px;
-      background-color: var(--wp--preset--color--raft-bg-alt);
-      border-radius: 25px;
-      padding: 8px 24px;
-    }
-  }
+	&.is-style-raft-pills {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		list-style: none;
+		font-size: var(--wp--preset--font-size--small);
+		padding-left: 0;
+
+		li {
+			margin: 5px;
+			background-color: var(--wp--preset--color--raft-bg-alt);
+			border-radius: 25px;
+			padding: 8px 24px;
+		}
+	}
 }

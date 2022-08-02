@@ -2317,7 +2317,7 @@
 
 "@wordpress/stylelint-config@^20.0.2":
   version "20.0.2"
-  resolved "https://registry.npmjs.org/@wordpress/stylelint-config/-/stylelint-config-20.0.2.tgz"
+  resolved "https://registry.yarnpkg.com/@wordpress/stylelint-config/-/stylelint-config-20.0.2.tgz#343c351606ba9167736b42479fa66047cb3507e7"
   integrity sha512-guP0Cwc4PysbRJroxWcBxViYaqaTlxrkcZ/dfsoB0ZLO+RrZ8YFktt02mt6q6MASLTBEWIBHVQ5nKLVFPWAWJg==
   dependencies:
     stylelint-config-recommended "^6.0.0"
