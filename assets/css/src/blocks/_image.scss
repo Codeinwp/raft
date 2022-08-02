@@ -1,34 +1,40 @@
 %figcaption {
-  text-align: left;
-  font-size: var(--wp--preset--font-size--small);
+	text-align: left;
+	font-size: var(--wp--preset--font-size--small);
 }
 
 // Gallery & Image captions.
 .wp-block-gallery.has-nested-images,
 figure.wp-block-image {
-  figcaption {
-    @extend %figcaption;
-    color: var(--wp--preset--color--raft-fg);
-    opacity: .6;
-  }
+
+	figcaption {
+
+		@extend %figcaption;
+		color: var(--wp--preset--color--raft-fg);
+		opacity: 0.6;
+	}
 }
 
 // Gallery image captions
 .wp-block-gallery.has-nested-images {
-  figure.wp-block-image {
-    figcaption {
-      @extend %figcaption;
-      background: rgba(0, 0, 0, 0.3);
-      margin: 0;
-      padding: 8px;
-      opacity: 1;
-    }
 
-    &.is-style-rounded {
-      figcaption {
-        opacity: .6;
-        background: 0;
-      }
-    }
-  }
+	figure.wp-block-image {
+
+		figcaption {
+
+			@extend %figcaption;
+			background: rgba(0, 0, 0, 0.3);
+			margin: 0;
+			padding: 8px;
+			opacity: 1;
+		}
+
+		&.is-style-rounded {
+
+			figcaption {
+				opacity: 0.6;
+				background: 0;
+			}
+		}
+	}
 }
