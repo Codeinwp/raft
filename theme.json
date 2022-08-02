@@ -38,12 +38,24 @@
       "customFontSize": true,
       "fontFamilies": [
         {
-          "fontFamily": "var(--raft-body-font-family), sans-serif",
+          "fontFamily": "\"Readex Pro\", sans-serif",
           "name": "Body",
-          "slug": "body"
+          "slug": "body",
+          "fontFace": [
+            {
+              "fontDisplay": "swap",
+              "fontFamily": "Readex Pro",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "160 700",
+              "src": [
+                "file:./assets/fonts/ReadexPro/ReadexPro-VariableFont_wght.ttf"
+              ]
+            }
+          ]
         },
         {
-          "fontFamily": "var(--raft-headings-font-family), sans-serif",
+          "fontFamily": "\"Readex Pro\", sans-serif",
           "name": "Headings",
           "slug": "headings"
         }
