@@ -1,7 +1,9 @@
 name: Test PHP
 
-
-on: [pull_request]
+on:
+  push:
+    branches-ignore:
+      - 'main'
 
 jobs:
   phplint:
