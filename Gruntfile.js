@@ -11,6 +11,7 @@ const paths = {
   logs: 'logs/',
   images: 'images/',
   vendor: 'packages/',
+  css: 'assets/css/'
 };
 
 const taskMap = {

@@ -55,3 +55,4 @@ tsconfig.json
 lint-staged.config.js
 .stylelintrc.json
 phpstan.neon
+.gitkeep

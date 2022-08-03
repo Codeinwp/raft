@@ -3,26 +3,20 @@
 module.exports = {
 	package: {
 		options: {
-			prefix: '"version"\\:\\s+"'
+			prefix: '"version"\\:\\s+"',
 		},
-		src: 'package.json'
+		src: 'package.json',
 	},
 	stylesheet: {
 		options: {
-			prefix: 'Version\\:\\s+'
+			prefix: 'Version\\:\\s+',
 		},
-		src: 'style.css'
-	},
-	scssStylesheet: {
-		options: {
-			prefix: 'Version\\:\\s+'
-		},
-		src: 'assets/css/src/style.scss'
+		src: 'style.css',
 	},
 	functions: {
 		options: {
-			prefix: 'RRAFT_VERSION\', \''
+			prefix: "RAFT_VERSION', '",
 		},
-		src: 'functions.php'
-	}
+		src: 'functions.php',
+	},
 };

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9d9813256013f9d14b7e87acd9297e91",
+    "content-hash": "7b44a04851ccfea5e91a5aa71ac76a5d",
     "packages": [
         {
             "name": "codeinwp/themeisle-sdk",
@@ -45,51 +45,6 @@
                 "source": "https://github.com/Codeinwp/themeisle-sdk/tree/v3.2.26"
             },
             "time": "2022-05-12T11:55:06+00:00"
-        },
-        {
-            "name": "wptt/webfont-loader",
-            "version": "v1.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/WPTT/webfont-loader.git",
-                "reference": "780e564bf0554c419ef447c2b5b768b497ecee40"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/WPTT/webfont-loader/zipball/780e564bf0554c419ef447c2b5b768b497ecee40",
-                "reference": "780e564bf0554c419ef447c2b5b768b497ecee40",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "composer/installers": "~1.0",
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
-                "php-parallel-lint/php-parallel-lint": "^1.2",
-                "wptrt/wpthemereview": "^0.2.1"
-            },
-            "type": "package",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Contributors",
-                    "homepage": "https://github.com/WPTT/font-loader/graphs/contributors"
-                }
-            ],
-            "description": "Locally host webfonts.",
-            "homepage": "https://github.com/WPTT/font-loader",
-            "keywords": [
-                "wordpress"
-            ],
-            "support": {
-                "issues": "https://github.com/WPTT/font-loader/issues",
-                "source": "https://github.com/WPTT/font-loader"
-            },
-            "time": "2022-06-17T10:41:00+00:00"
         }
     ],
     "packages-dev": [
@@ -2339,6 +2294,67 @@
                 "source": "https://github.com/WPTRT/WPThemeReview"
             },
             "time": "2019-11-17T20:05:55+00:00"
+        },
+        {
+            "name": "yoast/phpunit-polyfills",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Yoast/PHPUnit-Polyfills.git",
+                "reference": "5ea3536428944955f969bc764bbe09738e151ada"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Yoast/PHPUnit-Polyfills/zipball/5ea3536428944955f969bc764bbe09738e151ada",
+                "reference": "5ea3536428944955f969bc764bbe09738e151ada",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "phpunit/phpunit": "^4.8.36 || ^5.7.21 || ^6.0 || ^7.0 || ^8.0 || ^9.0"
+            },
+            "require-dev": {
+                "yoast/yoastcs": "^2.2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.x-dev",
+                    "dev-develop": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "phpunitpolyfills-autoload.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Team Yoast",
+                    "email": "support@yoast.com",
+                    "homepage": "https://yoast.com"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/Yoast/PHPUnit-Polyfills/graphs/contributors"
+                }
+            ],
+            "description": "Set of polyfills for changed PHPUnit functionality to allow for creating PHPUnit cross-version compatible tests",
+            "homepage": "https://github.com/Yoast/PHPUnit-Polyfills",
+            "keywords": [
+                "phpunit",
+                "polyfill",
+                "testing"
+            ],
+            "support": {
+                "issues": "https://github.com/Yoast/PHPUnit-Polyfills/issues",
+                "source": "https://github.com/Yoast/PHPUnit-Polyfills"
+            },
+            "time": "2021-11-23T01:37:03+00:00"
         }
     ],
     "aliases": [],

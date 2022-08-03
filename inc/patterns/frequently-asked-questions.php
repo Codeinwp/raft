@@ -29,7 +29,9 @@ $column_markup = '
 ';
 
 $strings = array(
-	'title' => __( 'Frequently asked questions', 'raft' ),
+	'title'  => __( 'Frequently asked questions', 'raft' ),
+	'byline' => __( 'Have questions? We have the answers!', 'raft' ),
+	'button' => __( 'See More FAQs', 'raft' ),
 );
 
 return array(
@@ -39,17 +41,19 @@ return array(
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true}} -->
 <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
 <!-- wp:heading {"textAlign":"center","className":"is-style-default"} -->
-<h2 class="has-text-align-center is-style-default">Frequently asked questions</h2>
+<h2 class="has-text-align-center is-style-default">' . esc_html( $strings['title'] ) . '</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","fontSize":"normal"} -->
-<p class="has-text-align-center has-normal-font-size">Have questions? We have the answers!</p>
+<p class="has-text-align-center has-normal-font-size">' . esc_html( $strings['byline'] ) . '</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
 <!-- wp:button {"textColor":"raft-fg-alt"} -->
-<div class="wp-block-button"><a class="wp-block-button__link has-raft-fg-alt-color has-text-color">See more FAQs</a></div>
+<div class="wp-block-button">
+<a class="wp-block-button__link has-raft-fg-alt-color has-text-color">' . esc_html( $strings['button'] ) . '</a>
+</div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
