@@ -13,12 +13,12 @@
  */
 
 $illustrations = array(
-	'shape-01.png',
-	'shape-05.png',
-	'shape-04.png',
+	'shape-01.svg',
+	'shape-05.svg',
+	'shape-04.svg',
 
-	'shape-03.png',
-	'shape-02.png',
+	'shape-03.svg',
+	'shape-02.svg',
 );
 
 $illustrations_markup = '';

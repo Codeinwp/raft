@@ -13,8 +13,8 @@
  */
 
 $illustrations = array(
-	'shape-01.png',
-	'shape-04.png',
+	'shape-01.svg',
+	'shape-04.svg',
 );
 
 $strings = array(

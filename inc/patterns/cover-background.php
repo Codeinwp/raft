@@ -12,7 +12,7 @@
  * keywords: cover, section, header, hero
  */
 
-$hero_illustration = RAFT_URL . 'assets/img/raft-cover-bg.jpg';
+$hero_illustration = RAFT_URL . 'assets/img/raft-cover-bg.svg';
 
 $strings = array(
 	'title'  => __( 'This is a cover with a background image', 'raft' ),
