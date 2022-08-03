@@ -14,7 +14,7 @@
  * keywords: hero, section, header, hero section, hero header, hero section header, hero header section, hero header section
  */
 
-$hero_illustration = RAFT_URL . 'assets/img/raft-illustration.jpg';
+$hero_illustration = RAFT_URL . 'assets/img/raft-illustration.png';
 
 $strings = array(
 	'title'    => __( 'Welcome to Raft, a block-based theme by Otter', 'raft' ),
