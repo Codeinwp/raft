@@ -71,6 +71,6 @@
     "format:scss": "wp-scripts lint-style './assets/css/src/**/*.scss' --fix"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged --v"
+    "pre-commit": "npx lint-staged"
   }
 }
