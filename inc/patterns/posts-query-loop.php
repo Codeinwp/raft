@@ -12,7 +12,11 @@
  * keywords: section, blog, posts, latest
  */
 
-$string = __( 'Go to post', 'raft' );
+$strings = array(
+	'button'   => __( 'Go to post', 'raft' ),
+	'title'    => __( 'Posts Query loop', 'raft' ),
+	'no_posts' => __( 'Unfortunately no posts were found', 'raft' ),
+);
 
 return array(
 	'title'      => __( 'Posts Query loop', 'raft' ),
@@ -21,7 +25,7 @@ return array(
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true}} -->
 <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
 <!-- wp:heading -->
-<h2>Posts Query loop</h2>
+<h2>' . esc_html( $strings['title'] ) . '</h2>
 <!-- /wp:heading -->
 
 <!-- wp:spacer {"height":"40px"} -->
@@ -37,7 +41,7 @@ return array(
 <!-- wp:post-date {"fontSize":"small"} /-->
 <!-- wp:post-title /-->
 <!-- wp:post-terms {"term":"category","fontSize":"small"} /-->
-<!-- wp:post-excerpt {"moreText":"\u003cstrong\u003e' . esc_html( $string ) . '\u003c/strong\u003e","style":{"elements":{"link":{"color":{"text":"var:preset|color|raft-accent"}}}}} /-->
+<!-- wp:post-excerpt {"moreText":"\u003cstrong\u003e' . esc_html( $strings['button'] ) . '\u003c/strong\u003e","style":{"elements":{"link":{"color":{"text":"var:preset|color|raft-accent"}}}}} /-->
 
 <!-- wp:spacer {"height":"64px"} -->
 <div style="height:64px" aria-hidden="true" class="wp-block-spacer"></div>
@@ -53,7 +57,7 @@ return array(
 
 <!-- wp:query-no-results -->
 <!-- wp:paragraph {"backgroundColor":"raft-bg-alt"} -->
-<p class="has-raft-bg-alt-background-color has-background">Unfortunately no posts were found</p>
+<p class="has-raft-bg-alt-background-color has-background">Unfortuna' . esc_html( $strings['no_posts'] ) . 'd</p>
 <!-- /wp:paragraph -->
 <!-- /wp:query-no-results -->
 

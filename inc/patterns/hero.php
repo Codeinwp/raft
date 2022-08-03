@@ -16,6 +16,12 @@
 
 $hero_illustration = RAFT_URL . 'assets/img/raft-illustration.jpg';
 
+$strings = array(
+	'title'    => __( 'Welcome to Raft, a block-based theme by Otter', 'raft' ),
+	'subtitle' => __( 'Raft is a free Full Site Editing theme by Otter, an awesome plugin for Gutenberg. Made by your friends at Themeisle.', 'raft' ),
+	'button'   => __( 'Learn More', 'raft' ),
+);
+
 return array(
 	'title'      => __( 'Hero section', 'raft' ),
 	'categories' => array( 'raft' ),
@@ -24,18 +30,18 @@ return array(
 <div class="wp-block-group alignfull has-raft-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
 
 <!-- wp:heading {"textAlign":"center","level":1,"fontSize":"xxl"} -->
-<h1 class="has-text-align-center has-xxl-font-size">Welcome to Raft, a block-based theme by Otter</h1>
+<h1 class="has-text-align-center has-xxl-font-size">' . esc_html( $strings['title'] ) . '</h1>
 <!-- /wp:heading -->
 
     <!-- wp:paragraph {"align":"center","fontSize":"medium"} -->
-    <p class="has-text-align-center has-medium-font-size">Raft is a free Full Site Editing theme by Otter, an awesome plugin for Gutenberg. Made by your friends at Themeisle.</p>
+    <p class="has-text-align-center has-medium-font-size">' . esc_html( $strings['subtitle'] ) . '</p>
     <!-- /wp:paragraph -->
 
     <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
     <div class="wp-block-buttons">
         <!-- wp:button {"textColor":"raft-fg-alt"} -->
         <div class="wp-block-button">
-        	<a class="wp-block-button__link has-raft-fg-alt-color has-text-color">Learn More</a>
+        	<a class="wp-block-button__link has-raft-fg-alt-color has-text-color">' . esc_html( $strings['button'] ) . '</a>
         </div>
         <!-- /wp:button -->
     </div>
