@@ -8,10 +8,8 @@ Requires PHP: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-TODO: Raft is a full site editing theme by Otter.
-
 == Description ==
-TODO: Description
+Raft is a lightweight, full-site-editing compatible theme ready for your next website. It provides a clean start and a solid base in conjunction with the Otter Blocks plugin, supporting your ideas and creativity.
 
 == Copyright ==
 Raft WordPress theme, Copyright 2022 Themeisle
