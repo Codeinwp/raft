@@ -45,7 +45,7 @@ return array(
     <div style="height:3vw" aria-hidden="true" class="wp-block-spacer"></div>
     <!-- /wp:spacer -->
 
-    <!-- wp:image {"align":"wide","sizeSlug":"full","linkDestination":"none"} -->
+    <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
     <figure class="wp-block-image alignwide size-full">
     	<img src="' . esc_url( $hero_illustration ) . '" alt="Hero Illustration"/>
     </figure>
