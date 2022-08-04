@@ -1,8 +1,9 @@
 name: Deploy
+
 on:
   push:
-    tags:
-      - "*"
+    branches:
+      - master
 jobs:
   deploy:
     name: Deploy to server
@@ -29,6 +30,9 @@ jobs:
           composer install --no-dev --prefer-dist --no-progress --no-suggest
           yarn run build
           yarn run dist
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
       - name: Upload Latest Version to S3
         uses: jakejarvis/s3-sync-action@master
         with:
