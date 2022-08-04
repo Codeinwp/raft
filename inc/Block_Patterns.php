@@ -67,6 +67,7 @@ class Block_Patterns {
 			'image-gallery',
 			'posts-query-loop',
 			'two-columns-features',
+			'three-columns-features',
 			'call-to-action',
 			'frequently-asked-questions',
 			'inverted-background',
