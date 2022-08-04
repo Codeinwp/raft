@@ -58,5 +58,5 @@ jobs:
           AUTH_TOKEN: ${{ secrets.THEMEISLE_STORE_AUTH }}
           STORE_URL: ${{ secrets.THEMEISLE_STORE_URL }}
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
-          BUILD_VERSION: $BUILD_VERSION
+          BUILD_VERSION: ${{ env.BUILD_VERSION }}
         uses: Codeinwp/action-store-release@main
