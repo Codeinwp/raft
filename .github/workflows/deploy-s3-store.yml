@@ -30,9 +30,6 @@ jobs:
           composer install --no-dev --prefer-dist --no-progress --no-suggest
           yarn run build
           yarn run dist
-      - name: Get the version
-        id: get_version
-        run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
       - name: Upload Latest Version to S3
         uses: jakejarvis/s3-sync-action@master
         with:
@@ -61,5 +58,5 @@ jobs:
           AUTH_TOKEN: ${{ secrets.THEMEISLE_STORE_AUTH }}
           STORE_URL: ${{ secrets.THEMEISLE_STORE_URL }}
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
-          BUILD_VERSION: ${{ steps.get_version.outputs.VERSION }}
+          BUILD_VERSION: $BUILD_VERSION
         uses: Codeinwp/action-store-release@main
