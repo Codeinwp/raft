@@ -27,7 +27,7 @@ return array(
 	'categories' => array( 'raft' ),
 	'content'    => '
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"24px","margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true}} -->
-<div class="wp-block-group has-raft-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><!-- wp:heading {"textAlign":"center","fontSize":"huge"} -->
+<div class="wp-block-group has-raft-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
 
 <!-- wp:heading {"textAlign":"center","level":1,"fontSize":"huge"} -->
 <h1 class="has-text-align-center has-huge-font-size">' . esc_html( $strings['title'] ) . '</h1>
