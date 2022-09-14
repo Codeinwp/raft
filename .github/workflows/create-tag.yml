@@ -2,8 +2,8 @@ name: Release
 
 on:
   push:
-    tags:
-      - "*"
+    branches:
+      - master
 jobs:
   create_tag:
     runs-on: ubuntu-latest
