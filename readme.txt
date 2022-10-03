@@ -9,7 +9,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-Raft is a lightweight, full-site-editing compatible theme ready for your next website. It provides a clean start and a solid base in conjunction with the Otter Blocks plugin, supporting your ideas and creativity.
+Raft is a lightweight, full-site-editing compatible (FSE) theme ready for your next website. Raft is a super fast, easily customizable, simple theme. It’s perfect for blogs, small business, startups, agencies, firms, e-commerce shops (WooCommerce storefront) as well as personal portfolio sites and most types of projects. Raft works perfectly with Gutenberg and the most popular page builders (Elementor, Brizy, Beaver Builder or the Block Editor). Raft is also WooCommerce ready, responsive, RTL & translation ready. Learn more at https://themeisle.com/themes/raft/.
 
 == Copyright ==
 Raft WordPress theme, Copyright 2022 Themeisle
