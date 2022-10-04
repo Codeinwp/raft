@@ -17,8 +17,8 @@
 $hero_illustration = RAFT_URL . 'assets/img/raft-illustration.svg';
 
 $strings = array(
-	'title'    => __( 'Welcome to Raft, a block-based theme by Otter', 'raft' ),
-	'subtitle' => __( 'Raft is a free Full Site Editing theme by Otter, an awesome plugin for Gutenberg. Made by your friends at Themeisle.', 'raft' ),
+	'title'    => __( 'Block-based websites made simple.', 'raft' ),
+	'subtitle' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.',
 	'button'   => __( 'Learn More', 'raft' ),
 );
 
