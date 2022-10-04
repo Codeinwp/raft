@@ -17,6 +17,14 @@ Raft is distributed under the terms of the GNU GPLv2 or later
 
 == Changelog ==
 
+##### [Version 1.0.2](https://github.com/Codeinwp/raft/compare/v1.0.1...v1.0.2) (2022-10-04)
+
+- Change screenshot
+- Change text in hero pattern
+
+
+
+
 ##### [Version 1.0.1](https://github.com/Codeinwp/raft/compare/v1.0.0...v1.0.1) (2022-09-14)
 
 - Fix notice that was not dismissible in dashboard
