@@ -17,6 +17,13 @@ Raft is distributed under the terms of the GNU GPLv2 or later
 
 ## Changelog ##
 
+##### [Version 1.0.3](https://github.com/Codeinwp/raft/compare/v1.0.2...v1.0.3) (2022-10-07)
+
+- change style.css description
+
+
+
+
 ##### [Version 1.0.2](https://github.com/Codeinwp/raft/compare/v1.0.1...v1.0.2) (2022-10-04)
 
 - Change screenshot
