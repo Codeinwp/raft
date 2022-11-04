@@ -25,43 +25,43 @@ class Constants {
 	/**
 	 * WooCommerce templates
 	 */
-	const WOO_TEMPLATES = [
-		[
+	const WOO_TEMPLATES = array(
+		array(
 			'slug'        => 'product-search-results',
 			'title'       => 'title',
-			'description' => 'description'
-		],
-		[
+			'description' => 'description',
+		),
+		array(
 			'slug'        => 'taxonomy-product_cat',
 			'title'       => 'title',
-			'description' => 'description'
-		],
-		[
+			'description' => 'description',
+		),
+		array(
 			'slug'        => 'archive-product',
 			'title'       => 'title',
-			'description' => 'description'
-		],
-		[
+			'description' => 'description',
+		),
+		array(
 			'slug'        => 'taxonomy-product_tag',
 			'title'       => 'title',
-			'description' => 'description'
-		],
-		[
+			'description' => 'description',
+		),
+		array(
 			'slug'        => 'single-product',
 			'title'       => 'title',
-			'description' => 'description'
-		],
-		[
+			'description' => 'description',
+		),
+		array(
 			'slug'        => 'page-cart',
 			'title'       => 'title',
-			'description' => 'description'
-		],
-		[
+			'description' => 'description',
+		),
+		array(
 			'slug'        => 'page-checkout',
 			'title'       => 'title',
-			'description' => 'description'
-		],
-	];
+			'description' => 'description',
+		),
+	);
 
 	/**
 	 * Templates extension.
