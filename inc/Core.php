@@ -9,8 +9,6 @@
 
 namespace Raft;
 
-use Raft\Compatibility\WooCommerce\Main as WooCommerce;
-
 /**
  * Class Core
  *
@@ -47,10 +45,6 @@ class Core {
 		new Block_Patterns();
 		new Block_Styles();
 		new Block_Template_Manager();
-
-		if ( class_exists( 'WooCommerce', false ) ) {
-			new WooCommerce();
-		}
 	}
 
 	/**
