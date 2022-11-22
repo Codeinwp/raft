@@ -1,23 +1,23 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "title": "Night Owl",
+  "title": "Wooden",
   "version": 2,
   "settings": {
     "color": {
       "palette": [
         {
           "slug": "raft-bg",
-          "color": "#232323",
+          "color": "#EFECE7",
           "name": "Background"
         },
         {
           "slug": "raft-fg",
-          "color": "#FFFFFF",
+          "color": "#202020",
           "name": "Foreground"
         },
         {
           "slug": "raft-bg-alt",
-          "color": "rgba(0, 0, 0, 0.3)",
+          "color": "rgba(255, 255, 255, 0.5)",
           "name": "Background Alt"
         },
         {
@@ -27,7 +27,7 @@
         },
         {
           "slug": "raft-accent",
-          "color": "#5C40CA",
+          "color": "#544636",
           "name": "Accent"
         }
       ]
@@ -35,7 +35,7 @@
   },
   "styles": {
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--outfit)"
+      "fontFamily": "var(--wp--preset--font-family--lora)"
     }
   }
 }

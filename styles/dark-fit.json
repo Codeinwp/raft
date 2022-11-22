@@ -1,13 +1,13 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
-  "title": "Night Owl",
+  "title": "Dark Fit",
   "version": 2,
   "settings": {
     "color": {
       "palette": [
         {
           "slug": "raft-bg",
-          "color": "#232323",
+          "color": "#1B1818",
           "name": "Background"
         },
         {
@@ -17,7 +17,7 @@
         },
         {
           "slug": "raft-bg-alt",
-          "color": "rgba(0, 0, 0, 0.3)",
+          "color": "rgba(255, 255, 255, 0.05)",
           "name": "Background Alt"
         },
         {
@@ -27,7 +27,7 @@
         },
         {
           "slug": "raft-accent",
-          "color": "#5C40CA",
+          "color": "#417E61",
           "name": "Accent"
         }
       ]

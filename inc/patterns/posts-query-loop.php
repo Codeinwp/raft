@@ -19,7 +19,7 @@ $strings = array(
 );
 
 return array(
-	'title'      => __( 'Posts Query loop', 'raft' ),
+	'title'      => $strings['title'],
 	'categories' => array( 'raft' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true}} -->

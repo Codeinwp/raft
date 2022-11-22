@@ -49,15 +49,3 @@ Raft is distributed under the terms of the GNU GPLv2 or later
 ####   Version 1.0.0 (2022-08-04)
 
 - Initial release
-
-
-
-
-== Resources ==
-
-Fonts:
-
-Readex Pro Font
-Copyright: 2018 The Readex Pro Project Authors (https://github.com/ThomasJockin/readexpro)
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Source: https://github.com/google/fonts/tree/main/ofl/readexpro
