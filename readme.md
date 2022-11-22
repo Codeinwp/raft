@@ -17,6 +17,17 @@ Raft is distributed under the terms of the GNU GPLv2 or later
 
 ## Changelog ##
 
+##### [Version 1.0.5](https://github.com/Codeinwp/raft/compare/v1.0.4...v1.0.5) (2022-11-22)
+
+- Adds new Header & Footer template parts;
+- Adds content block inside the front-page template;
+- Adds 11 new block patterns inside the theme;
+- Adds four new font families to be used with style variations;
+- Fix three-column features pattern layout;
+
+
+
+
 ##### [Version 1.0.4](https://github.com/Codeinwp/raft/compare/v1.0.3...v1.0.4) (2022-10-24)
 
 - Fix image block alignments
@@ -49,15 +60,3 @@ Raft is distributed under the terms of the GNU GPLv2 or later
 ####   Version 1.0.0 (2022-08-04)
 
 - Initial release
-
-
-
-
-## Resources ##
-
-Fonts:
-
-Readex Pro Font
-Copyright: 2018 The Readex Pro Project Authors (https://github.com/ThomasJockin/readexpro)
-License: SIL Open Font License, 1.1, https://opensource.org/licenses/OFL-1.1
-Source: https://github.com/google/fonts/tree/main/ofl/readexpro
