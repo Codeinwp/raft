@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "title": "Dark Fit",
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "raft-bg",
+          "color": "#1B1818",
+          "name": "Background"
+        },
+        {
+          "slug": "raft-fg",
+          "color": "#FFFFFF",
+          "name": "Foreground"
+        },
+        {
+          "slug": "raft-bg-alt",
+          "color": "rgba(255, 255, 255, 0.05)",
+          "name": "Background Alt"
+        },
+        {
+          "slug": "raft-fg-alt",
+          "color": "#FFFFFF",
+          "name": "Foreground Alt"
+        },
+        {
+          "slug": "raft-accent",
+          "color": "#417E61",
+          "name": "Accent"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--outfit)"
+    }
+  }
+}
