@@ -1,0 +1,19 @@
+//.has-raft-fg-alt-color
+//.has-raft-accent-background-color
+$colors: (
+	raft-bg : ti-bg,
+	raft-fg: ti-fg,
+	raft-bg-alt: ti-bg-alt,
+	raft-fg-alt: ti-fg-alt,
+	raft-accent: ti-accent,
+);
+
+// remap color css variables to has-*-color and has-*-background-color
+@each $raft, $generic in $colors {
+	.has-#{$raft}-color {
+		color: var(--wp--preset--color--#{$generic});
+	}
+	.has-#{$raft}-background-color {
+		background-color: var(--wp--preset--color--#{$generic});
+	}
+}

@@ -6,27 +6,27 @@
     "color": {
       "palette": [
         {
-          "slug": "raft-bg",
+          "slug": "ti-bg",
           "color": "#FFFFFF",
           "name": "Background"
         },
         {
-          "slug": "raft-fg",
+          "slug": "ti-fg",
           "color": "#202220",
           "name": "Foreground"
         },
         {
-          "slug": "raft-bg-alt",
+          "slug": "ti-bg-alt",
           "color": "rgba(0, 0, 0, 0.05)",
           "name": "Background Alt"
         },
         {
-          "slug": "raft-fg-alt",
+          "slug": "ti-fg-alt",
           "color": "#f6f6f6",
           "name": "Foreground Alt"
         },
         {
-          "slug": "raft-accent",
+          "slug": "ti-accent",
           "color": "#202220",
           "name": "Accent"
         }
