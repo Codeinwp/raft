@@ -65,6 +65,9 @@ class Core {
 	public function setup() {
 		load_theme_textdomain( 'raft', RAFT_DIR . '/languages' );
 
+		$starter_content = new Starter_Content();
+
+		add_theme_support( 'starter-content', $starter_content->get() );
 		add_theme_support( 'wp-block-styles' );
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'title-tag' );
