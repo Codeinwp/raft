@@ -1,6 +1,6 @@
 <?php
 /**
- * Main theme class.
+ * Starter Content Class.
  *
  * @author Themeisle
  * @package raft
