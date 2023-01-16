@@ -13,6 +13,9 @@ namespace Raft;
  * Admin class.
  */
 class Admin {
+
+	const OTTER_REF = 'otter_reference_key';
+
 	/**
 	 * Admin constructor.
 	 */
@@ -29,6 +32,7 @@ class Admin {
 	public function setup_otter_notice() {
 		add_action( 'admin_notices', array( $this, 'render_welcome_notice' ), 0 );
 		add_action( 'wp_ajax_raft_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
+		add_action( 'wp_ajax_raft_set_otter_ref', array( $this, 'set_otter_ref' ) );
 	}
 
 	/**
@@ -51,6 +55,7 @@ class Admin {
 			array(),
 			array(
 				'nonce'         => wp_create_nonce( 'raft-dismiss-welcome-notice' ),
+				'otterRefNonce' => wp_create_nonce( 'raft-set-otter-ref' ),
 				'ajaxUrl'       => esc_url( admin_url( 'admin-ajax.php' ) ),
 				'otterStatus'   => $otter_status,
 				'activationUrl' => esc_url(
@@ -130,6 +135,25 @@ class Admin {
 		}
 		update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
 		wp_die();
+	}
+
+	/**
+	 * Update Otter reference key.
+	 *
+	 * @return void
+	 */
+	public function set_otter_ref() {
+		if ( empty( $_POST['nonce'] ) ) {
+			return;
+		}
+
+		if ( ! wp_verify_nonce( sanitize_text_field( $_POST['nonce'] ), 'raft-set-otter-ref' ) ) {
+			return;
+		}
+
+		update_option( self::OTTER_REF, 'raft' );
+
+		wp_send_json_success();
 	}
 
 	/**
