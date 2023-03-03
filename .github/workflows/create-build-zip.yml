@@ -15,7 +15,11 @@ jobs:
       git-sha-8: ${{ steps.retrieve-git-sha-8.outputs.sha8 }}
     steps:
       - name: Check out source files
-        uses: actions/checkout@v2
+      - uses: actions/checkout@master
+      - name: Setup node 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
       - name: Get Composer Cache Directory
         id: composer-cache
         run: |
