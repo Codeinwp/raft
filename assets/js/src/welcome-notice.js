@@ -10,6 +10,7 @@ function handleWelcomeNotice( $ ) {
 		activationUrl,
 		ajaxUrl,
 		nonce,
+		otterRefNonce,
 		otterStatus,
 	} = raftData;
 
@@ -30,6 +31,12 @@ function handleWelcomeNotice( $ ) {
 	const activateOtter = async () => {
 		installText.text( activating );
 		await activatePlugin( activationUrl );
+
+		await $.post( ajaxUrl, {
+			nonce: otterRefNonce,
+			action: 'raft_set_otter_ref',
+		} );
+
 		installSpinner.removeClass( 'dashicons-update' );
 		installSpinner.addClass( 'dashicons-yes' );
 		installText.text( done );

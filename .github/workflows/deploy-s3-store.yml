@@ -30,6 +30,11 @@ jobs:
           composer install --no-dev --prefer-dist --no-progress --no-suggest
           yarn run build
           yarn run dist
+      - name: WordPress Theme Deploy
+        uses: Codeinwp/action-wordpress-theme-deploy@v1.0
+        env:
+          SVN_PASSWORD: ${{ secrets.SVN_THEMEISLE_PASSWORD }}
+          SVN_USERNAME: ${{ secrets.SVN_THEMEISLE_USERNAME }}
       - name: Upload Latest Version to S3
         uses: jakejarvis/s3-sync-action@master
         with:
