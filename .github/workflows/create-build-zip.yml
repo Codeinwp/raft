@@ -14,8 +14,11 @@ jobs:
       branch-name: ${{ steps.retrieve-branch-name.outputs.branch_name }}
       git-sha-8: ${{ steps.retrieve-git-sha-8.outputs.sha8 }}
     steps:
-      - name: Check out source files
-        uses: actions/checkout@v2
+      - uses: actions/checkout@master
+      - name: Setup node 14
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
       - name: Get Composer Cache Directory
         id: composer-cache
         run: |
@@ -70,10 +73,11 @@ jobs:
 
       - name: Check if a comment was already made
         id: find-comment
-        uses: peter-evans/find-comment@v1
+        uses: peter-evans/find-comment@v2
         with:
           issue-number: ${{ steps.get-pr-number.outputs.num }}
           comment-author: github-actions[bot]
+          token: ${{ secrets.BOT_TOKEN }}
           body-includes: Download Raft
 
       - name: Get comment body
@@ -85,15 +89,17 @@ jobs:
           echo "::set-output name=body::$body"
       - name: Create comment on PR with links to plugin builds
         if: ${{ steps.find-comment.outputs.comment-id == '' }}
-        uses: peter-evans/create-or-update-comment@v1
+        uses: peter-evans/create-or-update-comment@v2
         with:
           issue-number: ${{ steps.get-pr-number.outputs.num }}
+          token: ${{ secrets.BOT_TOKEN }}
           body: ${{ steps.get-comment-body.outputs.body }}
 
       - name: Update comment on PR with links to plugin builds
         if: ${{ steps.find-comment.outputs.comment-id != '' }}
-        uses: peter-evans/create-or-update-comment@v1
+        uses: peter-evans/create-or-update-comment@v2
         with:
           comment-id: ${{ steps.find-comment.outputs.comment-id }}
+          token: ${{ secrets.BOT_TOKEN }}
           edit-mode: replace
           body: ${{ steps.get-comment-body.outputs.body }}
