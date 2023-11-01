@@ -31,8 +31,8 @@
           "name": "Accent"
         },
         {
-          "slug": "raft-accent-secondary",
-          "color": "#0F100F",
+          "slug": "ti-accent-secondary",
+          "color": "#34654E",
           "name": "Accent Secondary"
         }
       ]
