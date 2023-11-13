@@ -124,6 +124,83 @@
         {
           "fontFace": [
             {
+              "fontDisplay": "swap",
+              "fontFamily": "inter",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "300 900",
+              "src": [
+                "file:.assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf"
+              ]
+            }
+          ],
+          "fontFamily": "\"inter\", sans-serif",
+          "name": "Inter",
+          "slug": "inter"
+        },
+        {
+          "fontFace": [
+            {
+              "fontDisplay": "swap",
+              "fontFamily": "geologica",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "300 900",
+              "src": [
+                "file:.assets/fonts/geologica/Geologica-VariableFont_CRSV,SHRP,slnt,wght.ttf"
+              ]
+            }
+          ],
+          "fontFamily": "\"geologica\", sans-serif",
+          "name": "Geologica",
+          "slug": "geologica"
+        },
+        {
+          "fontFace": [
+            {
+              "fontDisplay": "swap",
+              "fontFamily": "gloock",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": [
+                "file:.assets/fonts/gloock/Gloock-Regular.ttf"
+              ]
+            }
+          ],
+          "fontFamily": "\"gloock\", serif",
+          "name": "Gloock",
+          "slug": "gloock"
+        },
+        {
+          "fontFace": [
+            {
+              "fontDisplay": "swap",
+              "fontFamily": "Jet Brains Mono",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "400 800",
+              "src": [
+                "file:.assets/fonts/jet-brains-mono/JetBrainsMono-VariableFont_wght.ttf"
+              ]
+            },
+            {
+              "fontFamily": "Jet Brains Mono",
+              "fontStretch": "normal",
+              "fontStyle": "italic",
+              "fontWeight": "400 800",
+              "src": [
+                "file:.assets/fonts/jet-brains-mono/JetBrainsMono-VariableFont_wght.ttf"
+              ]
+            }
+          ],
+          "fontFamily": "\"jet-brains-mono\", sans-serif",
+          "name": "Jet Brains Mono",
+          "slug": "jet-brains-mono"
+        },
+        {
+          "fontFace": [
+            {
               "fontFamily": "Lora",
               "fontStretch": "normal",
               "fontStyle": "normal",
