@@ -187,9 +187,9 @@
 			},
 			"spacingSizes": [
 				{
-					"name": "2XS",
+					"name": "XXS",
 					"size": "clamp(.4rem, 2vw, 0.5rem)",
-					"slug": "2xs"
+					"slug": "xxs"
 				},
 				{
 					"name": "XS",
@@ -217,9 +217,9 @@
 					"slug": "xl"
 				},
 				{
-					"name": "2XL",
+					"name": "XXL",
 					"size": "clamp(3rem, 7vw, 5rem)",
-					"slug": "2xl"
+					"slug": "xxl"
 				}
 			],
 			"units": [
