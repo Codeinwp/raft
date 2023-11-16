@@ -56,8 +56,8 @@ return array(
 <!-- /wp:query-pagination -->
 
 <!-- wp:query-no-results -->
-<!-- wp:paragraph {"backgroundColor":"raft-bg-alt"} -->
-<p class="has-raft-bg-alt-background-color has-background">Unfortuna' . esc_html( $strings['no_posts'] ) . 'd</p>
+<!-- wp:paragraph {"backgroundColor":"ti-bg-alt"} -->
+<p class="has-ti-bg-alt-background-color has-background">Unfortuna' . esc_html( $strings['no_posts'] ) . 'd</p>
 <!-- /wp:paragraph -->
 <!-- /wp:query-no-results -->
 

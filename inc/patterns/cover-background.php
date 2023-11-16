@@ -30,8 +30,8 @@ return array(
 <img class="wp-block-cover__image-background" alt="" src="' . esc_url( $hero_illustration ) . '" data-object-fit="cover"/>
 <div class="wp-block-cover__inner-container">
 
-<!-- wp:group {"textColor":"raft-fg-alt","layout":{"inherit":true}} -->
-<div class="wp-block-group has-raft-fg-alt-color has-text-color">
+<!-- wp:group {"textColor":"ti-fg-alt","layout":{"inherit":true}} -->
+<div class="wp-block-group has-ti-fg-alt-color has-text-color">
 
 <!-- wp:heading {"fontSize":"huge"} -->
 <h2 class="has-huge-font-size">' . esc_html( $strings['title'] ) . '</h2>

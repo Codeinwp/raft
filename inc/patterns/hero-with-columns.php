@@ -38,13 +38,13 @@ return array(
 <p class="has-text-align-center has-medium-font-size">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:separator {"backgroundColor":"raft-accent"} -->
-<hr class="wp-block-separator has-text-color has-raft-accent-color has-alpha-channel-opacity has-raft-accent-background-color has-background"/>
+<!-- wp:separator {"backgroundColor":"ti-accent"} -->
+<hr class="wp-block-separator has-text-color has-ti-accent-color has-alpha-channel-opacity has-ti-accent-background-color has-background"/>
 <!-- /wp:separator -->
 
 <!-- wp:columns -->
-<div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"top","style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}},"backgroundColor":"raft-bg-alt"} -->
-<div class="wp-block-column is-vertically-aligned-top has-raft-bg-alt-background-color has-background" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
+<div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"top","style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}},"backgroundColor":"ti-bg-alt"} -->
+<div class="wp-block-column is-vertically-aligned-top has-ti-bg-alt-background-color has-background" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
 <!-- wp:image {"width":150,"height":150,"sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
 <figure class="wp-block-image size-full is-resized is-style-rounded"><img src="' . esc_url( $image ) . '" alt="" width="150" height="150"/></figure>
 <!-- /wp:image -->
@@ -64,8 +64,8 @@ return array(
 <!-- /wp:buttons --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"verticalAlignment":"top","style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}},"backgroundColor":"raft-bg-alt"} -->
-<div class="wp-block-column is-vertically-aligned-top has-raft-bg-alt-background-color has-background" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
+<!-- wp:column {"verticalAlignment":"top","style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}},"backgroundColor":"ti-bg-alt"} -->
+<div class="wp-block-column is-vertically-aligned-top has-ti-bg-alt-background-color has-background" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
 <!-- wp:image {"width":150,"height":150,"sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
 <figure class="wp-block-image size-full is-resized is-style-rounded"><img src="' . esc_url( $image ) . '" alt="" width="150" height="150"/></figure>
 <!-- /wp:image -->
@@ -85,8 +85,8 @@ return array(
 <!-- /wp:buttons --></div>
 <!-- /wp:column -->
 
-<!-- wp:column {"verticalAlignment":"top","style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}},"backgroundColor":"raft-bg-alt"} -->
-<div class="wp-block-column is-vertically-aligned-top has-raft-bg-alt-background-color has-background" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
+<!-- wp:column {"verticalAlignment":"top","style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}},"backgroundColor":"ti-bg-alt"} -->
+<div class="wp-block-column is-vertically-aligned-top has-ti-bg-alt-background-color has-background" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px">
 <!-- wp:image {"width":150,"height":150,"sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
 <figure class="wp-block-image size-full is-resized is-style-rounded"><img src="' . esc_url( $image ) . '" alt="" width="150" height="150"/></figure>
 <!-- /wp:image -->

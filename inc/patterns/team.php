@@ -22,8 +22,8 @@ return array(
 	'title'      => $strings['title'],
 	'categories' => array( 'raft' ),
 	'content'    => '
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true,"type":"constrained"},"otterConditions":[]} -->
-<div class="wp-block-group alignfull has-raft-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><!-- wp:group {"align":"wide","otterConditions":[]} -->
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"ti-bg-alt","layout":{"inherit":true,"type":"constrained"},"otterConditions":[]} -->
+<div class="wp-block-group alignfull has-ti-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><!-- wp:group {"align":"wide","otterConditions":[]} -->
 <div class="wp-block-group alignwide"><!-- wp:heading {"fontSize":"x-large"} -->
 <h2 class="has-x-large-font-size">' . esc_html( $strings['title'] ) . '</h2>
 <!-- /wp:heading -->
@@ -48,7 +48,7 @@ return array(
 <p class="has-small-font-size" style="text-transform:uppercase">CEO / Co-founder</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:social-links {"iconColor":"raft-accent","iconColorValue":"#C26148","openInNewTab":true,"style":{"spacing":{"blockGap":{"top":"8px","left":"8px"}}},"className":"is-style-logos-only"} -->
+<!-- wp:social-links {"iconColor":"ti-accent","iconColorValue":"#C26148","openInNewTab":true,"style":{"spacing":{"blockGap":{"top":"8px","left":"8px"}}},"className":"is-style-logos-only"} -->
 <ul class="wp-block-social-links has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"#","service":"twitter"} /-->
 
 <!-- wp:social-link {"url":"#","service":"linkedin"} /--></ul>
@@ -68,7 +68,7 @@ return array(
 <p class="has-small-font-size" style="text-transform:uppercase">CFO / Co-founder</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:social-links {"iconColor":"raft-accent","iconColorValue":"#C26148","openInNewTab":true,"style":{"spacing":{"blockGap":{"top":"8px","left":"8px"}}},"className":"is-style-logos-only"} -->
+<!-- wp:social-links {"iconColor":"ti-accent","iconColorValue":"#C26148","openInNewTab":true,"style":{"spacing":{"blockGap":{"top":"8px","left":"8px"}}},"className":"is-style-logos-only"} -->
 <ul class="wp-block-social-links has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"#","service":"twitter"} /-->
 
 <!-- wp:social-link {"url":"#","service":"linkedin"} /--></ul>
@@ -88,7 +88,7 @@ return array(
 <p class="has-small-font-size" style="text-transform:uppercase">CTO / Co-founder</p>
 <!-- /wp:paragraph -->
 
-<!-- wp:social-links {"iconColor":"raft-accent","iconColorValue":"#C26148","openInNewTab":true,"style":{"spacing":{"blockGap":{"top":"8px","left":"8px"}}},"className":"is-style-logos-only"} -->
+<!-- wp:social-links {"iconColor":"ti-accent","iconColorValue":"#C26148","openInNewTab":true,"style":{"spacing":{"blockGap":{"top":"8px","left":"8px"}}},"className":"is-style-logos-only"} -->
 <ul class="wp-block-social-links has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"#","service":"twitter"} /-->
 
 <!-- wp:social-link {"url":"#","service":"linkedin"} /--></ul>

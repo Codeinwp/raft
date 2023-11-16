@@ -74,9 +74,9 @@ return array(
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {"textColor":"raft-fg-alt"} -->
+<!-- wp:button {"textColor":"ti-fg-alt"} -->
 <div class="wp-block-button">
-<a class="wp-block-button__link has-raft-fg-alt-color has-text-color">' . esc_html( $strings['button'] ) . '</a>
+<a class="wp-block-button__link has-ti-fg-alt-color has-text-color">' . esc_html( $strings['button'] ) . '</a>
 </div>
 <!-- /wp:button -->
 </div>
