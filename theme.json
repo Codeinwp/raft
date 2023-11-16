@@ -189,37 +189,37 @@
 				{
 					"name": "XXS",
 					"size": "clamp(.4rem, 2vw, 0.5rem)",
-					"slug": "xxs"
+					"slug": "20"
 				},
 				{
 					"name": "XS",
 					"size": "clamp(.6rem, 2.5vw, 1rem)",
-					"slug": "xs"
+					"slug": "30"
 				},
 				{
 					"name": "S",
 					"size": "clamp(1rem, 3vw, 1.5rem)",
-					"slug": "s"
+					"slug": "40"
 				},
 				{
 					"name": "M",
 					"size": "clamp(1.5rem, 4vw, 2rem)",
-					"slug": "m"
+					"slug": "50"
 				},
 				{
 					"name": "L",
 					"size": "clamp(2rem, 5vw, 3rem)",
-					"slug": "l"
+					"slug": "60"
 				},
 				{
 					"name": "XL",
 					"size": "clamp(3rem, 6vw, 4rem)",
-					"slug": "xl"
+					"slug": "70"
 				},
 				{
 					"name": "XXL",
 					"size": "clamp(3rem, 7vw, 5rem)",
-					"slug": "xxl"
+					"slug": "80"
 				}
 			],
 			"units": [
