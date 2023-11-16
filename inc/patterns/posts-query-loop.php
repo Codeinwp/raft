@@ -41,7 +41,7 @@ return array(
 <!-- wp:post-date {"fontSize":"small"} /-->
 <!-- wp:post-title /-->
 <!-- wp:post-terms {"term":"category","fontSize":"small"} /-->
-<!-- wp:post-excerpt {"moreText":"\u003cstrong\u003e' . esc_html( $strings['button'] ) . '\u003c/strong\u003e","style":{"elements":{"link":{"color":{"text":"var:preset|color|raft-accent"}}}}} /-->
+<!-- wp:post-excerpt {"moreText":"\u003cstrong\u003e' . esc_html( $strings['button'] ) . '\u003c/strong\u003e","style":{"elements":{"link":{"color":{"text":"var:preset|color|ti-accent"}}}}} /-->
 
 <!-- wp:spacer {"height":"64px"} -->
 <div style="height:64px" aria-hidden="true" class="wp-block-spacer"></div>
