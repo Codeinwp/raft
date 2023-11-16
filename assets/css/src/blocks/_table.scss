@@ -1,7 +1,7 @@
 .wp-block-table {
 
 	&.is-style-stripes tbody tr:nth-child(odd) {
-		background-color: var(--wp--preset--color--raft-bg-alt);
+		background-color: var(--wp--preset--color--ti-bg-alt);
 	}
 
 	thead {
@@ -14,7 +14,7 @@
 
 	figcaption {
 		font-size: var(--wp--preset--font-size--small);
-		color: var(--wp--preset--color--raft-fg);
+		color: var(--wp--preset--color--ti-fg);
 		opacity: 0.6;
 	}
 }

@@ -16,8 +16,8 @@ return array(
 	'title'      => __( 'Content columns with hero', 'raft' ),
 	'categories' => array( 'raft' ),
 	'content'    => '
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true,"type":"constrained"},"otterConditions":[]} -->
-<div class="wp-block-group alignfull has-raft-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><!-- wp:group {"layout":{"inherit":false}} -->
+<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"ti-bg-alt","layout":{"inherit":true,"type":"constrained"},"otterConditions":[]} -->
+<div class="wp-block-group alignfull has-ti-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><!-- wp:group {"layout":{"inherit":false}} -->
 <div class="wp-block-group"><!-- wp:heading {"textAlign":"center","fontSize":"huge"} -->
 <h2 class="has-text-align-center has-huge-font-size">Lorem ipsum sit dolor</h2>
 <!-- /wp:heading -->

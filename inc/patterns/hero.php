@@ -26,8 +26,8 @@ return array(
 	'title'      => __( 'Hero section', 'raft' ),
 	'categories' => array( 'raft' ),
 	'content'    => '
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"24px","margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true}} -->
-<div class="wp-block-group has-raft-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"24px","margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"ti-bg-alt","layout":{"inherit":true}} -->
+<div class="wp-block-group has-ti-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
 
 <!-- wp:heading {"textAlign":"center","level":1,"fontSize":"huge"} -->
 <h1 class="has-text-align-center has-huge-font-size">' . esc_html( $strings['title'] ) . '</h1>
@@ -40,9 +40,9 @@ return array(
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
 
-<!-- wp:button {"textColor":"raft-fg-alt"} -->
+<!-- wp:button {"textColor":"ti-fg-alt"} -->
 <div class="wp-block-button">
-<a class="wp-block-button__link has-raft-fg-alt-color has-text-color">' . esc_html( $strings['button'] ) . '</a>
+<a class="wp-block-button__link has-ti-fg-alt-color has-text-color">' . esc_html( $strings['button'] ) . '</a>
 </div>
 <!-- /wp:button -->
 
