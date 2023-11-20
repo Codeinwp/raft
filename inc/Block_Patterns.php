@@ -59,7 +59,16 @@ class Block_Patterns {
 	 */
 	private function setup_properties() {
 		$categories = array(
-			'raft' => array( 'label' => __( 'Raft Patterns', 'raft' ) ),
+			'raft/featured'           => array( 'label' => __( 'Featured', 'raft' ) ),
+			'raft/headers'            => array( 'label' => __( 'Headers', 'raft' ) ),
+			'raft/footers'            => array( 'label' => __( 'Footers', 'raft' ) ),
+			'raft/heroes_page_titles' => array( 'label' => __( 'Heroes / Page Titles', 'raft' ) ),
+			'raft/features'           => array( 'label' => __( 'Features', 'raft' ) ),
+			'raft/content'            => array( 'label' => __( 'Content', 'raft' ) ),
+			'raft/call_to_action'     => array( 'label' => __( 'Call to Action', 'raft' ) ),
+			'raft/singles'            => array( 'label' => __( 'Singles', 'raft' ) ),
+			'raft/post_loops'         => array( 'label' => __( 'Post Loops', 'raft' ) ),
+			'raft/pages'              => array( 'label' => __( 'Pages', 'raft' ) ),
 		);
 
 		$patterns = array(
@@ -72,7 +81,6 @@ class Block_Patterns {
 			'frequently-asked-questions',
 			'inverted-background',
 			'hero',
-
 			'alternating-feature-columns',
 			'call-to-action-2',
 			'content-columns-with-hero',
