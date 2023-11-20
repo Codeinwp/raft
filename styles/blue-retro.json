@@ -29,6 +29,11 @@
           "slug": "raft-accent",
           "color": "#F9C33E",
           "name": "Accent"
+        },
+        {
+          "slug": "raft-accent-secondary",
+          "color": "#F7B81C",
+          "name": "Accent Secondary"
         }
       ]
     }
