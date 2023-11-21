@@ -27,8 +27,8 @@
         },
         {
           "slug": "raft-bg-inv",
-	        "color": "#494949",
-	        "name": "Dark Background"
+	  "color": "#494949",
+	  "name": "Dark Background"
         },
         {
           "slug": "raft-bg-alt",
