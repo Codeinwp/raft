@@ -13,7 +13,7 @@
         {
           "slug": "raft-fg",
           "color": "#202220",
-          "name": "Foreground"
+          "name": "Text"
         },
           {
           "slug": "raft-accent",
@@ -26,14 +26,19 @@
           "name": "Accent Secondary"
         },
         {
+          "slug": "raft-bg-inv",
+	        "color": "#494949",
+	        "name": "Dark Background"
+        },
+        {
           "slug": "raft-bg-alt",
           "color": "rgba(0, 0, 0, 0.05)",
-          "name": "Background Alt"
+          "name": "Light Background"
         },
         {
           "slug": "raft-fg-alt",
           "color": "#f6f6f6",
-          "name": "Foreground Alt"
+          "name": "Inverted Text"
         }
       ]
     }
