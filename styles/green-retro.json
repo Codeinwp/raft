@@ -47,7 +47,7 @@
     "elements": {
       "heading": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--glook)"
+          "fontFamily": "var(--wp--preset--font-family--gloock)"
         }
       },
       "h1": {
