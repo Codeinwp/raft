@@ -13,7 +13,7 @@
         {
           "slug": "raft-fg",
           "color": "#FFFFFF",
-          "name": "Foreground"
+          "name": "Text"
         },
          {
           "slug": "raft-accent",
