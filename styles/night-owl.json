@@ -16,16 +16,6 @@
           "name": "Foreground"
         },
         {
-          "slug": "raft-bg-alt",
-          "color": "rgba(0, 0, 0, 0.3)",
-          "name": "Background Alt"
-        },
-        {
-          "slug": "raft-fg-alt",
-          "color": "#FFFFFF",
-          "name": "Foreground Alt"
-        },
-        {
           "slug": "raft-accent",
           "color": "#5C40CA",
           "name": "Accent"
@@ -34,6 +24,16 @@
           "slug": "raft-accent-secondary",
           "color": "#4C32B4",
           "name": "Accent Secondary"
+        },
+        {
+          "slug": "raft-bg-alt",
+          "color": "rgba(0, 0, 0, 0.3)",
+          "name": "Background Alt"
+        },
+        {
+          "slug": "raft-fg-alt",
+          "color": "#FFFFFF",
+          "name": "Foreground Alt"
         }
       ]
     }
