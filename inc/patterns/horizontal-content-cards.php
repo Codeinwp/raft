@@ -24,7 +24,7 @@ $images = array(
 
 return array(
 	'title'      => __( 'Horizontal content cards', 'raft' ),
-	'categories' => array( 'raft' ),
+	'categories' => array( 'raft/content' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true,"type":"constrained"},"otterConditions":[]} -->
 <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><!-- wp:group {"align":"wide","layout":{"inherit":false}} -->
