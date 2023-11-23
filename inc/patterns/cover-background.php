@@ -22,7 +22,7 @@ $strings = array(
 
 return array(
 	'title'      => __( 'Cover title with background', 'raft' ),
-	'categories' => array( 'raft' ),
+	'categories' => array( 'raft/heroes_page_titles' ),
 	'content'    => '
 <!-- wp:cover {"url":"' . esc_url( $hero_illustration ) . '","dimRatio":60,"overlayColor":"black","minHeight":60,"minHeightUnit":"vh","align":"full","style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}}} -->
 <div class="wp-block-cover alignfull" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px;min-height:60vh">
