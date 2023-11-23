@@ -66,7 +66,7 @@ class Block_Patterns {
 			'raft/features'           => array( 'label' => __( 'Features', 'raft' ) ),
 			'raft/content'            => array( 'label' => __( 'Content', 'raft' ) ),
 			'raft/testimonials'       => array( 'label' => __( 'Testimonials', 'raft' ) ),
-			'raft/team'       	  => array( 'label' => __( 'Team', 'raft' ) ),
+			'raft/team'               => array( 'label' => __( 'Team', 'raft' ) ),
 			'raft/pricing'            => array( 'label' => __( 'Pricing', 'raft' ) ),
 			'raft/call_to_action'     => array( 'label' => __( 'Call to Action', 'raft' ) ),
 			'raft/singles'            => array( 'label' => __( 'Singles', 'raft' ) ),
