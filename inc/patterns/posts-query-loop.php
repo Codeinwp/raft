@@ -20,7 +20,7 @@ $strings = array(
 
 return array(
 	'title'      => $strings['title'],
-	'categories' => array( 'raft' ),
+	'categories' => array( 'raft/post_loops' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true}} -->
 <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
