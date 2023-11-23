@@ -47,7 +47,7 @@
     "elements": {
       "heading": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--jet-brains-mono)"
+          "fontFamily": "var(--wp--preset--font-family--spline-sans-mono)"
         }
       },
       "h1": {
@@ -82,7 +82,7 @@
       }
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--jet-brains-mono)"
+      "fontFamily": "var(--wp--preset--font-family--spline-sans-mono)"
     }
   }
 }

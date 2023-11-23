@@ -43,47 +43,47 @@
       ]
     }
   },
-  "styles": {
+"styles": {
     "elements": {
       "heading": {
         "typography": {
-          "fontFamily": "var(--wp--preset--font-family--geologica)"
+          "fontFamily": "var(--wp--preset--font-family--spline-sans)"
         }
       },
       "h1": {
         "typography": {
-          "fontWeight": "800"
+          "fontWeight": "900"
         }
       },
       "h2": {
         "typography": {
-          "fontWeight": "800"
+          "fontWeight": "700"
         }
       },
       "h3": {
         "typography": {
-          "fontWeight": "800"
+          "fontWeight": "700"
         }
       },
       "h4": {
         "typography": {
-          "fontWeight": "800"
+          "fontWeight": "700"
         }
       },
       "h5": {
         "typography": {
-          "fontWeight": "800"
+          "fontWeight": "700"
         }
       },
       "h6": {
         "typography": {
-          "fontWeight": "800"
+          "fontWeight": "700"
         }
       }
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--geologica)"
+      "fontFamily": "var(--wp--preset--font-family--spline-sans)",
+		  "fontWeight": "400"
     }
   }
 }
-
