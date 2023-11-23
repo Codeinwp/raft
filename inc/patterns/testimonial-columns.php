@@ -16,7 +16,7 @@ $image = RAFT_URL . 'assets/img/shape-07.svg';
 
 return array(
 	'title'      => __( 'Testimonial Columns', 'raft' ),
-	'categories' => array( 'raft' ),
+	'categories' => array( 'raft/testimonials' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true,"type":"constrained"},"otterConditions":[]} -->
 <div class="wp-block-group alignfull has-raft-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><!-- wp:group {"align":"wide","layout":{"inherit":false}} -->
