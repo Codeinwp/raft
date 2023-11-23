@@ -5,7 +5,7 @@
 	&.taxonomy-category {
 
 		a {
-			padding: 8px 24px;
+			padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
 			margin: 5px;
 			background-color: var(--wp--preset--color--raft-bg-alt);
 			border-radius: 25px;
