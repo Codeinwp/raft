@@ -18,7 +18,7 @@ $strings = array(
 
 return array(
 	'title'      => $strings['title'],
-	'categories' => array( 'raft' ),
+	'categories' => array( 'raft/pricing' ),
 	'content'    => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true,"type":"constrained"},"otterConditions":[]} -->
 <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><!-- wp:heading {"textAlign":"center","className":"is-style-default"} -->
 <h2 class="has-text-align-center is-style-default">' . esc_html( $strings['title'] ) . '</h2>
