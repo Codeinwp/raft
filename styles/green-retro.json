@@ -82,7 +82,7 @@
       }
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--source-sans-lora)"
+      "fontFamily": "var(--wp--preset--font-family--lora)"
     }
   }
 }
