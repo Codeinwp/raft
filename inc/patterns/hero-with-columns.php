@@ -22,7 +22,7 @@ $image = RAFT_URL . 'assets/img/shape-05.svg';
 
 return array(
 	'title'      => $strings['title'],
-	'categories' => array( 'raft' ),
+	'categories' => array( 'raft/heroes_page_titles' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"blockGap":"32px","margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true,"type":"constrained"},"otterConditions":[]} -->
 <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><!-- wp:group {"align":"wide","style":{"spacing":{"blockGap":"32px"}},"otterConditions":[]} -->
