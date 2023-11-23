@@ -83,6 +83,7 @@
     },
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--geologica)"
+       "fontWeight": "300"
     }
   }
 }
