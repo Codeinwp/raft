@@ -141,7 +141,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "300 900",
 							"src": [
-								"file:.assets/fonts/spline-sans/SplineSans-VariableFont_wght.ttf"
+								"file:./assets/fonts/spline-sans/SplineSans-VariableFont_wght.ttf"
 							]
 						}
 					],
@@ -158,7 +158,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "300 900",
 							"src": [
-								"file:.assets/fonts/geologica/Geologica-VariableFont_CRSV,SHRP,slnt,wght.ttf"
+								"file:./assets/fonts/geologica/Geologica-VariableFont_CRSV,SHRP,slnt,wght.ttf"
 							]
 						}
 					],
@@ -175,7 +175,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "400",
 							"src": [
-								"file:.assets/fonts/gloock/Gloock-Regular.ttf"
+								"file:./assets/fonts/gloock/Gloock-Regular.ttf"
 							]
 						}
 					],
@@ -192,7 +192,7 @@
 							"fontStyle": "normal",
 							"fontWeight": "400 800",
 							"src": [
-								"file:.assets/fonts/spline-sans-mono/SplineSansMono-VariableFont_wght.ttf"
+								"file:./assets/fonts/spline-sans-mono/SplineSansMono-VariableFont_wght.ttf"
 							]
 						},
 						{
@@ -201,7 +201,7 @@
 							"fontStyle": "italic",
 							"fontWeight": "400 800",
 							"src": [
-								"file:.assets/fonts/spline-sans-mono/SplineSansMono-Italic-VariableFont_wght.ttf"
+								"file:./assets/fonts/spline-sans-mono/SplineSansMono-Italic-VariableFont_wght.ttf"
 							]
 						}
 					],
