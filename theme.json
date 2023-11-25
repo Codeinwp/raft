@@ -511,6 +511,10 @@
 			"title": "Blank Page - Only Content"
 		},
 		{
+		  "name": "template-plain",
+		  "title": "Page with Header & Footer"
+		},
+		{
 			"name": "single-product",
 			"title": "WooCommerce Single Product"
 		},
@@ -528,7 +532,8 @@
 			"name": "header",
 			"title": "Header",
 			"area": "header"
-		},{
+		},
+		{
 			"name": "header-centered",
 			"title": "Header Centered",
 			"area": "header"
