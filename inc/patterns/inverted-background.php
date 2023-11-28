@@ -23,7 +23,7 @@ $strings = array(
 
 return array(
 	'title'      => $strings['title'],
-	'categories' => array( 'raft' ),
+	'categories' => array( 'raft/content' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-fg","textColor":"raft-bg","layout":{"inherit":false,"wideSize":"960px"}} -->
 <div class="wp-block-group alignfull has-raft-bg-color has-raft-fg-background-color has-text-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
