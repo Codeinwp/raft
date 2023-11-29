@@ -85,6 +85,52 @@ class Core {
 				'script',
 			)
 		);
+	
+		add_theme_support(
+			'otter-onboarding',
+			array(
+				'templates' => array(
+					'archive'    => array(
+						'archive-boxed' => array(
+							'file'  => RAFT_DIR . 'library/archive/archive-boxed.html',
+							'title' => 'Archive Boxed',
+						),
+						'archive-cards' => array(
+							'file'  => RAFT_DIR . 'library/archive/archive-cards.html',
+							'title' => 'Archive Cards',
+						),
+						'archive-row'   => array(
+							'file'  => RAFT_DIR . 'library/archive/archive-row.html',
+							'title' => 'Archive Row',
+						),
+					),
+					'single'     => array(
+						'single-post-centered' => array(
+							'file'  => RAFT_DIR . 'library/single/single-post-centered.html',
+							'title' => 'Single Post Centered',
+						),
+						'single-post-columns'  => array(
+							'file'  => RAFT_DIR . 'library/single/single-post-columns.html',
+							'title' => 'Single Post Columns',
+						),
+						'single-post-cover'    => array(
+							'file'  => RAFT_DIR . 'library/single/single-post-cover.html',
+							'title' => 'Single Post Cover',
+						),
+					),
+					'front-page' => array(
+						'front-page-alt'   => array(
+							'file'  => RAFT_DIR . 'library/front-end/front-page-alt.html',
+							'title' => 'Landing Page',
+						),
+						'front-page-alt-2' => array(
+							'file'  => RAFT_DIR . 'library/front-end/front-page-alt-2.html',
+							'title' => 'Landing Page',
+						),
+					),
+				),
+			)
+		);
 
 		remove_theme_support( 'core-block-patterns' );
 
