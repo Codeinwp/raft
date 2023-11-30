@@ -70,6 +70,14 @@ class Admin {
 						admin_url( 'plugins.php' ) 
 					) 
 				),
+				'onboardingUrl' => esc_url(
+					add_query_arg(
+						array(
+							'onboarding' => 'true',
+						),
+						admin_url( 'site-editor.php' )
+					) 
+				),
 				'activating'    => __( 'Activating', 'raft' ) . '&hellip;',
 				'installing'    => __( 'Installing', 'raft' ) . '&hellip;',
 				'done'          => __( 'Done', 'raft' ),
@@ -86,11 +94,11 @@ class Admin {
 
 		$notice_html .= '<h1 class="notice-title">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= sprintf( __( 'Power up your website building experience with %s!', 'raft' ), '<span>Otter Blocks</span>' );
+		$notice_html .= sprintf( __( 'Get started with Raft in minutes, with %s', 'raft' ), '<span>Otter\'s FSE Onboarding</span>' );
 
 		$notice_html .= '</h1>';
 
-		$notice_html .= '<p class="description">' . __( 'Otter is a Gutenberg Blocks page builder plugin that adds extra functionality to the WordPress Block Editor (also known as Gutenberg) for a better page building experience without the need for traditional page builders.', 'raft' ) . '</p>';
+		$notice_html .= '<p class="description">' . __( 'Change your site’s appearance, setup your templates, add new pages and much more, with Otter’s innovative Onboarding process.', 'raft' ) . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
@@ -98,11 +106,18 @@ class Admin {
 		$notice_html .= '<button id="raft-install-otter" class="button button-primary button-hero">';
 		$notice_html .= '<span class="dashicons dashicons-update hidden"></span>';
 		$notice_html .= '<span class="text">';
-		$notice_html .= 'installed' === $otter_status ?
+
+		if ( 'active' === $otter_status ) {
 			/* translators: %s: Otter Blocks */
-			sprintf( __( 'Activate %s', 'raft' ), 'Otter Blocks' ) :
+			$notice_html .= __( 'Try it out!', 'raft' );
+		} elseif ( 'installed' === $otter_status ) {
 			/* translators: %s: Otter Blocks */
-			sprintf( __( 'Install & Activate %s', 'raft' ), 'Otter Blocks' );
+			$notice_html .= sprintf( __( 'Activate %s', 'raft' ), 'Otter Blocks' );
+		} else {
+			/* translators: %s: Otter Blocks */
+			$notice_html .= sprintf( __( 'Install & Activate %s', 'raft' ), 'Otter Blocks' );
+		}
+
 		$notice_html .= '</span>';
 		$notice_html .= '</button>';
 
@@ -162,9 +177,18 @@ class Admin {
 	 * @return bool
 	 */
 	private function should_show_welcome_notice(): bool {
-		// Already using Otter.
+		// Already using Otter & has finished onboarding.
 		if ( is_plugin_active( 'otter-blocks/otter-blocks.php' ) ) {
-			return false;
+			if ( class_exists( '\ThemeIsle\GutenbergBlocks\Plugins\FSE_Onboarding' ) ) {
+				$status = get_option( \ThemeIsle\GutenbergBlocks\Plugins\FSE_Onboarding::OPTION_KEY, array() );
+				$slug   = get_stylesheet();
+
+				if ( ! empty( $status[ $slug ] ) ) {
+					return false;
+				}
+			} else {
+				return false;
+			}
 		}
 
 		// Notice was dismissed.
@@ -223,6 +247,10 @@ class Admin {
 	 */
 	private function get_otter_status(): string {
 		$status = 'not-installed';
+
+		if ( is_plugin_active( 'otter-blocks/otter-blocks.php' ) ) {
+			return 'active';
+		}
 
 		if ( file_exists( ABSPATH . 'wp-content/plugins/otter-blocks/otter-blocks.php' ) ) {
 			return 'installed';

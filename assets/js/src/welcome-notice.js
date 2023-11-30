@@ -8,6 +8,7 @@ function handleWelcomeNotice( $ ) {
 		installing,
 		done,
 		activationUrl,
+		onboardingUrl,
 		ajaxUrl,
 		nonce,
 		otterRefNonce,
@@ -46,6 +47,11 @@ function handleWelcomeNotice( $ ) {
 	$( installBtn ).on( 'click', async () => {
 		installSpinner.removeClass( 'hidden' );
 		installBtn.attr( 'disabled', true );
+
+		if ( otterStatus === 'active' ) {
+			window.location.href = onboardingUrl;
+			return;
+		}
 
 		if ( otterStatus === 'installed' ) {
 			await activateOtter();
