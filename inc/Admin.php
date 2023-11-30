@@ -33,6 +33,7 @@ class Admin {
 		add_action( 'admin_notices', array( $this, 'render_welcome_notice' ), 0 );
 		add_action( 'wp_ajax_raft_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
 		add_action( 'wp_ajax_raft_set_otter_ref', array( $this, 'set_otter_ref' ) );
+		add_action( 'activated_plugin', 'after_otter_activation' );
 	}
 
 	/**
@@ -257,5 +258,47 @@ class Admin {
 		}
 
 		return $status;
+	}
+
+	/**
+	 * Run after Otter Blocks activation.
+	 *
+	 * @param string $plugin Plugin name.
+	 *
+	 * @return void
+	 */
+	public function after_otter_activation( $plugin ) {
+		if ( 'otter-blocks/otter-blocks.php' !== $plugin ) {
+			return;
+		}
+
+		if ( ! class_exists( '\ThemeIsle\GutenbergBlocks\Plugins\FSE_Onboarding' ) ) {
+			return;
+		}
+
+		$status = get_option( \ThemeIsle\GutenbergBlocks\Plugins\FSE_Onboarding::OPTION_KEY, array() );
+		$slug   = get_stylesheet();
+
+		if ( ! empty( $status[ $slug ] ) ) {
+			return;
+		}
+
+		// Dismiss after two days from activation.
+		$activated_time = get_option( 'raft_install' );
+
+		if ( ! empty( $activated_time ) && time() - intval( $activated_time ) > ( 2 * DAY_IN_SECONDS ) ) {
+			update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
+			return;
+		}
+
+		$onboarding = add_query_arg(
+			array(
+				'onboarding' => 'true',
+			),
+			admin_url( 'site-editor.php' )
+		);
+
+		wp_safe_redirect( $onboarding );
+		exit;
 	}
 }
