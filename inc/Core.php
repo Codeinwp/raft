@@ -148,6 +148,19 @@ class Core {
 			// FAQ patterns.
 			'faq_section_title'     => __( 'Frequently Asked Questions', 'raft' ),
 			'faq_title'             => __( 'Just a frequent question', 'raft' ),
+
+			// Portfolio patterns.
+			'portfolio_section_title'     => __( 'Explore my work', 'raft' ),
+			'portfolio_title'             => __( 'A portfolio title', 'raft' ),
+			'portfolio_client'             => __( 'Client Name', 'raft' ),
+
+			// Loops and other.
+			'read_more'     => __( 'Read more', 'raft' ),
+			'continue_reading'     => __( 'Continue reading', 'raft' ),
+			'no_posts_found'     => __( 'Unfortunately no posts were found', 'raft' ),
+			'search'     => __( 'Search for a keyword...', 'raft' ),
+			'404'     => __( '404', 'raft' ),
+			'page_not_found'     => __( 'Unfortunately the page was not found.', 'raft' ),
 			
 			// Content Patterns.
 			'content_title'         => __( 'A generic content title', 'raft' ),
