@@ -95,6 +95,37 @@ class Block_Patterns {
 			'pricing-plans-inline-title',
 			'team',
 			'testimonial-columns',
+			
+			/* new patterns */
+			
+			'features-centered',
+			'feature-cards',
+			'features-background',
+			'hero-columns',
+			'hero-boxed',
+			'title-button',
+			'title-background',
+			'testimonial-background',
+			'testimonial-columns',
+			'testimonial-fullwidth',
+			'testimonial-cards',
+			'pricing-5',
+			'pricing-4',
+			'pricing-3',
+			'loop-card-centered',
+			'loop-cards',
+			'loop-rows',
+			'loop-3',
+			'call-to-action-image',
+			'call-to-action-4',
+			'team-columns',
+			'team-grid',
+			'team-rows',
+			'single-post-2',
+			'single-post-3',
+			'single-post-cover',
+			'homepage-2',
+			'homepage -3',
 		);
 
 		$this->categories = apply_filters( 'raft_block_patterns_categories', $categories );

@@ -55,6 +55,7 @@ class Core {
 		add_action( 'after_setup_theme', array( $this, 'setup' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'add_editor_styles' ) );
+		add_filter( 'raft_strings', array( $this, 'strings' ) );
 	}
 
 	/**
@@ -107,5 +108,59 @@ class Core {
 	 */
 	public function add_editor_styles() {
 		Assets_Manager::enqueue_style( Assets_Manager::ASSETS_SLUGS['editor-css'], 'editor' );
+	}
+
+	/**
+	 * Define theme strings.
+	 * 
+	 * @param array $strings Strings.
+	 * @return array
+	 */
+	public function strings( $strings = array() ) {
+		$strings = array(
+			
+			// Generic patterns.
+			'hero_title'            => __( 'Block Based Themes Made simple', 'raft' ),
+			'page_title'            => __( 'This is a page title', 'raft' ),
+			'section_title'         => __( 'This is section title', 'raft' ),
+			'subtitle'              => __( 'Subtitle', 'raft' ),
+			'section_description'   => __( 'A short section description', 'raft' ),
+			'paragraph_text'        => __( 'This is placeholder text, feel free to replace it with your unique content as it\'s included here just to provide you with a better understanding of how your text will fit in the layout. Explore the various patterns and templates as you create your personalized web experience.', 'raft' ),
+			'short_text'            => __( 'Just some placeholder text', 'raft' ),
+			
+			// Feature patterns.
+			'feature_section_title' => __( 'Showcase your Features and Services', 'raft' ),
+			'feature_title'         => __( 'This is feature title', 'raft' ),
+			'feature_description'   => __( 'A placeholder description that you can replace with your own content.', 'raft' ),
+			'button_text'           => __( 'Button Text', 'raft' ),
+			
+			// Team patterns.
+			'team_section_title'    => __( 'Our Team', 'raft' ),
+			'team_member'           => __( 'Team member name', 'raft' ),
+			'member_role'           => __( 'Company role', 'raft' ),
+			
+			// Pricing patterns.
+			'pricing_section_title' => __( 'A pricing section. Join premium!', 'raft' ),
+			'plan_title'            => __( 'Plan title', 'raft' ),
+			'price'                 => __( '$19.99', 'raft' ),
+			'price_feature'         => __( 'A pricing feature', 'raft' ),
+			
+			// FAQ patterns.
+			'faq_section_title'     => __( 'Frequently Asked Questions', 'raft' ),
+			'faq_title'             => __( 'Just a frequent question', 'raft' ),
+			
+			// Content Patterns.
+			'content_title'         => __( 'A generic content title', 'raft' ),
+			'content_subtitle'      => __( 'A content subtitle', 'raft' ),
+			
+			// Testimonial patterns.
+			'testimonial'           => __( '"...Absolutely one of the best services out there, very professional and easy-going experience, highly recommended..."', 'raft' ),
+			'testimonial_name'      => __( 'Jason Doe', 'raft' ),
+			
+			// CTA patterns.
+			'cta_title'             => __( 'Get started today, get in touch!', 'raft' ),
+		);
+
+		return $strings;
 	}
 }
