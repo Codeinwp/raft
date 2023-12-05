@@ -1,54 +1,77 @@
 <?php
 /**
- * Pattern
- *
+ * Testimonial Columns with Rating
+ * 
  * @author Themeisle
  * @package raft
  * @since 1.0.5
  *
  * slug: testimonial-columns
- * title: Testimonial Columns
- * categories: raft
- * keywords: section, testimonial, columns, users
+ * title: Testimonial Columns with Rating
+ * categories: raft/testimonials
+ * keywords: testimonial, columns, rating
  */
 
-$image = RAFT_URL . 'assets/img/shape-07.svg';
+$raft_strings = apply_filters( 'raft_strings', array() );
+
+$images = array(
+	RAFT_URL . 'assets/img/shape-05.svg',
+);
 
 return array(
-	'title'      => __( 'Testimonial Columns', 'raft' ),
+	'title'      => __( 'Testimonial Columns with Rating', 'raft' ),
 	'categories' => array( 'raft/testimonials' ),
 	'content'    => '
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true,"type":"constrained"},"otterConditions":[]} -->
-<div class="wp-block-group alignfull has-raft-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><!-- wp:group {"align":"wide","layout":{"inherit":false}} -->
-<div class="wp-block-group alignwide"><!-- wp:columns -->
-<div class="wp-block-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"align":"center","width":150,"height":150,"sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
-<figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="' . esc_url( $image ) . '" alt="" width="150" height="150"/></figure>
-<!-- /wp:image -->
+		<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|80","margin":{"top":"0","bottom":"0"}}},"backgroundColor":"raft-bg","layout":{"type":"constrained"},"metadata":{}} -->
+		<div class="wp-block-group alignfull has-raft-bg-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
+			<!-- wp:columns {"align":"wide"} -->
+			<div class="wp-block-columns alignwide">
+				<!-- wp:column -->
+				<div class="wp-block-column">
+					<!-- wp:image -->
+					<figure class="wp-block-image size-full is-resized is-style-rounded">
+						<img src="' . esc_url( $images[0] ) . '" alt="" class="wp-image-287" style="aspect-ratio:1;object-fit:cover;width:88px"/>
+					</figure>
+					<!-- /wp:image -->
 
-<!-- wp:paragraph {"align":"center","fontSize":"normal"} -->
-<p class="has-text-align-center has-normal-font-size">"...Ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium..."</p>
-<!-- /wp:paragraph -->
+					<!-- wp:paragraph -->
+					<p class="has-text-align-left has-normal-font-size">' . esc_html( $raft_strings['testimonial'] ) . '</p>
+					<!-- /wp:paragraph -->
 
-<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"small"} -->
-<h3 class="has-text-align-center has-small-font-size" style="text-transform:uppercase">Smith Williamson</h3>
-<!-- /wp:heading --></div>
-<!-- /wp:column -->
+					<!-- wp:paragraph -->
+					<p class="has-text-align-left has-raft-accent-color has-text-color has-link-color has-normal-font-size">★ ★ ★ ★ ★</p>
+					<!-- /wp:paragraph -->
 
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"align":"center","width":150,"height":150,"sizeSlug":"full","linkDestination":"none","className":"is-style-rounded"} -->
-<figure class="wp-block-image aligncenter size-full is-resized is-style-rounded"><img src="' . esc_url( $image ) . '" alt="" width="150" height="150"/></figure>
-<!-- /wp:image -->
+					<!-- wp:paragraph -->
+					<p class="has-text-align-left has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase">' . esc_html( $raft_strings['testimonial_name'] ) . '</p>
+					<!-- /wp:paragraph -->
+				</div>
+				<!-- /wp:column -->
 
-<!-- wp:paragraph {"align":"center","fontSize":"normal"} -->
-<p class="has-text-align-center has-normal-font-size">"...Ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium..."</p>
-<!-- /wp:paragraph -->
+				<!-- wp:column -->
+				<div class="wp-block-column">
+					<!-- wp:image -->
+					<figure class="wp-block-image size-full is-resized is-style-rounded">
+						<img src="' . esc_url( $images[0] ) . '" alt="" class="wp-image-287" style="aspect-ratio:1;object-fit:cover;width:88px"/>
+					</figure>
+					<!-- /wp:image -->
 
-<!-- wp:heading {"textAlign":"center","level":3,"style":{"typography":{"textTransform":"uppercase"}},"fontSize":"small"} -->
-<h3 class="has-text-align-center has-small-font-size" style="text-transform:uppercase">Smith Williamson</h3>
-<!-- /wp:heading --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div>
-<!-- /wp:group --></div>
-<!-- /wp:group -->',
+					<!-- wp:paragraph -->
+					<p class="has-text-align-left has-normal-font-size">' . esc_html( $raft_strings['testimonial'] ) . '</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph -->
+					<p class="has-text-align-left has-raft-accent-color has-text-color has-link-color has-normal-font-size">★ ★ ★ ★ ★</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph -->
+					<p class="has-text-align-left has-small-font-size" style="font-style:normal;font-weight:600;letter-spacing:2px;text-transform:uppercase">' . esc_html( $raft_strings['testimonial_name'] ) . '</p>
+					<!-- /wp:paragraph -->
+				</div>
+				<!-- /wp:column -->
+			</div>
+			<!-- /wp:columns -->
+		</div>
+		<!-- /wp:group -->
+	',
 );
