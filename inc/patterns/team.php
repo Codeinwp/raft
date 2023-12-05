@@ -20,7 +20,7 @@ $image = RAFT_URL . 'assets/img/shape-02.svg';
 
 return array(
 	'title'      => $strings['title'],
-	'categories' => array( 'raft/content' ),
+	'categories' => array( 'raft/team' ),
 	'content'    => '
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true,"type":"constrained"},"otterConditions":[]} -->
 <div class="wp-block-group alignfull has-raft-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px"><!-- wp:group {"align":"wide","otterConditions":[]} -->
