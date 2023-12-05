@@ -30,7 +30,7 @@ return array(
                 <!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40","top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}}} -->
                 <div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
                     <!-- wp:heading {"textAlign":"left"} -->
-                    <h2 class="wp-block-heading has-text-align-left">' . esc_html( $raft_strings['team_member_title'] ) . '</h2>
+                    <h2 class="wp-block-heading has-text-align-left">' . esc_html( $raft_strings['team_member'] ) . '</h2>
                     <!-- /wp:heading -->
 
                     <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}},"fontSize":"small"} -->
@@ -38,7 +38,7 @@ return array(
                     <!-- /wp:paragraph -->
 
                     <!-- wp:paragraph -->
-                    <p>' . esc_html( $raft_strings['team_member_description'] ) . '</p>
+                    <p>' . esc_html( $raft_strings['paragraph_text'] ) . '</p>
                     <!-- /wp:paragraph -->
 
                     <!-- wp:social-links {"iconColor":"raft-fg-alt","iconColorValue":"#FDFDFD","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|20","left":"var:preset|spacing|20"}}},"className":"is-style-logos-only","layout":{"type":"flex","flexWrap":"nowrap"}} -->
@@ -66,7 +66,7 @@ return array(
                 <!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"right":"var:preset|spacing|40","left":"var:preset|spacing|40","top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}}} -->
                 <div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
                     <!-- wp:heading {"textAlign":"left"} -->
-                    <h2 class="wp-block-heading has-text-align-left">' . esc_html( $raft_strings['team_member_title'] ) . '</h2>
+                    <h2 class="wp-block-heading has-text-align-left">' . esc_html( $raft_strings['team_member'] ) . '</h2>
                     <!-- /wp:heading -->
 
                     <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}},"fontSize":"small"} -->
@@ -74,7 +74,7 @@ return array(
                     <!-- /wp:paragraph -->
 
                     <!-- wp:paragraph -->
-                    <p>' . esc_html( $raft_strings['team_member_description'] ) . '</p>
+                    <p>' . esc_html( $raft_strings['paragraph_text'] ) . '</p>
                     <!-- /wp:paragraph -->
 
                     <!-- wp:social-links {"iconColor":"raft-fg-alt","iconColorValue":"#FDFDFD","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|20","left":"var:preset|spacing|20"}}},"className":"is-style-logos-only","layout":{"type":"flex","flexWrap":"nowrap"}} -->
