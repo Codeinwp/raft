@@ -154,11 +154,12 @@ class Core {
 			'portfolio_title'             => __( 'A portfolio title', 'raft' ),
 			'portfolio_client'             => __( 'Client Name', 'raft' ),
 
-			// Loops and other.
+			// Loops and templates.
 			'read_more'     => __( 'Read more', 'raft' ),
 			'continue_reading'     => __( 'Continue reading', 'raft' ),
 			'no_posts_found'     => __( 'Unfortunately no posts were found', 'raft' ),
 			'search_results'     => __( 'Search results', 'raft' ),
+			'search_button'     => __( 'Search', 'raft' ),
 			'search_placeholder'     => __( 'Search for a keyword...', 'raft' ),
 			'404'     => __( '404', 'raft' ),
 			'page_not_found'     => __( 'Unfortunately the page was not found.', 'raft' ),
