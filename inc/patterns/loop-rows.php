@@ -1,18 +1,20 @@
 <?php
 /**
- * Posts Loop Rows Pattern for Raft Theme
+ * Posts Loop Rows
  *
  * @author Themeisle
  * @package raft
  * @since 1.0.5
  *
- * slug: loop-rows
+ * slug: posts-loop-rows
  * title: Posts Loop Rows
  * categories: raft/post_loops
- * keywords: posts, loop, rows
+ * keywords: loop, rows, posts
  */
 
 $raft_strings = apply_filters( 'raft_strings', array() );
+
+// Define images array if needed here
 
 return array(
 	'title'      => __( 'Posts Loop Rows', 'raft' ),
@@ -27,31 +29,23 @@ return array(
 				<div class="wp-block-columns" style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
 					<!-- wp:column {"width":"50%","style":{"spacing":{"blockGap":"0"}}} -->
 					<div class="wp-block-column" style="flex-basis:50%">
-						<!-- wp:group {"style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-						<div class="wp-block-group">
-							<!-- wp:post-featured-image {"isLink":true} /-->
-						</div>
-						<!-- /wp:group -->
+						<!-- wp:post-featured-image {"isLink":true} /-->
 					</div>
 					<!-- /wp:column -->
 
 					<!-- wp:column {"verticalAlignment":"center","width":"50%","style":{"spacing":{"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}}} -->
 					<div class="wp-block-column is-vertically-aligned-center" style="padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50);flex-basis:50%">
-						<!-- wp:group {"layout":{"type":"constrained","justifyContent":"left"}} -->
-						<div class="wp-block-group">
-							<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"},"fontSize":"small"} -->
-							<div class="wp-block-group has-small-font-size">
-								<!-- wp:post-terms {"term":"category"} /-->
+						<!-- wp:group {"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between"},"fontSize":"small"} -->
+						<div class="wp-block-group has-small-font-size">
+							<!-- wp:post-terms {"term":"category"} /-->
 
-								<!-- wp:post-date /-->
-							</div>
-							<!-- /wp:group -->
-
-							<!-- wp:post-title {"textAlign":"left","isLink":true,"fontSize":"medium"} /-->
-
-							<!-- wp:read-more {"content":"' . esc_html( $raft_strings['continue_reading'] ) . '","style":{"elements":{"link":{"color":{"text":"var:preset|color|raft-accent"}}}},"textColor":"raft-accent"} /-->
+							<!-- wp:post-date /-->
 						</div>
 						<!-- /wp:group -->
+
+						<!-- wp:post-title {"textAlign":"left","isLink":true,"fontSize":"medium"} /-->
+
+						<!-- wp:read-more {"content":"Continue reading","style":{"elements":{"link":{"color":{"text":"var:preset|color|raft-accent"}}}},"textColor":"raft-accent"} /-->
 					</div>
 					<!-- /wp:column -->
 				</div>
@@ -72,7 +66,7 @@ return array(
 
 				<!-- wp:query-no-results -->
 				<!-- wp:paragraph {"align":"center","placeholder":"Add text or blocks that will display when the query returns no results.","backgroundColor":"raft-bg-alt"} -->
-				<p class="has-text-align-center has-raft-bg-alt-background-color has-background">' . esc_html( $raft_strings['no_posts_found'] ) . '</p>
+				<p class="has-text-align-center has-raft-bg-alt-background-color has-background">Unfortunately no posts were found</p>
 				<!-- /wp:paragraph -->
 				<!-- /wp:query-no-results -->
 			</div>
