@@ -126,11 +126,6 @@ class Block_Patterns {
 			'single-post-cover',
 			'homepage-2',
 			'homepage -3',
-
-
-
-
-
 		);
 
 		$this->categories = apply_filters( 'raft_block_patterns_categories', $categories );
