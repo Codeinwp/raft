@@ -158,7 +158,8 @@ class Core {
 			'read_more'     => __( 'Read more', 'raft' ),
 			'continue_reading'     => __( 'Continue reading', 'raft' ),
 			'no_posts_found'     => __( 'Unfortunately no posts were found', 'raft' ),
-			'search'     => __( 'Search for a keyword...', 'raft' ),
+			'search_results'     => __( 'Search results', 'raft' ),
+			'search_placeholder'     => __( 'Search for a keyword...', 'raft' ),
 			'404'     => __( '404', 'raft' ),
 			'page_not_found'     => __( 'Unfortunately the page was not found.', 'raft' ),
 			
