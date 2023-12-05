@@ -34,7 +34,7 @@ return array(
                     <!-- /wp:heading -->
 
                     <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}},"fontSize":"small"} -->
-                    <p class="has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">' . esc_html( $raft_strings['team_member_role'] ) . '</p>
+                    <p class="has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">' . esc_html( $raft_strings['member_role'] ) . '</p>
                     <!-- /wp:paragraph -->
 
                     <!-- wp:paragraph -->
@@ -70,7 +70,7 @@ return array(
                     <!-- /wp:heading -->
 
                     <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}},"fontSize":"small"} -->
-                    <p class="has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">' . esc_html( $raft_strings['team_member_role'] ) . '</p>
+                    <p class="has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">' . esc_html( $raft_strings['member_role'] ) . '</p>
                     <!-- /wp:paragraph -->
 
                     <!-- wp:paragraph -->
