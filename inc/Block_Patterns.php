@@ -69,7 +69,6 @@ class Block_Patterns {
 			'raft/team'               => array( 'label' => __( 'Team', 'raft' ) ),
 			'raft/pricing'            => array( 'label' => __( 'Pricing', 'raft' ) ),
 			'raft/call_to_action'     => array( 'label' => __( 'Call to Action', 'raft' ) ),
-			'raft/singles'            => array( 'label' => __( 'Singles', 'raft' ) ),
 			'raft/post_loops'         => array( 'label' => __( 'Post Loops', 'raft' ) ),
 			'raft/pages'              => array( 'label' => __( 'Pages', 'raft' ) ),
 		);
@@ -118,14 +117,17 @@ class Block_Patterns {
 			'loop-3',
 			'call-to-action-image',
 			'call-to-action-4',
+			'text-columns',
+			'centered-text-background',
 			'team-columns',
-			'team-grid',
 			'team-rows',
-			'single-post-2',
-			'single-post-3',
-			'single-post-cover',
 			'homepage-2',
-			'homepage -3',
+			'homepage-3',
+			'about-page',
+			'contact-page',
+			'portfolio-page',
+			'services-page',
+			'landing-page',
 		);
 
 		$this->categories = apply_filters( 'raft_block_patterns_categories', $categories );
