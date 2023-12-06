@@ -152,7 +152,7 @@ class Core {
 			'price_feature'         => __( 'A pricing feature', 'raft' ),
 
 			// Contact patterns.
-			'contact_page_title_title'            => __( 'Get in touch', 'raft' ),
+			'contact_page_title'            => __( 'Get in touch', 'raft' ),
 			'contact_section_title'	 => __( 'Contact details', 'raft' ),
 			'follow'                 => __( 'Follow us', 'raft' ),
 			'contact_details'        => __( 'Contact detail example', 'raft' ),
