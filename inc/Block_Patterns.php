@@ -71,6 +71,11 @@ class Block_Patterns {
 			'raft/call_to_action'     => array( 'label' => __( 'Call to Action', 'raft' ) ),
 			'raft/post_loops'         => array( 'label' => __( 'Post Loops', 'raft' ) ),
 			'raft/pages'              => array( 'label' => __( 'Pages', 'raft' ) ),
+
+			/* Visible only in Site Editor */
+			
+			'raft/singles'            => array( 'label' => __( 'Singles', 'raft' ) ),
+			'raft/archives'           => array( 'label' => __( 'Archives', 'raft' ) ),
 		);
 
 		$patterns = array(
@@ -129,7 +134,8 @@ class Block_Patterns {
 			'contact-page',
 			'portfolio-page',
 			'services-page',
-			'landing-page',
+			'centered-title',
+			'contact-details',
 		);
 
 		$this->categories = apply_filters( 'raft_block_patterns_categories', $categories );
