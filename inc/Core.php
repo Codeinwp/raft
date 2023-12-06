@@ -121,7 +121,12 @@ class Core {
 			
 			// Generic patterns.
 			'hero_title'            => __( 'Block Based Themes Made simple', 'raft' ),
+			'raft_feature_1'        => __( 'Style Variations', 'raft' ),
+			'raft_feature_2'        => __( 'Built-in Patterns', 'raft' ),
+			'raft_feature_3'        => __( 'Powered by Blocks', 'raft' ),
 			'page_title'            => __( 'This is a page title', 'raft' ),
+			'about_page_title'      => __( 'About our Team', 'raft' ),
+			'services_page_title'      => __( 'Explore our Services', 'raft' ),
 			'section_title'         => __( 'This is section title', 'raft' ),
 			'subtitle'              => __( 'Subtitle', 'raft' ),
 			'section_description'   => __( 'A short section description', 'raft' ),
@@ -133,6 +138,7 @@ class Core {
 			'feature_title'         => __( 'This is feature title', 'raft' ),
 			'feature_description'   => __( 'A placeholder description that you can replace with your own content.', 'raft' ),
 			'button_text'           => __( 'Button Text', 'raft' ),
+			'button_text_2'           => __( 'Get Started', 'raft' ),
 			
 			// Team patterns.
 			'team_section_title'    => __( 'Our Team', 'raft' ),
@@ -144,25 +150,31 @@ class Core {
 			'plan_title'            => __( 'Plan title', 'raft' ),
 			'price'                 => __( '$19.99', 'raft' ),
 			'price_feature'         => __( 'A pricing feature', 'raft' ),
+
+			// Contact patterns.
+			'contact_page_title_title'            => __( 'Get in touch', 'raft' ),
+			'contact_section_title'	 => __( 'Contact details', 'raft' ),
+			'follow'                 => __( 'Follow us', 'raft' ),
+			'contact_details'        => __( 'Contact detail example', 'raft' ),
 			
 			// FAQ patterns.
 			'faq_section_title'     => __( 'Frequently Asked Questions', 'raft' ),
 			'faq_title'             => __( 'Just a frequent question', 'raft' ),
 
 			// Portfolio patterns.
-			'portfolio_section_title'     => __( 'Explore my work', 'raft' ),
-			'portfolio_title'             => __( 'A portfolio title', 'raft' ),
-			'portfolio_client'             => __( 'Client Name', 'raft' ),
+			'portfolio_section_title'     => __( 'Selected Portfolio', 'raft' ),
+			'portfolio_title'             => __( 'A project title', 'raft' ),
+			'portfolio_client'            => __( 'Client Name', 'raft' ),
 
 			// Loops and templates.
-			'read_more'     => __( 'Read more', 'raft' ),
-			'continue_reading'     => __( 'Continue reading', 'raft' ),
-			'no_posts_found'     => __( 'Unfortunately no posts were found', 'raft' ),
-			'search_results'     => __( 'Search results', 'raft' ),
-			'search_button'     => __( 'Search', 'raft' ),
-			'search_placeholder'     => __( 'Search for a keyword...', 'raft' ),
-			'404'     => __( '404', 'raft' ),
-			'page_not_found'     => __( 'Unfortunately the page was not found.', 'raft' ),
+			'read_more'     	=> __( 'Read more', 'raft' ),
+			'continue_reading'     	=> __( 'Continue reading', 'raft' ),
+			'no_posts_found'     	=> __( 'Unfortunately no posts were found', 'raft' ),
+			'search_results'     	=> __( 'Search results', 'raft' ),
+			'search_button'     	=> __( 'Search', 'raft' ),
+			'search_placeholder'    => __( 'Search for a keyword...', 'raft' ),
+			'404'     		=> __( '404', 'raft' ),
+			'page_not_found'     	=> __( 'Unfortunately the page was not found.', 'raft' ),
 			
 			// Content Patterns.
 			'content_title'         => __( 'A generic content title', 'raft' ),
@@ -174,6 +186,7 @@ class Core {
 			
 			// CTA patterns.
 			'cta_title'             => __( 'Get started today, get in touch!', 'raft' ),
+			'raft_cta_title'             => __( 'Create your new website today, with Raft!', 'raft' ),
 		);
 
 		return $strings;
