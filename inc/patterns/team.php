@@ -40,11 +40,9 @@ return array(
 				<p class="has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">' . esc_html( $raft_strings['member_role'] ) . '</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:social-links {"iconColor":"raft-accent","iconColorValue":"#C26148","openInNewTab":true,"style":{"spacing":{"blockGap":{"top":"8px","left":"8px"}}},"className":"is-style-logos-only"} -->
-<ul class="wp-block-social-links has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"#","service":"twitter"} /-->
-
-<!-- wp:social-link {"url":"#","service":"linkedin"} /--></ul>
-<!-- /wp:social-links --></div>
+				<!-- wp:social-links {"openInNewTab":true,"style":{"spacing":{"blockGap":{"top":"8px","left":"8px"}}},"className":"is-style-logos-only"} -->
+<ul class="wp-block-social-links is-style-logos-only"><!-- wp:social-link {"url":"#","service":"x"} /--><!-- wp:social-link {"url":"#","service":"linkedin"} /--></ul>
+<!-- /wp:social-links -->
 			</div>
 			<!-- /wp:column -->
 			<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}}} -->
@@ -61,11 +59,9 @@ return array(
 				<p class="has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">' . esc_html( $raft_strings['member_role'] ) . '</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:social-links {"iconColor":"raft-accent","iconColorValue":"#C26148","openInNewTab":true,"style":{"spacing":{"blockGap":{"top":"8px","left":"8px"}}},"className":"is-style-logos-only"} -->
-<ul class="wp-block-social-links has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"#","service":"twitter"} /-->
-
-<!-- wp:social-link {"url":"#","service":"linkedin"} /--></ul>
-<!-- /wp:social-links --></div>
+				<!-- wp:social-links {"openInNewTab":true,"style":{"spacing":{"blockGap":{"top":"8px","left":"8px"}}},"className":"is-style-logos-only"} -->
+<ul class="wp-block-social-links is-style-logos-only"><!-- wp:social-link {"url":"#","service":"x"} /--><!-- wp:social-link {"url":"#","service":"linkedin"} /--></ul>
+<!-- /wp:social-links -->
 			</div>
 			<!-- /wp:column -->
 			<!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}}} -->
@@ -82,11 +78,9 @@ return array(
 				<p class="has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">' . esc_html( $raft_strings['member_role'] ) . '</p>
 				<!-- /wp:paragraph -->
 
-				<!-- wp:social-links {"iconColor":"raft-accent","iconColorValue":"#C26148","openInNewTab":true,"style":{"spacing":{"blockGap":{"top":"8px","left":"8px"}}},"className":"is-style-logos-only"} -->
-<ul class="wp-block-social-links has-icon-color is-style-logos-only"><!-- wp:social-link {"url":"#","service":"twitter"} /-->
-
-<!-- wp:social-link {"url":"#","service":"linkedin"} /--></ul>
-<!-- /wp:social-links --></div>
+				<!-- wp:social-links {"openInNewTab":true,"style":{"spacing":{"blockGap":{"top":"8px","left":"8px"}}},"className":"is-style-logos-only"} -->
+<ul class="wp-block-social-links is-style-logos-only"><!-- wp:social-link {"url":"#","service":"x"} /--><!-- wp:social-link {"url":"#","service":"linkedin"} /--></ul>
+<!-- /wp:social-links -->
 			</div>
 			<!-- /wp:column -->
 		</div>
