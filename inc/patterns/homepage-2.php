@@ -15,9 +15,9 @@
 $raft_strings = apply_filters( 'raft_strings', array() );
 
 return array(
-    'title'      => __( 'Homepage 2', 'raft' ),
-    'categories' => array( 'raft/pages' ),
-    'content'    => '
+	'title'      => __( 'Homepage 2', 'raft' ),
+	'categories' => array( 'raft/pages' ),
+	'content'    => '
 				<!-- wp:pattern {"slug":"raft/hero-columns"} /-->
                 <!-- wp:pattern {"slug":"raft/features-background"} /-->
                 <!-- wp:pattern {"slug":"raft/single-feature-button"} /-->

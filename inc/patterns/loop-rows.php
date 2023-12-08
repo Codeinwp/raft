@@ -14,7 +14,7 @@
 
 $raft_strings = apply_filters( 'raft_strings', array() );
 
-// Define images array if needed here
+// Define images array if needed here.
 
 return array(
 	'title'      => __( 'Posts Loop Rows', 'raft' ),

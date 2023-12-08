@@ -15,14 +15,14 @@
 $raft_strings = apply_filters( 'raft_strings', array() );
 
 $images = array(
-    RAFT_URL . 'assets/img/shape-05.svg',
-    RAFT_URL . 'assets/img/shape-01.svg',
+	RAFT_URL . 'assets/img/shape-05.svg',
+	RAFT_URL . 'assets/img/shape-01.svg',
 );
 
 return array(
-    'title'      => __( 'Team Member Rows', 'raft' ),
-    'categories' => array( 'raft/team' ),
-    'content'    => '
+	'title'      => __( 'Team Member Rows', 'raft' ),
+	'categories' => array( 'raft/team' ),
+	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|70","margin":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|raft-fg-alt"}}}},"backgroundColor":"raft-bg-inv","textColor":"raft-fg-alt","layout":{"type":"constrained"},"metadata":{}} -->
         <div class="wp-block-group alignfull has-raft-fg-alt-color has-raft-bg-inv-background-color has-text-color has-background has-link-color" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
             <!-- wp:columns {"verticalAlignment":"center","align":"wide","style":{"spacing":{"blockGap":{"top":"0","left":"0"}}}} -->

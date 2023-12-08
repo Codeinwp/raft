@@ -14,19 +14,19 @@
 
 $raft_strings = apply_filters( 'raft_strings', array() );
 
-// Define image URLs
+// Define image URLs.
 $images = array(
-    RAFT_URL . 'assets/img/shape-01.svg',
-    RAFT_URL . 'assets/img/shape-07.svg',
-    RAFT_URL . 'assets/img/shape-06.svg',
-    RAFT_URL . 'assets/img/shape-05.svg',
-    RAFT_URL . 'assets/img/shape-08.svg',
+	RAFT_URL . 'assets/img/shape-01.svg',
+	RAFT_URL . 'assets/img/shape-07.svg',
+	RAFT_URL . 'assets/img/shape-06.svg',
+	RAFT_URL . 'assets/img/shape-05.svg',
+	RAFT_URL . 'assets/img/shape-08.svg',
 );
 
 return array(
-    'title'      => __( 'Inverted Gallery with Title', 'raft' ),
-    'categories' => array( 'raft/content' ),
-    'content'    => '
+	'title'      => __( 'Inverted Gallery with Title', 'raft' ),
+	'categories' => array( 'raft/content' ),
+	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-bg-inv","textColor":"raft-fg-alt","layout":{"inherit":true,"type":"constrained"}} -->
         <div class="wp-block-group alignfull has-raft-fg-alt-color has-raft-bg-inv-background-color has-text-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
             <!-- wp:group {"align":"wide","layout":{"inherit":false}} -->

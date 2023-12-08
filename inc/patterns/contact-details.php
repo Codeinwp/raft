@@ -14,7 +14,7 @@
 
 $raft_strings = apply_filters( 'raft_strings', array() );
 
-// Define image URLs
+// Define image URLs.
 $images = array(
 	RAFT_URL . 'assets/img/raft-cover-bg.svg',
 );

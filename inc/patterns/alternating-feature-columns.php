@@ -15,14 +15,14 @@
 $raft_strings = apply_filters( 'raft_strings', array() );
 
 $images = array(
-    RAFT_URL . 'assets/img/shape-010.svg',
-    RAFT_URL . 'assets/img/shape-011.svg',
+	RAFT_URL . 'assets/img/shape-010.svg',
+	RAFT_URL . 'assets/img/shape-011.svg',
 );
 
 return array(
-    'title'      => __( 'Alternating Feature Columns', 'raft' ),
-    'categories' => array( 'raft/features' ),
-    'content'    => '
+	'title'      => __( 'Alternating Feature Columns', 'raft' ),
+	'categories' => array( 'raft/features' ),
+	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px","right":"0px","left":"0px"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"0px"}},"layout":{"inherit":false}} -->
         <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
             <!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"blockGap":"0px"}}} -->

@@ -15,10 +15,10 @@
 $raft_strings = apply_filters( 'raft_strings', array() );
 
 $images = array(
-    RAFT_URL . 'assets/img/shape-06.svg',
-    RAFT_URL . 'assets/img/shape-01.svg',
-    RAFT_URL . 'assets/img/shape-04.svg',
-    RAFT_URL . 'assets/img/shape-07.svg',
+	RAFT_URL . 'assets/img/shape-06.svg',
+	RAFT_URL . 'assets/img/shape-01.svg',
+	RAFT_URL . 'assets/img/shape-04.svg',
+	RAFT_URL . 'assets/img/shape-07.svg',
 );
 
 return array(

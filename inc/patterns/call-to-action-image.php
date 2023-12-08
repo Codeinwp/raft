@@ -15,13 +15,13 @@
 $raft_strings = apply_filters( 'raft_strings', array() );
 
 $images = array(
-    RAFT_URL . 'assets/img/raft-cover-bg.svg',
+	RAFT_URL . 'assets/img/raft-cover-bg.svg',
 );
 
 return array(
-    'title'      => __( 'Call to Action with Image', 'raft' ),
-    'categories' => array( 'raft/call_to_action' ),
-    'content'    => '
+	'title'      => __( 'Call to Action with Image', 'raft' ),
+	'categories' => array( 'raft/call_to_action' ),
+	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0","bottom":"0","right":"0","left":"0"},"margin":{"top":"0","bottom":"0"},"blockGap":"0"},"elements":{"link":{"color":{"text":"var:preset|color|raft-fg-alt"}}}},"backgroundColor":"raft-bg-inv","textColor":"raft-fg-alt","layout":{"inherit":false},"metadata":{}} -->
         <div class="wp-block-group alignfull has-raft-fg-alt-color has-raft-bg-inv-background-color has-text-color has-background has-link-color" style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"0","left":"0"},"padding":{"top":"0","bottom":"0","left":"0","right":"0"},"margin":{"top":"0","bottom":"0"}}}} -->
         <div class="wp-block-columns" style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:column {"verticalAlignment":"stretch","width":"50%","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}}} -->

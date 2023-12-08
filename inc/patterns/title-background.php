@@ -1,6 +1,7 @@
 <?php
 /**
  * Page Title on Background
+ *
  * @author Themeisle
  * @package raft
  * @since 1.0.5
