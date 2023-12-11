@@ -95,11 +95,11 @@ class Admin {
 
 		$notice_html .= '<h1 class="notice-title">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= sprintf( __( 'Get started with Raft in minutes, with %s', 'raft' ), '<span>Otter\'s FSE Onboarding</span>' );
+		$notice_html .= sprintf( __( 'Power-up your website building experience with %s: Seamless theme setup, advanced blocks and extra functionality for your site.', 'raft' ), '<strong>Otter Blocks</strong>' );
 
 		$notice_html .= '</h1>';
 
-		$notice_html .= '<p class="description">' . __( 'Change your site’s appearance, setup your templates, add new pages and much more, with Otter’s innovative Onboarding process.', 'raft' ) . '</p>';
+		$notice_html .= '<p class="description">' . __( 'Otter is a Gutenberg Blocks page builder plugin that adds new blocks and functionality to your theme, while optimising your page building experience. Now with Otter\'s new theme onboarding wizard, you can experience a streamlined and intuitive setup of your Raft theme in minutes.', 'raft' ) . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
