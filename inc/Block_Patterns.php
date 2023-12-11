@@ -69,9 +69,13 @@ class Block_Patterns {
 			'raft/team'               => array( 'label' => __( 'Team', 'raft' ) ),
 			'raft/pricing'            => array( 'label' => __( 'Pricing', 'raft' ) ),
 			'raft/call_to_action'     => array( 'label' => __( 'Call to Action', 'raft' ) ),
-			'raft/singles'            => array( 'label' => __( 'Singles', 'raft' ) ),
 			'raft/post_loops'         => array( 'label' => __( 'Post Loops', 'raft' ) ),
 			'raft/pages'              => array( 'label' => __( 'Pages', 'raft' ) ),
+
+			/* Visible only in Site Editor */
+			
+			'raft/singles'            => array( 'label' => __( 'Singles', 'raft' ) ),
+			'raft/archives'           => array( 'label' => __( 'Archives', 'raft' ) ),
 		);
 
 		$patterns = array(
@@ -95,6 +99,43 @@ class Block_Patterns {
 			'pricing-plans-inline-title',
 			'team',
 			'testimonial-columns',
+			
+			/* new patterns */
+			
+			'features-centered',
+			'feature-cards',
+			'features-background',
+			'single-feature-button',
+			'hero-columns',
+			'hero-boxed',
+			'title-button',
+			'title-background',
+			'testimonial-background',
+			'testimonial-columns',
+			'testimonial-fullwidth',
+			'testimonial-cards',
+			'pricing-5',
+			'pricing-4',
+			'pricing-3',
+			'loop-card-centered',
+			'loop-cards',
+			'loop-rows',
+			'loop-3',
+			'call-to-action-image',
+			'call-to-action-3',
+			'text-columns',
+			'centered-text-background',
+			'portfolio-columns',
+			'team-columns',
+			'team-rows',
+			'homepage-2',
+			'homepage-3',
+			'about-page',
+			'contact-page',
+			'portfolio-page',
+			'services-page',
+			'centered-title',
+			'contact-details',
 		);
 
 		$this->categories = apply_filters( 'raft_block_patterns_categories', $categories );
