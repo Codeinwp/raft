@@ -408,6 +408,14 @@
 					"fontWeight": "600",
 					"lineHeight": "1.6"
 				}
+			},
+			"caption": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--small)"
+				},
+				"color": {
+					"text": "var(--wp--preset--color--raft-fg)"
+				}
 			}
 		},
 		"blocks": {
