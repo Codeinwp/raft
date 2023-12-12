@@ -1,4 +1,15 @@
-<!-- wp:template-part {"slug":"header","theme":"raft","tagName":"header"} /-->
+<?php
+/**
+ * Archive Rows
+ *
+ * @author Themeisle
+ * @package raft
+ * @since 1.1.0
+ */
+
+$raft_strings = apply_filters( 'raft_strings', array() );
+
+return '<!-- wp:template-part {"slug":"header","theme":"raft","tagName":"header"} /-->
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-raft-bg-alt-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:query-title {"type":"archive","textAlign":"center"} /--></div>
@@ -24,7 +35,7 @@
 
 <!-- wp:post-title {"textAlign":"left","isLink":true,"fontSize":"medium"} /-->
 
-<!-- wp:read-more {"content":"Continue reading","style":{"elements":{"link":{"color":{"text":"var:preset|color|raft-accent"}}}},"textColor":"raft-accent"} /--></div>
+<!-- wp:read-more {"content":"' . esc_html( $raft_strings['continue_reading'] ) . '","style":{"elements":{"link":{"color":{"text":"var:preset|color|raft-accent"}}}},"textColor":"raft-accent"} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -42,10 +53,10 @@
 
 <!-- wp:query-no-results -->
 <!-- wp:paragraph {"align":"center","placeholder":"Add text or blocks that will display when the query returns no results.","backgroundColor":"raft-bg-alt"} -->
-<p class="has-text-align-center has-raft-bg-alt-background-color has-background">Unfortunately no posts were found</p>
+<p class="has-text-align-center has-raft-bg-alt-background-color has-background">' . esc_html( $raft_strings['no_posts_found'] ) . '</p>
 <!-- /wp:paragraph -->
 <!-- /wp:query-no-results --></div>
 <!-- /wp:query --></div>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","theme":"raft","tagName":"footer"} /-->
+<!-- wp:template-part {"slug":"footer","theme":"raft","tagName":"footer"} /-->';

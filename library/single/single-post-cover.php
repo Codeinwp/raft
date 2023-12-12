@@ -1,4 +1,15 @@
-<!-- wp:template-part {"slug":"header","theme":"raft","tagName":"header"} /-->
+<?php
+/**
+ * Single Post Cover
+ *
+ * @author Themeisle
+ * @package raft
+ * @since 1.1.0
+ */
+
+$raft_strings = apply_filters( 'raft_strings', array() );
+
+return '<!-- wp:template-part {"slug":"header","theme":"raft","tagName":"header"} /-->
 
 <!-- wp:cover {"useFeaturedImage":true,"dimRatio":60,"overlayColor":"raft-fg","minHeight":50,"minHeightUnit":"vw","style":{"spacing":{"margin":{"top":"0","bottom":"0"},"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-cover" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--50);min-height:50vw"><span aria-hidden="true" class="wp-block-cover__background has-raft-fg-background-color has-background-dim-60 has-background-dim"></span><div class="wp-block-cover__inner-container"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"}}},"layout":{"type":"default"}} -->
@@ -17,7 +28,7 @@
 <!-- wp:column {"width":"33.33%"} -->
 <div class="wp-block-column" style="flex-basis:33.33%"><!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
 <div class="wp-block-group"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}},"fontSize":"small"} -->
-<p class="has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">Categories</p>
+<p class="has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">' . esc_html( $raft_strings['categories'] ) . '</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:post-terms {"term":"category","fontSize":"small"} /--></div>
@@ -28,7 +39,7 @@
 <!-- /wp:separator -->
 
 <!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}},"fontSize":"small"} -->
-<p class="has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">About me</p>
+<p class="has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">' . esc_html( $raft_strings['about_me'] ) . '</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:post-author-biography {"fontSize":"small"} /-->
@@ -38,7 +49,7 @@
 
 <!-- wp:social-link {"url":"#","service":"instagram"} /-->
 
-<!-- wp:social-link {"url":"#","service":"wordpress"} /--></ul>
+<!-- wp:social-link {"url":"#","service":"WordPress"} /--></ul>
 <!-- /wp:social-links --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></div>
@@ -47,7 +58,7 @@
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"},"margin":{"top":"0px","bottom":"0px"}}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true,"type":"constrained"}} -->
 <div class="wp-block-group has-raft-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)"><!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"0","right":"0","bottom":"0","left":"0"}}},"layout":{"inherit":false}} -->
 <div class="wp-block-group alignwide" style="padding-top:0;padding-right:0;padding-bottom:0;padding-left:0"><!-- wp:paragraph {"style":{"typography":{"fontStyle":"normal","fontWeight":"600","textTransform":"uppercase"}},"fontSize":"small"} -->
-<p class="has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">Read Also...</p>
+<p class="has-small-font-size" style="font-style:normal;font-weight:600;text-transform:uppercase">' . esc_html( $raft_strings['read_also'] ) . '</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:query {"queryId":18,"query":{"perPage":"1","pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false}} -->
@@ -66,4 +77,4 @@
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","theme":"raft","tagName":"footer"} /-->
+<!-- wp:template-part {"slug":"footer","theme":"raft","tagName":"footer"} /-->';

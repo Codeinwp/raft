@@ -1,4 +1,13 @@
-<!-- wp:template-part {"slug":"header","theme":"raft","tagName":"header"} /-->
+<?php
+/**
+ * Single Post Centered
+ *
+ * @author Themeisle
+ * @package raft
+ * @since 1.1.0
+ */
+
+return '<!-- wp:template-part {"slug":"header","theme":"raft","tagName":"header"} /-->
 
 <!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80"},"margin":{"top":"0px","bottom":"0px"},"blockGap":"0px"}},"backgroundColor":"raft-bg-alt","layout":{"inherit":false}} -->
 <div class="wp-block-group has-raft-bg-alt-background-color has-background" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--80);padding-bottom:var(--wp--preset--spacing--80)"><!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
@@ -56,4 +65,4 @@
 <!-- /wp:comments --></div>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","theme":"raft","tagName":"footer"} /-->
+<!-- wp:template-part {"slug":"footer","theme":"raft","tagName":"footer"} /-->';

@@ -1,8 +1,19 @@
-<!-- wp:template-part {"slug":"header","theme":"raft","tagName":"header"} /-->
+<?php
+/**
+ * Archive Boxed
+ *
+ * @author Themeisle
+ * @package raft
+ * @since 1.1.0
+ */
+
+$raft_strings = apply_filters( 'raft_strings', array() );
+
+return '<!-- wp:template-part {"slug":"header","theme":"raft","tagName":"header"} /-->
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"backgroundColor":"raft-bg-alt","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-raft-bg-alt-background-color has-background" style="padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--50)"><!-- wp:heading {"textAlign":"center","level":1} -->
-<h1 class="wp-block-heading has-text-align-center">Archive Cards</h1>
+<h1 class="wp-block-heading has-text-align-center">' . esc_html( $raft_strings['page_title'] ) . '</h1>
 <!-- /wp:heading --></div>
 <!-- /wp:group -->
 
@@ -21,7 +32,7 @@
 
 <!-- wp:post-title {"textAlign":"left","isLink":true,"fontSize":"medium"} /-->
 
-<!-- wp:read-more {"content":"Continue reading...","style":{"elements":{"link":{"color":{"text":"var:preset|color|raft-accent"}}}},"textColor":"raft-accent"} /--></div>
+<!-- wp:read-more {"content":"' . esc_html( $raft_strings['continue_reading'] ) . '","style":{"elements":{"link":{"color":{"text":"var:preset|color|raft-accent"}}}},"textColor":"raft-accent"} /--></div>
 <!-- /wp:group --></div>
 <!-- /wp:group -->
 <!-- /wp:post-template -->
@@ -38,10 +49,10 @@
 
 <!-- wp:query-no-results -->
 <!-- wp:paragraph {"align":"center","placeholder":"Add text or blocks that will display when the query returns no results.","backgroundColor":"raft-bg-alt"} -->
-<p class="has-text-align-center has-raft-bg-alt-background-color has-background">Unfortunately no posts were found</p>
+<p class="has-text-align-center has-raft-bg-alt-background-color has-background">' . esc_html( $raft_strings['no_posts_found'] ) . '</p>
 <!-- /wp:paragraph -->
 <!-- /wp:query-no-results --></div>
 <!-- /wp:query --></div>
 <!-- /wp:group -->
 
-<!-- wp:template-part {"slug":"footer","theme":"raft","tagName":"footer"} /-->
+<!-- wp:template-part {"slug":"footer","theme":"raft","tagName":"footer"} /-->';

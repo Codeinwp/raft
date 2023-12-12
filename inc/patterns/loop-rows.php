@@ -45,7 +45,7 @@ return array(
 
 						<!-- wp:post-title {"textAlign":"left","isLink":true,"fontSize":"medium"} /-->
 
-						<!-- wp:read-more {"content":"Continue reading","style":{"elements":{"link":{"color":{"text":"var:preset|color|raft-accent"}}}},"textColor":"raft-accent"} /-->
+						<!-- wp:read-more {"content":"' . esc_html( $raft_strings['continue_reading'] ) . '","style":{"elements":{"link":{"color":{"text":"var:preset|color|raft-accent"}}}},"textColor":"raft-accent"} /-->
 					</div>
 					<!-- /wp:column -->
 				</div>
