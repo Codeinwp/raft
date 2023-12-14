@@ -87,6 +87,74 @@ class Core {
 			)
 		);
 
+		add_theme_support(
+			'otter-onboarding',
+			array(
+				'templates'      => array(
+					'archive'    => array(
+						'archive-boxed' => array(
+							'file'  => RAFT_DIR . 'library/archive/archive-boxed.php',
+							'title' => __( 'Archive Boxed', 'raft' ),
+						),
+						'archive-cards' => array(
+							'file'  => RAFT_DIR . 'library/archive/archive-cards.php',
+							'title' => __( 'Archive Cards', 'raft' ),
+						),
+						'archive-row'   => array(
+							'file'  => RAFT_DIR . 'library/archive/archive-row.php',
+							'title' => __( 'Archive Row', 'raft' ),
+						),
+					),
+					'single'     => array(
+						'single-post-centered' => array(
+							'file'  => RAFT_DIR . 'library/single/single-post-centered.php',
+							'title' => __( 'Single Post Centered', 'raft' ),
+						),
+						'single-post-columns'  => array(
+							'file'  => RAFT_DIR . 'library/single/single-post-columns.php',
+							'title' => __( 'Single Post Columns', 'raft' ),
+						),
+						'single-post-cover'    => array(
+							'file'  => RAFT_DIR . 'library/single/single-post-cover.php',
+							'title' => __( 'Single Post Cover', 'raft' ),
+						),
+					),
+					'front-page' => array(
+						'front-page-alt'   => array(
+							'file'  => RAFT_DIR . 'library/front-end/front-page-2.php',
+							'title' => __( 'Homepage 2', 'raft' ),
+						),
+						'front-page-alt-2' => array(
+							'file'  => RAFT_DIR . 'library/front-end/front-page-3.php',
+							'title' => __( 'Homepage 3', 'raft' ),
+						),
+					),
+				),
+				'page_templates' => array(
+					'about-page'     => array(
+						'file'     => RAFT_DIR . 'library/templates/about-page.php',
+						'title'    => __( 'About Page', 'raft' ),
+						'template' => 'template-plain',
+					),
+					'contact-page'   => array(
+						'file'     => RAFT_DIR . 'library/templates/contact-page.php',
+						'title'    => __( 'Contact Page', 'raft' ),
+						'template' => 'template-plain',
+					),
+					'portfolio-page' => array(
+						'file'     => RAFT_DIR . 'library/templates/portfolio-page.php',
+						'title'    => __( 'Portfolio Page', 'raft' ),
+						'template' => 'template-plain',
+					),
+					'services-page'  => array(
+						'file'     => RAFT_DIR . 'library/templates/services-page.php',
+						'title'    => __( 'Services Page', 'raft' ),
+						'template' => 'template-plain',
+					),
+				),
+			)
+		);
+
 		remove_theme_support( 'core-block-patterns' );
 
 		register_nav_menus( array( 'primary' => esc_html__( 'Primary Menu', 'raft' ) ) );
@@ -118,7 +186,7 @@ class Core {
 	 */
 	public function strings( $strings = array() ) {
 		$strings = array(
-			
+
 			// Generic patterns.
 			'hero_title'              => __( 'Block Based Themes Made simple', 'raft' ),
 			'raft_feature_1'          => __( 'Style Variations', 'raft' ),
@@ -126,25 +194,26 @@ class Core {
 			'raft_feature_3'          => __( 'Powered by Blocks', 'raft' ),
 			'page_title'              => __( 'This is a page title', 'raft' ),
 			'about_page_title'        => __( 'About our Team', 'raft' ),
+			'about_me'                => __( 'About me', 'raft' ),
 			'services_page_title'     => __( 'Explore our Services', 'raft' ),
 			'section_title'           => __( 'This is section title', 'raft' ),
 			'subtitle'                => __( 'Subtitle', 'raft' ),
 			'section_description'     => __( 'A short section description', 'raft' ),
 			'paragraph_text'          => __( 'This is placeholder text, feel free to replace it with your unique content as it\'s included here just to provide you with a better understanding of how your text will fit in the layout. Explore the various patterns and templates as you create your personalized web experience.', 'raft' ),
 			'short_text'              => __( 'Just some placeholder text', 'raft' ),
-			
+
 			// Feature patterns.
 			'feature_section_title'   => __( 'Showcase your Features and Services', 'raft' ),
 			'feature_title'           => __( 'This is feature title', 'raft' ),
 			'feature_description'     => __( 'A placeholder description that you can replace with your own content.', 'raft' ),
 			'button_text'             => __( 'Button Text', 'raft' ),
 			'button_text_2'           => __( 'Get Started', 'raft' ),
-			
+
 			// Team patterns.
 			'team_section_title'      => __( 'Our Team', 'raft' ),
 			'team_member'             => __( 'Team member name', 'raft' ),
 			'member_role'             => __( 'Company role', 'raft' ),
-			
+
 			// Pricing patterns.
 			'pricing_section_title'   => __( 'A pricing section. Join premium!', 'raft' ),
 			'plan_title'              => __( 'Plan title', 'raft' ),
@@ -156,7 +225,7 @@ class Core {
 			'contact_section_title'   => __( 'Contact details', 'raft' ),
 			'follow'                  => __( 'Follow us', 'raft' ),
 			'contact_details'         => __( 'Contact detail example', 'raft' ),
-			
+
 			// FAQ patterns.
 			'faq_section_title'       => __( 'Frequently Asked Questions', 'raft' ),
 			'faq_title'               => __( 'Just a frequent question', 'raft' ),
@@ -175,15 +244,18 @@ class Core {
 			'search_placeholder'      => __( 'Search for a keyword...', 'raft' ),
 			'404'                     => __( '404', 'raft' ),
 			'page_not_found'          => __( 'Unfortunately the page was not found.', 'raft' ),
-			
+			'categories'              => __( 'Categories', 'raft' ),
+			'read_also'               => __( 'Read also…', 'raft' ),
+
 			// Content Patterns.
 			'content_title'           => __( 'A generic content title', 'raft' ),
 			'content_subtitle'        => __( 'A content subtitle', 'raft' ),
-			
+			'lorem_ipsum_subtitle'    => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit', 'raft' ),
+
 			// Testimonial patterns.
 			'testimonial'             => __( '"...Absolutely one of the best services out there, very professional and easy-going experience, highly recommended..."', 'raft' ),
 			'testimonial_name'        => __( 'Jason Doe', 'raft' ),
-			
+
 			// CTA patterns.
 			'cta_title'               => __( 'Get started today, get in touch!', 'raft' ),
 			'raft_cta_title'          => __( 'Create your new website today, with Raft!', 'raft' ),
