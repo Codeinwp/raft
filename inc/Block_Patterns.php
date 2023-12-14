@@ -111,7 +111,6 @@ class Block_Patterns {
 			'title-button',
 			'title-background',
 			'testimonial-background',
-			'testimonial-columns',
 			'testimonial-fullwidth',
 			'testimonial-cards',
 			'pricing-5',
