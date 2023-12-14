@@ -35,7 +35,7 @@ return array(
                     <!-- /wp:image -->
 
                     <!-- wp:heading {"level":3} -->
-                    <h3 class="wp-block-heading">' . esc_html( $raft_strings['feature_title'] ) . '</h3>
+                    <h3 class="wp-block-heading">' . esc_html( $raft_strings['raft_feature_1'] ) . '</h3>
                     <!-- /wp:heading -->
 
                     <!-- wp:paragraph -->
@@ -51,7 +51,7 @@ return array(
                     <!-- /wp:image -->
 
                     <!-- wp:heading {"level":3} -->
-                    <h3 class="wp-block-heading">' . esc_html( $raft_strings['feature_title'] ) . '</h3>
+                    <h3 class="wp-block-heading">' . esc_html( $raft_strings['raft_feature_2'] ) . '</h3>
                     <!-- /wp:heading -->
 
                     <!-- wp:paragraph -->
@@ -67,7 +67,7 @@ return array(
                     <!-- /wp:image -->
 
                     <!-- wp:heading {"level":3} -->
-                    <h3 class="wp-block-heading">' . esc_html( $raft_strings['feature_title'] ) . '</h3>
+                    <h3 class="wp-block-heading">' . esc_html( $raft_strings['raft_feature_3'] ) . '</h3>
                     <!-- /wp:heading -->
 
                     <!-- wp:paragraph -->
