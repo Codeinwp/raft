@@ -311,7 +311,7 @@ class Admin {
 		$screen = get_current_screen();
 
 		if ( current_user_can( 'manage_options' ) && ( 'dashboard' === $screen->id || 'themes' === $screen->id ) ) {
-			$website_url = rawurlencode( get_site_url() );
+			$website_url = preg_replace( '/[^a-zA-Z0-9]+/', '', get_site_url() );
 
 			$config = array(
 				'environmentId' => 'clp9hp3j71oqndl2ietgq8nej',
