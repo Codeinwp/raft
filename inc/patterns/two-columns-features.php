@@ -15,14 +15,14 @@
 $raft_strings = apply_filters( 'raft_strings', array() );
 
 $images = array(
-    RAFT_URL . 'assets/img/shape-05.svg',
-    RAFT_URL . 'assets/img/shape-01.svg',
+	RAFT_URL . 'assets/img/shape-05.svg',
+	RAFT_URL . 'assets/img/shape-01.svg',
 );
 
 return array(
-    'title'      => __( 'Two Columns of Features', 'raft' ),
-    'categories' => array( 'raft/features' ),
-    'content'    => '
+	'title'      => __( 'Two Columns of Features', 'raft' ),
+	'categories' => array( 'raft/features' ),
+	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|60"}},"backgroundColor":"raft-bg-alt","layout":{"inherit":true,"type":"constrained"}} -->
         <div class="wp-block-group alignfull has-raft-bg-alt-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
             <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|30"}},"layout":{"type":"constrained"}} -->

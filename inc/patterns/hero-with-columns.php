@@ -13,7 +13,7 @@
  */
 
 $raft_strings = apply_filters( 'raft_strings', array() );
-$images = array(
+$images       = array(
 	RAFT_URL . 'assets/img/shape-05.svg',
 	RAFT_URL . 'assets/img/shape-06.svg',
 	RAFT_URL . 'assets/img/shape-07.svg',

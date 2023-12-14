@@ -15,15 +15,15 @@
 $raft_strings = apply_filters( 'raft_strings', array() );
 
 $images = array(
-    RAFT_URL . 'assets/img/shape-05.svg',
-    RAFT_URL . 'assets/img/shape-06.svg',
-    RAFT_URL . 'assets/img/shape-04.svg',
+	RAFT_URL . 'assets/img/shape-05.svg',
+	RAFT_URL . 'assets/img/shape-06.svg',
+	RAFT_URL . 'assets/img/shape-04.svg',
 );
 
 return array(
-    'title'      => __( 'Three Columns of Features', 'raft' ),
-    'categories' => array( 'raft/features' ),
-    'content'    => '
+	'title'      => __( 'Three Columns of Features', 'raft' ),
+	'categories' => array( 'raft/features' ),
+	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
         <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
             <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->

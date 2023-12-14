@@ -15,17 +15,17 @@
 $raft_strings = apply_filters( 'raft_strings', array() );
 
 $images = array(
-    RAFT_URL . 'assets/img/shape-01.svg',
-    RAFT_URL . 'assets/img/shape-05.svg',
-    RAFT_URL . 'assets/img/shape-04.svg',
-    RAFT_URL . 'assets/img/shape-03.svg',
-    RAFT_URL . 'assets/img/shape-02.svg',
+	RAFT_URL . 'assets/img/shape-01.svg',
+	RAFT_URL . 'assets/img/shape-05.svg',
+	RAFT_URL . 'assets/img/shape-04.svg',
+	RAFT_URL . 'assets/img/shape-03.svg',
+	RAFT_URL . 'assets/img/shape-02.svg',
 );
 
 return array(
-    'title'      => __( 'Image Gallery with Title', 'raft' ),
-    'categories' => array( 'raft/content' ),
-    'content'    => '
+	'title'      => __( 'Image Gallery with Title', 'raft' ),
+	'categories' => array( 'raft/content' ),
+	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|40"}},"layout":{"inherit":true,"type":"constrained"}} -->
         <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:heading {"textAlign":"center"} -->
         <h2 class="wp-block-heading has-text-align-center">' . esc_html( $raft_strings['section_title'] ) . '</h2>

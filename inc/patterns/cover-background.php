@@ -15,13 +15,13 @@
 $raft_strings = apply_filters( 'raft_strings', array() );
 
 $images = array(
-    RAFT_URL . 'assets/img/raft-cover-bg.svg',
+	RAFT_URL . 'assets/img/raft-cover-bg.svg',
 );
 
 return array(
-    'title'      => __( 'Cover with Background', 'raft' ),
-    'categories' => array( 'raft/heroes_page_titles' ),
-    'content'    => '
+	'title'      => __( 'Cover with Background', 'raft' ),
+	'categories' => array( 'raft/heroes_page_titles' ),
+	'content'    => '
         <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"right":"0","left":"0","top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
         <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
             <!-- wp:cover {"url":"' . esc_url( $images[0] ) . '","dimRatio":60,"overlayColor":"black","minHeight":600,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","right":"var:preset|spacing|40","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|30"}}} -->
