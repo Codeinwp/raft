@@ -317,7 +317,7 @@ class Admin {
 				'environmentId' => 'clp9hp3j71oqndl2ietgq8nej',
 				'apiHost'       => 'https://app.formbricks.com',
 				'userId'        => 'raft_' . $website_url,
-				'attributions'  => array(
+				'attributes'    => array(
 					'days_since_install' => self::convert_to_category( round( ( time() - get_option( 'raft_install', 0 ) ) / DAY_IN_SECONDS ) ),
 				),
 			);
