@@ -13,22 +13,32 @@
         {
           "slug": "raft-fg",
           "color": "#FFFFFF",
-          "name": "Foreground"
+          "name": "Text"
+        },
+         {
+          "slug": "raft-accent",
+          "color": "#417E61",
+          "name": "Accent"
+        },
+        {
+          "slug": "raft-accent-secondary",
+          "color": "#34654E",
+          "name": "Accent Secondary"
+        },
+        {
+          "slug": "raft-bg-inv",
+	        "color": "#000000",
+	        "name": "Dark Background"
         },
         {
           "slug": "raft-bg-alt",
           "color": "rgba(255, 255, 255, 0.05)",
-          "name": "Background Alt"
+          "name": "Light Background"
         },
         {
           "slug": "raft-fg-alt",
           "color": "#FFFFFF",
-          "name": "Foreground Alt"
-        },
-        {
-          "slug": "raft-accent",
-          "color": "#417E61",
-          "name": "Accent"
+          "name": "Inverted Text"
         }
       ]
     }

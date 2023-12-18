@@ -9,8 +9,8 @@
 	border: 0;
 	box-shadow: none;
 	font-weight: 600;
-	padding: 16px 32px;
-	border-radius: 3px;
+	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--50);
+	border-radius: 5px;
 	font-size: var(--wp--preset--font-size--normal);
 }
 

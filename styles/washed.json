@@ -1,0 +1,90 @@
+{
+  "$schema": "<https://schemas.wp.org/trunk/theme.json>",
+  "title": "washed",
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "raft-bg",
+          "color": "#FEFAF7",
+          "name": "Background"
+        },
+        {
+          "slug": "raft-fg",
+          "color": "#202220",
+          "name": "Text"
+        },
+        {
+          "slug": "raft-accent",
+          "color": "#EA7847",
+          "name": "Accent"
+        },
+        {
+          "slug": "raft-accent-secondary",
+          "color": "#C14712",
+          "name": "Accent Secondary"
+        },
+        {
+          "slug": "raft-bg-inv",
+          "color": "#37384C",
+          "name": "Dark Background"
+        },
+        {
+          "slug": "raft-bg-alt",
+          "color": "#FAE2D1",
+          "name": "Light Background"
+        },
+        {
+          "slug": "raft-fg-alt",
+          "color": "#FFFFFF",
+          "name": "Inverted Text"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--geologica)"
+        }
+      },
+      "h1": {
+        "typography": {
+          "fontWeight": "600"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontWeight": "600"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontWeight": "600"
+        }
+      },
+      "h4": {
+        "typography": {
+          "fontWeight": "600"
+        }
+      },
+      "h5": {
+        "typography": {
+          "fontWeight": "600"
+        }
+      },
+      "h6": {
+        "typography": {
+          "fontWeight": "600"
+        }
+      }
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--geologica)",
+      "fontWeight": "300"
+    }
+  }
+}
+

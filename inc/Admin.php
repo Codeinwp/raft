@@ -20,19 +20,20 @@ class Admin {
 	 * Admin constructor.
 	 */
 	public function __construct() {
-		$this->setup_otter_notice();
+		$this->setup_admin_hooks();
 	}
 
-
 	/**
-	 * Setup the Otter Blocks notice.
+	 * Setup admin hooks.
 	 *
 	 * @return void
 	 */
-	public function setup_otter_notice() {
+	public function setup_admin_hooks() {
 		add_action( 'admin_notices', array( $this, 'render_welcome_notice' ), 0 );
 		add_action( 'wp_ajax_raft_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
 		add_action( 'wp_ajax_raft_set_otter_ref', array( $this, 'set_otter_ref' ) );
+		add_action( 'activated_plugin', array( $this, 'after_otter_activation' ) );
+		add_action( 'admin_print_scripts', array( $this, 'add_nps_form' ) );
 	}
 
 	/**
@@ -70,6 +71,14 @@ class Admin {
 						admin_url( 'plugins.php' ) 
 					) 
 				),
+				'onboardingUrl' => esc_url(
+					add_query_arg(
+						array(
+							'onboarding' => 'true',
+						),
+						admin_url( 'site-editor.php' )
+					) 
+				),
 				'activating'    => __( 'Activating', 'raft' ) . '&hellip;',
 				'installing'    => __( 'Installing', 'raft' ) . '&hellip;',
 				'done'          => __( 'Done', 'raft' ),
@@ -86,11 +95,11 @@ class Admin {
 
 		$notice_html .= '<h1 class="notice-title">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= sprintf( __( 'Power up your website building experience with %s!', 'raft' ), '<span>Otter Blocks</span>' );
+		$notice_html .= sprintf( __( 'Power-up your website building experience with %s: Seamless theme setup, advanced blocks and extra functionality for your site.', 'raft' ), '<strong>Otter Blocks</strong>' );
 
 		$notice_html .= '</h1>';
 
-		$notice_html .= '<p class="description">' . __( 'Otter is a Gutenberg Blocks page builder plugin that adds extra functionality to the WordPress Block Editor (also known as Gutenberg) for a better page building experience without the need for traditional page builders.', 'raft' ) . '</p>';
+		$notice_html .= '<p class="description">' . __( 'Otter is a Gutenberg Blocks page builder plugin that adds new blocks and functionality to your theme, while optimising your page building experience. Now with Otter\'s new theme onboarding wizard, you can experience a streamlined and intuitive setup of your Raft theme in minutes.', 'raft' ) . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
@@ -98,11 +107,18 @@ class Admin {
 		$notice_html .= '<button id="raft-install-otter" class="button button-primary button-hero">';
 		$notice_html .= '<span class="dashicons dashicons-update hidden"></span>';
 		$notice_html .= '<span class="text">';
-		$notice_html .= 'installed' === $otter_status ?
+
+		if ( 'active' === $otter_status ) {
 			/* translators: %s: Otter Blocks */
-			sprintf( __( 'Activate %s', 'raft' ), 'Otter Blocks' ) :
+			$notice_html .= __( 'Try it out!', 'raft' );
+		} elseif ( 'installed' === $otter_status ) {
 			/* translators: %s: Otter Blocks */
-			sprintf( __( 'Install & Activate %s', 'raft' ), 'Otter Blocks' );
+			$notice_html .= sprintf( __( 'Activate %s', 'raft' ), 'Otter Blocks' );
+		} else {
+			/* translators: %s: Otter Blocks */
+			$notice_html .= sprintf( __( 'Install & Activate %s', 'raft' ), 'Otter Blocks' );
+		}
+
 		$notice_html .= '</span>';
 		$notice_html .= '</button>';
 
@@ -162,9 +178,18 @@ class Admin {
 	 * @return bool
 	 */
 	private function should_show_welcome_notice(): bool {
-		// Already using Otter.
+		// Already using Otter & has finished onboarding.
 		if ( is_plugin_active( 'otter-blocks/otter-blocks.php' ) ) {
-			return false;
+			if ( class_exists( '\ThemeIsle\GutenbergBlocks\Plugins\FSE_Onboarding' ) ) {
+				$status = get_option( \ThemeIsle\GutenbergBlocks\Plugins\FSE_Onboarding::OPTION_KEY, array() );
+				$slug   = get_stylesheet();
+
+				if ( ! empty( $status[ $slug ] ) ) {
+					return false;
+				}
+			} else {
+				return false;
+			}
 		}
 
 		// Notice was dismissed.
@@ -224,10 +249,104 @@ class Admin {
 	private function get_otter_status(): string {
 		$status = 'not-installed';
 
+		if ( is_plugin_active( 'otter-blocks/otter-blocks.php' ) ) {
+			return 'active';
+		}
+
 		if ( file_exists( ABSPATH . 'wp-content/plugins/otter-blocks/otter-blocks.php' ) ) {
 			return 'installed';
 		}
 
 		return $status;
+	}
+
+	/**
+	 * Run after Otter Blocks activation.
+	 *
+	 * @param string $plugin Plugin name.
+	 *
+	 * @return void
+	 */
+	public function after_otter_activation( $plugin ) {
+		if ( 'otter-blocks/otter-blocks.php' !== $plugin ) {
+			return;
+		}
+
+		if ( ! class_exists( '\ThemeIsle\GutenbergBlocks\Plugins\FSE_Onboarding' ) ) {
+			return;
+		}
+
+		$status = get_option( \ThemeIsle\GutenbergBlocks\Plugins\FSE_Onboarding::OPTION_KEY, array() );
+		$slug   = get_stylesheet();
+
+		if ( ! empty( $status[ $slug ] ) ) {
+			return;
+		}
+
+		// Dismiss after two days from activation.
+		$activated_time = get_option( 'raft_install' );
+
+		if ( ! empty( $activated_time ) && time() - intval( $activated_time ) > ( 2 * DAY_IN_SECONDS ) ) {
+			update_option( Constants::CACHE_KEYS['dismissed-welcome-notice'], 'yes' );
+			return;
+		}
+
+		$onboarding = add_query_arg(
+			array(
+				'onboarding' => 'true',
+			),
+			admin_url( 'site-editor.php' )
+		);
+
+		wp_safe_redirect( $onboarding );
+		exit;
+	}
+
+	/**
+	 * Add NPS form.
+	 *
+	 * @return void
+	 */
+	public function add_nps_form() {
+		$screen = get_current_screen();
+
+		if ( current_user_can( 'manage_options' ) && ( 'dashboard' === $screen->id || 'themes' === $screen->id ) ) {
+			$website_url = preg_replace( '/[^a-zA-Z0-9]+/', '', get_site_url() );
+
+			$config = array(
+				'environmentId' => 'clp9hp3j71oqndl2ietgq8nej',
+				'apiHost'       => 'https://app.formbricks.com',
+				'userId'        => 'raft_' . $website_url,
+				'attributes'    => array(
+					'days_since_install' => self::convert_to_category( round( ( time() - get_option( 'raft_install', 0 ) ) / DAY_IN_SECONDS ) ),
+				),
+			);
+
+			echo '<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://unpkg.com/@formbricks/js@^1.2.0/dist/index.umd.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e),setTimeout(function(){window.formbricks.init(' . wp_json_encode( $config ) . ')},500)}();</script>';
+		}
+	}
+
+	/**
+	 * Convert a number to a category.
+	 *
+	 * @param int $number Number to convert.
+	 * @param int $scale  Scale.
+	 *
+	 * @return int
+	 */
+	public static function convert_to_category( $number, $scale = 1 ) {
+		$normalized_number = round( $number / $scale );
+
+		if ( 0 === $normalized_number || 1 === $normalized_number ) {
+			return 0;
+		} elseif ( $normalized_number > 1 && $normalized_number < 8 ) {
+			return 7;
+		} elseif ( $normalized_number >= 8 && $normalized_number < 31 ) {
+			return 30;
+		} elseif ( $normalized_number > 30 && $normalized_number < 90 ) {
+			return 90;
+		} elseif ( $normalized_number >= 90 ) {
+			return 91;
+		}
 	}
 }

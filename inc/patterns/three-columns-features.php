@@ -1,72 +1,83 @@
 <?php
 /**
- * Pattern
+ * Three Columns of Features Pattern for Raft Theme
  *
  * @author Themeisle
  * @package raft
- * @since 1.0.0
+ * @since 1.0.5
  *
- * slug: images-text-columns
- * title: Two columns of features
- * categories: raft
- * keywords: section, image, text, columns, title
+ * slug: three-columns-features
+ * title: Three Columns of Features
+ * categories: raft/features
+ * keywords: three columns, features, services
  */
 
-$columns = array(
-	array(
-		'image' => 'shape-05.svg',
-		'title' => __( 'Style Variations', 'raft' ),
-	),
-	array(
-		'image' => 'shape-06.svg',
-		'title' => __( 'Built-in Patterns', 'raft' ),
-	),
-	array(
-		'image' => 'shape-04.svg',
-		'title' => __( 'Powered by blocks', 'raft' ),
-	),
+$raft_strings = apply_filters( 'raft_strings', array() );
+
+$images = array(
+	RAFT_URL . 'assets/img/shape-05.svg',
+	RAFT_URL . 'assets/img/shape-06.svg',
+	RAFT_URL . 'assets/img/shape-04.svg',
 );
-
-$strings = array(
-	'title' => __( 'Three columns of features', 'raft' ),
-);
-
-$columns_markup = '';
-
-foreach ( $columns as $column ) {
-	$columns_markup .= '<!-- wp:column -->';
-	$columns_markup .= '<div class="wp-block-column">';
-
-	$columns_markup .= '<!-- wp:image {"sizeSlug":"large","linkDestination":"none"} -->';
-	$columns_markup .= '<figure class="wp-block-image size-full">';
-	$columns_markup .= '<img src="' . esc_url( RAFT_URL . 'assets/img/' . $column['image'] ) . '" alt="Illustration"/>';
-	$columns_markup .= '</figure>';
-	$columns_markup .= '<!-- /wp:image -->';
-
-	$columns_markup .= '<!-- wp:heading {"level":3} -->';
-	$columns_markup .= '<h3>' . esc_html( $column['title'] ) . '</h3>';
-	$columns_markup .= '<!-- /wp:heading -->';
-
-	$columns_markup .= '<!-- wp:paragraph -->';
-	$columns_markup .= '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>';
-	$columns_markup .= '<!-- /wp:paragraph -->';
-
-	$columns_markup .= '</div>';
-	$columns_markup .= '<!-- /wp:column -->';
-}
 
 return array(
-	'title'      => $strings['title'],
-	'categories' => array( 'raft' ),
+	'title'      => __( 'Three Columns of Features', 'raft' ),
+	'categories' => array( 'raft/features' ),
 	'content'    => '
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
+        <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"type":"constrained"}} -->
+        <div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)">
+            <!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|40","left":"var:preset|spacing|40"}}}} -->
+            <div class="wp-block-columns alignwide">
+                <!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
+                <div class="wp-block-column">
+                    <!-- wp:image {"linkDestination":"none","className":"size-full"} -->
+                    <figure class="wp-block-image size-full"><img src="' . esc_url( $images[0] ) . '" alt="Illustration"/></figure>
+                    <!-- /wp:image -->
 
-<!-- wp:columns {"align":"wide"} -->
-<div class="wp-block-columns alignwide">' . wp_kses_post( $columns_markup ) . '</div>
-<!-- /wp:columns -->
+                    <!-- wp:heading {"level":3} -->
+                    <h3 class="wp-block-heading">' . esc_html( $raft_strings['raft_feature_1'] ) . '</h3>
+                    <!-- /wp:heading -->
 
-</div>
-<!-- /wp:group -->
-',
+                    <!-- wp:paragraph -->
+                    <p>' . esc_html( $raft_strings['feature_description'] ) . '</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:column -->
+
+                <!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
+                <div class="wp-block-column">
+                    <!-- wp:image {"linkDestination":"none","className":"size-full"} -->
+                    <figure class="wp-block-image size-full"><img src="' . esc_url( $images[1] ) . '" alt="Illustration"/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:heading {"level":3} -->
+                    <h3 class="wp-block-heading">' . esc_html( $raft_strings['raft_feature_2'] ) . '</h3>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:paragraph -->
+                    <p>' . esc_html( $raft_strings['feature_description'] ) . '</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:column -->
+
+                <!-- wp:column {"style":{"spacing":{"blockGap":"var:preset|spacing|40"}}} -->
+                <div class="wp-block-column">
+                    <!-- wp:image {"linkDestination":"none","className":"size-full"} -->
+                    <figure class="wp-block-image size-full"><img src="' . esc_url( $images[2] ) . '" alt="Illustration"/></figure>
+                    <!-- /wp:image -->
+
+                    <!-- wp:heading {"level":3} -->
+                    <h3 class="wp-block-heading">' . esc_html( $raft_strings['raft_feature_3'] ) . '</h3>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:paragraph -->
+                    <p>' . esc_html( $raft_strings['feature_description'] ) . '</p>
+                    <!-- /wp:paragraph -->
+                </div>
+                <!-- /wp:column -->
+            </div>
+            <!-- /wp:columns -->
+        </div>
+        <!-- /wp:group -->
+    ',
 );
