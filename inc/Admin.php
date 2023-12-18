@@ -20,20 +20,20 @@ class Admin {
 	 * Admin constructor.
 	 */
 	public function __construct() {
-		$this->setup_otter_notice();
+		$this->setup_admin_hooks();
 	}
 
-
 	/**
-	 * Setup the Otter Blocks notice.
+	 * Setup admin hooks.
 	 *
 	 * @return void
 	 */
-	public function setup_otter_notice() {
+	public function setup_admin_hooks() {
 		add_action( 'admin_notices', array( $this, 'render_welcome_notice' ), 0 );
 		add_action( 'wp_ajax_raft_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
 		add_action( 'wp_ajax_raft_set_otter_ref', array( $this, 'set_otter_ref' ) );
 		add_action( 'activated_plugin', array( $this, 'after_otter_activation' ) );
+		add_action( 'admin_print_scripts', array( $this, 'add_nps_form' ) );
 	}
 
 	/**
@@ -300,5 +300,53 @@ class Admin {
 
 		wp_safe_redirect( $onboarding );
 		exit;
+	}
+
+	/**
+	 * Add NPS form.
+	 *
+	 * @return void
+	 */
+	public function add_nps_form() {
+		$screen = get_current_screen();
+
+		if ( current_user_can( 'manage_options' ) && ( 'dashboard' === $screen->id || 'themes' === $screen->id ) ) {
+			$website_url = preg_replace( '/[^a-zA-Z0-9]+/', '', get_site_url() );
+
+			$config = array(
+				'environmentId' => 'clp9hp3j71oqndl2ietgq8nej',
+				'apiHost'       => 'https://app.formbricks.com',
+				'userId'        => 'raft_' . $website_url,
+				'attributes'    => array(
+					'days_since_install' => self::convert_to_category( round( ( time() - get_option( 'raft_install', 0 ) ) / DAY_IN_SECONDS ) ),
+				),
+			);
+
+			echo '<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://unpkg.com/@formbricks/js@^1.2.0/dist/index.umd.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e),setTimeout(function(){window.formbricks.init(' . wp_json_encode( $config ) . ')},500)}();</script>';
+		}
+	}
+
+	/**
+	 * Convert a number to a category.
+	 *
+	 * @param int $number Number to convert.
+	 * @param int $scale  Scale.
+	 *
+	 * @return int
+	 */
+	public static function convert_to_category( $number, $scale = 1 ) {
+		$normalized_number = round( $number / $scale );
+
+		if ( 0 === $normalized_number || 1 === $normalized_number ) {
+			return 0;
+		} elseif ( $normalized_number > 1 && $normalized_number < 8 ) {
+			return 7;
+		} elseif ( $normalized_number >= 8 && $normalized_number < 31 ) {
+			return 30;
+		} elseif ( $normalized_number > 30 && $normalized_number < 90 ) {
+			return 90;
+		} elseif ( $normalized_number >= 90 ) {
+			return 91;
+		}
 	}
 }
