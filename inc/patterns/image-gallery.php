@@ -1,88 +1,75 @@
 <?php
 /**
- * Pattern
+ * Image Gallery with Title
  *
  * @author Themeisle
  * @package raft
- * @since 1.0.0
+ * @since 1.0.5
  *
- * slug: img-gallery
- * title: Image Gallery with title
- * categories: raft
- * keywords: gallery, images
+ * slug: image-gallery
+ * title: Image Gallery with Title
+ * categories: raft/content
+ * keywords: image, gallery, title
  */
 
-$illustrations = array(
-	'shape-01.svg',
-	'shape-05.svg',
-	'shape-04.svg',
+$raft_strings = apply_filters( 'raft_strings', array() );
 
-	'shape-03.svg',
-	'shape-02.svg',
+$images = array(
+	RAFT_URL . 'assets/img/shape-01.svg',
+	RAFT_URL . 'assets/img/shape-05.svg',
+	RAFT_URL . 'assets/img/shape-04.svg',
+	RAFT_URL . 'assets/img/shape-03.svg',
+	RAFT_URL . 'assets/img/shape-02.svg',
 );
-
-$illustrations_markup = '';
-
-$strings = array(
-	'title'  => __( 'Image Gallery with title', 'raft' ),
-	'byline' => __( 'Add your text, and replace with your images', 'raft' ),
-	'button' => __( 'View more photos', 'raft' ),
-);
-
-foreach ( $illustrations as $illustration ) {
-	$illustrations_markup .= '<!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->';
-	$illustrations_markup .= '<figure class="wp-block-image size-full">';
-	$illustrations_markup .= '<img src="' . esc_url( RAFT_URL . 'assets/img/' . $illustration ) . '" alt="Illustration"/>';
-	$illustrations_markup .= '</figure>';
-	$illustrations_markup .= '<!-- /wp:image -->';
-}
-
 
 return array(
-	'title'      => $strings['title'],
+	'title'      => __( 'Image Gallery with Title', 'raft' ),
 	'categories' => array( 'raft/content' ),
 	'content'    => '
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"64px","bottom":"64px"},"margin":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true}} -->
-<div class="wp-block-group alignfull" style="margin-top:0px;margin-bottom:0px;padding-top:64px;padding-bottom:64px">
-<!-- wp:heading {"textAlign":"center"} -->
-<h2 class="has-text-align-center">' . esc_html( $strings['title'] ) . '</h2>
-<!-- /wp:heading -->
+        <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40","right":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"0"},"blockGap":"var:preset|spacing|40"}},"layout":{"inherit":true,"type":"constrained"}} -->
+        <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40)"><!-- wp:heading {"textAlign":"center"} -->
+        <h2 class="wp-block-heading has-text-align-center">' . esc_html( $raft_strings['section_title'] ) . '</h2>
+        <!-- /wp:heading -->
 
-<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center">' . esc_html( $strings['byline'] ) . '</p>
-<!-- /wp:paragraph -->
+        <!-- wp:paragraph {"align":"center"} -->
+        <p class="has-text-align-center">' . esc_html( $raft_strings['section_description'] ) . '</p>
+        <!-- /wp:paragraph -->
 
-<!-- wp:group {"align":"wide"} -->
-<div class="wp-block-group alignwide">
-<!-- wp:columns -->
-<div class="wp-block-columns">
-<!-- wp:column -->
-<div class="wp-block-column">
+        <!-- wp:group {"align":"wide"} -->
+        <div class="wp-block-group alignwide"><!-- wp:columns -->
+        <div class="wp-block-columns"><!-- wp:column -->
+        <div class="wp-block-column"><!-- wp:gallery {"imageCrop":false,"linkTo":"none","sizeSlug":"full","align":"center"} -->
+        <figure class="wp-block-gallery aligncenter has-nested-images columns-default">
+            <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+            <figure class="wp-block-image size-full"><img src="' . esc_url( $images[0] ) . '" alt="Illustration"/></figure>
+            <!-- /wp:image -->
 
-<!-- wp:gallery {"imageCrop":false,"linkTo":"none","sizeSlug":"full","align":"center"} -->
-<figure class="wp-block-gallery aligncenter has-nested-images columns-default">' . wp_kses_post( $illustrations_markup ) . '</figure>
-<!-- /wp:gallery -->
+            <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+            <figure class="wp-block-image size-full"><img src="' . esc_url( $images[1] ) . '" alt="Illustration"/></figure>
+            <!-- /wp:image -->
 
-</div>
-<!-- /wp:column -->
+            <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+            <figure class="wp-block-image size-full"><img src="' . esc_url( $images[2] ) . '" alt="Illustration"/></figure>
+            <!-- /wp:image -->
 
-</div>
-<!-- /wp:columns -->
+            <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+            <figure class="wp-block-image size-full"><img src="' . esc_url( $images[3] ) . '" alt="Illustration"/></figure>
+            <!-- /wp:image -->
 
-</div>
-<!-- /wp:group -->
+            <!-- wp:image {"sizeSlug":"full","linkDestination":"none"} -->
+            <figure class="wp-block-image size-full"><img src="' . esc_url( $images[4] ) . '" alt="Illustration"/></figure>
+            <!-- /wp:image -->
+        </figure>
+        <!-- /wp:gallery --></div>
+        <!-- /wp:column --></div>
+        <!-- /wp:columns --></div>
+        <!-- /wp:group -->
 
-<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-<div class="wp-block-buttons">
-<!-- wp:button {"textColor":"raft-fg-alt"} -->
-<div class="wp-block-button">
-<a class="wp-block-button__link has-raft-fg-alt-color has-text-color">' . esc_html( $strings['button'] ) . '</a>
-</div>
-<!-- /wp:button -->
-</div>
-<!-- /wp:buttons -->
-
-</div>
-<!-- /wp:group -->
-',
+        <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+        <div class="wp-block-buttons"><!-- wp:button {"textColor":"raft-fg-alt"} -->
+        <div class="wp-block-button"><a class="wp-block-button__link has-raft-fg-alt-color has-text-color wp-element-button">' . esc_html( $raft_strings['button_text'] ) . '</a></div>
+        <!-- /wp:button --></div>
+        <!-- /wp:buttons --></div>
+        <!-- /wp:group -->
+    ',
 );

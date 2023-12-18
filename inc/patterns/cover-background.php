@@ -1,59 +1,57 @@
 <?php
 /**
- * Pattern
+ * Cover with Background Pattern for Raft Theme
  *
  * @author Themeisle
  * @package raft
- * @since 1.0.0
+ * @since 1.0.5
  *
  * slug: cover-background
- * title: Cover title with background
- * categories: raft
- * keywords: cover, section, header, hero
+ * title: Cover with Background
+ * categories: raft/heroes_page_titles
+ * keywords: cover, background, heroes
  */
 
-$hero_illustration = RAFT_URL . 'assets/img/raft-cover-bg.svg';
+$raft_strings = apply_filters( 'raft_strings', array() );
 
-$strings = array(
-	'title'  => __( 'This is a cover with a background image', 'raft' ),
-	'byline' => 'Lorem ipsum dolor',
-	'button' => __( 'This is a button', 'raft' ),
+$images = array(
+	RAFT_URL . 'assets/img/raft-cover-bg.svg',
 );
 
 return array(
-	'title'      => __( 'Cover title with background', 'raft' ),
+	'title'      => __( 'Cover with Background', 'raft' ),
 	'categories' => array( 'raft/heroes_page_titles' ),
 	'content'    => '
-<!-- wp:cover {"url":"' . esc_url( $hero_illustration ) . '","dimRatio":60,"overlayColor":"black","minHeight":60,"minHeightUnit":"vh","align":"full","style":{"spacing":{"padding":{"top":"24px","right":"24px","bottom":"24px","left":"24px"}}}} -->
-<div class="wp-block-cover alignfull" style="padding-top:24px;padding-right:24px;padding-bottom:24px;padding-left:24px;min-height:60vh">
-<span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-60 has-background-dim"></span>
-<img class="wp-block-cover__image-background" alt="" src="' . esc_url( $hero_illustration ) . '" data-object-fit="cover"/>
-<div class="wp-block-cover__inner-container">
+        <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"right":"0","left":"0","top":"0","bottom":"0"},"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+        <div class="wp-block-group alignfull" style="margin-top:0;margin-bottom:0;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0">
+            <!-- wp:cover {"url":"' . esc_url( $images[0] ) . '","dimRatio":60,"overlayColor":"black","minHeight":600,"minHeightUnit":"px","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|80","right":"var:preset|spacing|40","bottom":"var:preset|spacing|80","left":"var:preset|spacing|40"},"blockGap":"var:preset|spacing|30"}}} -->
+            <div class="wp-block-cover alignfull" style="padding-top:var(--wp--preset--spacing--80);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--80);padding-left:var(--wp--preset--spacing--40);min-height:600px">
+                <span aria-hidden="true" class="wp-block-cover__background has-black-background-color has-background-dim-60 has-background-dim"></span>
+                <img class="wp-block-cover__image-background" alt="" src="' . esc_url( $images[0] ) . '" data-object-fit="cover"/>
+                <div class="wp-block-cover__inner-container">
+                    <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|50"}},"textColor":"raft-fg-alt","layout":{"inherit":true,"type":"constrained"}} -->
+                    <div class="wp-block-group has-raft-fg-alt-color has-text-color">
+                        <!-- wp:heading {"level":1} -->
+                        <h1 class="wp-block-heading">' . esc_html( $raft_strings['hero_title'] ) . '</h1>
+                        <!-- /wp:heading -->
 
-<!-- wp:group {"textColor":"raft-fg-alt","layout":{"inherit":true}} -->
-<div class="wp-block-group has-raft-fg-alt-color has-text-color">
+                        <!-- wp:paragraph {"fontSize":"medium"} -->
+                        <p class="has-medium-font-size">' . esc_html( $raft_strings['short_text'] ) . '</p>
+                        <!-- /wp:paragraph -->
 
-<!-- wp:heading {"fontSize":"huge"} -->
-<h2 class="has-huge-font-size">' . esc_html( $strings['title'] ) . '</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"fontSize":"medium"} -->
-<p class="has-medium-font-size">' . esc_html( $strings['byline'] ) . '</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:buttons -->
-<div class="wp-block-buttons">
-<!-- wp:button -->
-<div class="wp-block-button"><a class="wp-block-button__link">' . esc_html( $strings['button'] ) . '</a></div>
-<!-- /wp:button -->
-</div>
-
-<!-- /wp:buttons -->
-</div>
-
-<!-- /wp:group -->
-</div>
-
-</div>
-<!-- /wp:cover -->',
+                        <!-- wp:buttons -->
+                        <div class="wp-block-buttons">
+                            <!-- wp:button -->
+                            <div class="wp-block-button"><a class="wp-block-button__link wp-element-button">' . esc_html( $raft_strings['button_text_2'] ) . '</a></div>
+                            <!-- /wp:button -->
+                        </div>
+                        <!-- /wp:buttons -->
+                    </div>
+                    <!-- /wp:group -->
+                </div>
+            </div>
+            <!-- /wp:cover -->
+        </div>
+        <!-- /wp:group -->
+    ',
 );
