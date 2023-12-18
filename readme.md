@@ -17,6 +17,28 @@ Raft is distributed under the terms of the GNU GPLv2 or later
 
 ## Changelog ##
 
+#### [Version 1.1.0](https://github.com/Codeinwp/raft/compare/v1.0.6...v1.1.0) (2023-12-18)
+
+### New Features
+- **New Onboarding for Raft Theme**: Experience a new Onboarding process for the Raft theme, integrating the use of Otter Blocks plugin.
+- **New Block Patterns**: Added new block patterns to enrich the customization options.
+- **New Theme Style Presets**: Added 4 new theme style presets
+- **New Font Families Added**: Expanded the typography options with the addition of new font families.
+- **Secondary Accent Color**: Added a new secondary accent color in the theme's color palette.
+- **Dark background color**: Added a secondary background color in the theme's color palette.
+- **Fullwidth Template with Header and Footer**: Introduced a new fullwidth template that includes both Header and Footer.
+
+### Improvements
+- **New Spacing Variables**: Introduced new spacing variables for enhanced and responsive layout control.
+- **Reorganization of Pattern Library**: Removed core patterns and re-organized the pattern library for better clarity and theme-consistent experience.
+
+### Bug Fixes
+- **Footer Credits Display on Mobile**: Fixed the issue where footer credits appeared weird on mobile devices.
+- **Blog/Index Template Item Count**: Resolved the problem where the blog and index templates were not respecting the number of items defined in the Settings.
+
+
+
+
 ##### [Version 1.0.6](https://github.com/Codeinwp/raft/compare/v1.0.5...v1.0.6) (2023-03-09)
 
 - Add Starter Content
