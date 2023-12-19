@@ -42,6 +42,7 @@ function handleWelcomeNotice( $ ) {
 		installSpinner.addClass( 'dashicons-yes' );
 		installText.text( done );
 		setTimeout( hideAndRemoveNotice, 1500 );
+		window.location.href = onboardingUrl;
 	};
 
 	$( installBtn ).on( 'click', async () => {
