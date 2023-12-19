@@ -1,3 +1,8 @@
+##### [Version 1.1.1](https://github.com/Codeinwp/raft/compare/v1.1.0...v1.1.1) (2023-12-19)
+
+### Bug Fixes
+- **Welcome Notice not redirecting**: Fixes an issue with Welcome Notice not redirecting straightaway to Onboarding.
+
 #### [Version 1.1.0](https://github.com/Codeinwp/raft/compare/v1.0.6...v1.1.0) (2023-12-18)
 
 ### New Features
