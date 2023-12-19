@@ -335,7 +335,7 @@ class Admin {
 	 * @return int
 	 */
 	public static function convert_to_category( $number, $scale = 1 ) {
-		$normalized_number = round( $number / $scale );
+		$normalized_number = intval( round( $number / $scale ) );
 
 		if ( 0 === $normalized_number || 1 === $normalized_number ) {
 			return 0;
