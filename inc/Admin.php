@@ -101,11 +101,11 @@ class Admin {
 
 		$notice_html .= '<h1 class="notice-title">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= sprintf( __( 'Please install our builder', 'raft' ), '<strong>Otter Blocks</strong>' );
+		$notice_html .= sprintf( __( 'Extend Raft with our Free Builder', 'raft' ), '<strong>Otter Blocks</strong>' );
 
 		$notice_html .= '</h1>';
 
-		$notice_html .= '<p class="description">' . __( 'Install Otter and start building stunning, super-fast websites. Discover new blocks, enhanced functionality and seamless theme setup.', 'raft' ) . '</p>';
+		$notice_html .= '<p class="description">' . __( 'Install Otter, our Free Builder plugin, and create visually stunning, lightning-fast websites with ease. Discover new blocks, enhanced functionality, and experience an effortless theme setup.', 'raft' ) . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
