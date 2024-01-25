@@ -90,6 +90,7 @@ class Core {
 		add_theme_support(
 			'otter-onboarding',
 			array(
+				'logo'           => RAFT_URL . 'assets/img/logo.svg',
 				'templates'      => array(
 					'archive'    => array(
 						'archive-boxed' => array(

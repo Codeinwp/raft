@@ -89,17 +89,23 @@ class Admin {
 		$notice_html .= '<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>';
 		$notice_html .= '<div class="notice-content">';
 
-		$notice_html .= '<img class="otter-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png' ) ) . '" alt="' . __( 'Otter Blocks preview', 'raft' ) . '"/>';
+		$notice_html .= '<img class="otter-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png?1' ) ) . '" alt="' . __( 'Otter Blocks preview', 'raft' ) . '"/>';
 
 		$notice_html .= '<div class="notice-copy">';
 
-		$notice_html .= '<h1 class="notice-title">';
+		$notice_html .= '<h1 class="notice-subtitle">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= sprintf( __( 'Power-up your website building experience with %s: Seamless theme setup, advanced blocks and extra functionality for your site.', 'raft' ), '<strong>Otter Blocks</strong>' );
+		$notice_html .= __( 'Thanks for installing Raft theme 🎉', 'raft' );
 
 		$notice_html .= '</h1>';
 
-		$notice_html .= '<p class="description">' . __( 'Otter is a Gutenberg Blocks page builder plugin that adds new blocks and functionality to your theme, while optimising your page building experience. Now with Otter\'s new theme onboarding wizard, you can experience a streamlined and intuitive setup of your Raft theme in minutes.', 'raft' ) . '</p>';
+		$notice_html .= '<h1 class="notice-title">';
+		/* translators: %s: Otter Blocks */
+		$notice_html .= sprintf( __( 'Please install our builder', 'raft' ), '<strong>Otter Blocks</strong>' );
+
+		$notice_html .= '</h1>';
+
+		$notice_html .= '<p class="description">' . __( 'Install Otter and start building stunning, super-fast websites. Discover new blocks, enhanced functionality and seamless theme setup.', 'raft' ) . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
@@ -113,10 +119,10 @@ class Admin {
 			$notice_html .= __( 'Try it out!', 'raft' );
 		} elseif ( 'installed' === $otter_status ) {
 			/* translators: %s: Otter Blocks */
-			$notice_html .= sprintf( __( 'Activate %s', 'raft' ), 'Otter Blocks' );
+			$notice_html .= sprintf( __( 'Activate %s', 'raft' ), 'Otter' );
 		} else {
 			/* translators: %s: Otter Blocks */
-			$notice_html .= sprintf( __( 'Install & Activate %s', 'raft' ), 'Otter Blocks' );
+			$notice_html .= sprintf( __( 'Install & Activate %s', 'raft' ), 'Otter' );
 		}
 
 		$notice_html .= '</span>';
