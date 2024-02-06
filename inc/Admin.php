@@ -98,14 +98,16 @@ class Admin {
 		$notice_html .= __( 'Thanks for installing Raft theme 🎉', 'raft' );
 
 		$notice_html .= '</h1>';
-
+`
 		$notice_html .= '<h1 class="notice-title">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= sprintf( __( 'Extend Raft with our Free Builder', 'raft' ), '<strong>Otter Blocks</strong>' );
+		$notice_html .= sprintf( __( 'Install our Free builder', 'raft' ), '<strong>Otter Blocks</strong>' );
 
 		$notice_html .= '</h1>';
 
-		$notice_html .= '<p class="description">' . __( 'Install Otter, our Free Builder plugin, and create visually stunning, lightning-fast websites with ease. Discover new blocks, enhanced functionality, and experience an effortless theme setup.', 'raft' ) . '</p>';
+		$learn_more = '<a href="https://docs.themeisle.com/article/1975-fse-onboarding" target="_blank">' . __( 'Learn More', 'raft' ) . '</a>';
+
+		$notice_html .= '<p class="description">' . __( 'Install our free builder plugin and create stunning, lightning-fast websites.' . ' ' . $learn_more, 'raft' ) . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
@@ -119,19 +121,14 @@ class Admin {
 			$notice_html .= __( 'Try it out!', 'raft' );
 		} elseif ( 'installed' === $otter_status ) {
 			/* translators: %s: Otter Blocks */
-			$notice_html .= sprintf( __( 'Activate %s', 'raft' ), 'Otter' );
+			$notice_html .= sprintf( __( 'Activate %s', 'raft' ), 'Otter Builder' );
 		} else {
 			/* translators: %s: Otter Blocks */
-			$notice_html .= sprintf( __( 'Install & Activate %s', 'raft' ), 'Otter' );
+			$notice_html .= sprintf( __( 'Install %s', 'raft' ), 'Otter Builder' );
 		}
 
 		$notice_html .= '</span>';
 		$notice_html .= '</button>';
-
-		$notice_html .= '<a href="https://wordpress.org/plugins/otter-blocks/" target="_blank" class="button button-secondary button-hero">';
-		$notice_html .= '<span>' . __( 'Learn More', 'raft' ) . '</span>';
-		$notice_html .= '<span class="dashicons dashicons-external"></span>';
-		$notice_html .= '</a>';
 
 		$notice_html .= '</div>';
 
