@@ -5,6 +5,11 @@
 	position: relative;
 	padding-bottom: 0;
 	border-left: 1px solid #c3c4c7;
+	padding-left: 0;
+
+	@media (--tablet) {
+		padding-left: 10px;
+	}
 
 	.notice-content {
 		display: flex;
@@ -33,22 +38,25 @@
 	.notice-title {
 		line-height: 1.5;
 		max-width: 700px;
+		font-weight: 600;
+	}
 
-		span {
-			font-weight: 600;
-			color: #e57451;
-		}
+	.notice-subtitle {
+		color: #3b5de6;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 20px;
 	}
 
 	.actions {
 		display: flex;
-		margin-top: 40px;
+		margin-top: 20px;
 		gap: 20px;
 		align-items: center;
 
 
 		@media (--desktop) {
-			margin-top: 20px;
 			gap: 10px;
 			justify-content: center;
 		}
@@ -85,7 +93,6 @@
 		display: block;
 		max-height: 300px;
 		max-width: 60%;
-		padding: 30px 0;
 
 		@media (--desktop) {
 			max-width: 80%;
