@@ -95,19 +95,19 @@ class Admin {
 
 		$notice_html .= '<h1 class="notice-subtitle">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= __( 'Thanks for installing Raft theme 🎉', 'raft' );
+		$notice_html .= __( 'Thanks for downloading Raft Theme 🎉', 'raft' );
 
 		$notice_html .= '</h1>';
 
 		$notice_html .= '<h1 class="notice-title">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= sprintf( __( 'Install our Free builder', 'raft' ), '<strong>Otter Blocks</strong>' );
+		$notice_html .= sprintf( __( 'Extend Raft with our Free Builder', 'raft' ), '<strong>Otter Blocks</strong>' );
 
 		$notice_html .= '</h1>';
 
 		$learn_more = '<a href="https://docs.themeisle.com/article/1975-fse-onboarding" target="_blank">' . __( 'Learn More', 'raft' ) . '</a>';
 
-		$notice_html .= '<p class="description">' . __( 'Install our free builder plugin and create stunning, lightning-fast websites.', 'raft' ) . ' ' . $learn_more . '</p>';
+		$notice_html .= '<p class="description">' . __( 'Install our free builder plugin for more blocks, enhanced functionality, and seamless theme setup.', 'raft' ) . ' ' . $learn_more . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
