@@ -89,17 +89,25 @@ class Admin {
 		$notice_html .= '<button type="button" class="notice-dismiss"><span class="screen-reader-text">Dismiss this notice.</span></button>';
 		$notice_html .= '<div class="notice-content">';
 
-		$notice_html .= '<img class="otter-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png' ) ) . '" alt="' . __( 'Otter Blocks preview', 'raft' ) . '"/>';
+		$notice_html .= '<img class="otter-preview" src="' . esc_url( Assets_Manager::get_image_url( 'welcome-notice.png?1' ) ) . '" alt="' . __( 'Otter Blocks preview', 'raft' ) . '"/>';
 
 		$notice_html .= '<div class="notice-copy">';
 
-		$notice_html .= '<h1 class="notice-title">';
+		$notice_html .= '<h1 class="notice-subtitle">';
 		/* translators: %s: Otter Blocks */
-		$notice_html .= sprintf( __( 'Power-up your website building experience with %s: Seamless theme setup, advanced blocks and extra functionality for your site.', 'raft' ), '<strong>Otter Blocks</strong>' );
+		$notice_html .= __( 'Thanks for downloading Raft Theme 🎉', 'raft' );
 
 		$notice_html .= '</h1>';
 
-		$notice_html .= '<p class="description">' . __( 'Otter is a Gutenberg Blocks page builder plugin that adds new blocks and functionality to your theme, while optimising your page building experience. Now with Otter\'s new theme onboarding wizard, you can experience a streamlined and intuitive setup of your Raft theme in minutes.', 'raft' ) . '</p>';
+		$notice_html .= '<h1 class="notice-title">';
+		/* translators: %s: Otter Blocks */
+		$notice_html .= sprintf( __( 'Extend Raft with our Free Builder', 'raft' ), '<strong>Otter Blocks</strong>' );
+
+		$notice_html .= '</h1>';
+
+		$learn_more = '<a href="https://docs.themeisle.com/article/1975-fse-onboarding" target="_blank">' . __( 'Learn More', 'raft' ) . '</a>';
+
+		$notice_html .= '<p class="description">' . __( 'Install our free builder plugin for more blocks, enhanced functionality, and seamless theme setup.', 'raft' ) . ' ' . $learn_more . '</p>';
 
 		$notice_html .= '<div class="actions">';
 
@@ -113,19 +121,14 @@ class Admin {
 			$notice_html .= __( 'Try it out!', 'raft' );
 		} elseif ( 'installed' === $otter_status ) {
 			/* translators: %s: Otter Blocks */
-			$notice_html .= sprintf( __( 'Activate %s', 'raft' ), 'Otter Blocks' );
+			$notice_html .= sprintf( __( 'Activate %s', 'raft' ), 'Otter Builder' );
 		} else {
 			/* translators: %s: Otter Blocks */
-			$notice_html .= sprintf( __( 'Install & Activate %s', 'raft' ), 'Otter Blocks' );
+			$notice_html .= sprintf( __( 'Install %s', 'raft' ), 'Otter Builder' );
 		}
 
 		$notice_html .= '</span>';
 		$notice_html .= '</button>';
-
-		$notice_html .= '<a href="https://wordpress.org/plugins/otter-blocks/" target="_blank" class="button button-secondary button-hero">';
-		$notice_html .= '<span>' . __( 'Learn More', 'raft' ) . '</span>';
-		$notice_html .= '<span class="dashicons dashicons-external"></span>';
-		$notice_html .= '</a>';
 
 		$notice_html .= '</div>';
 
@@ -345,7 +348,7 @@ class Admin {
 			return 30;
 		} elseif ( $normalized_number > 30 && $normalized_number < 90 ) {
 			return 90;
-		} elseif ( $normalized_number >= 90 ) {
+		} elseif ( $normalized_number > 90 ) {
 			return 91;
 		}
 	}
