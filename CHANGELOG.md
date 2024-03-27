@@ -1,3 +1,9 @@
+##### [Version 1.1.4](https://github.com/Codeinwp/raft/compare/v1.1.3...v1.1.4) (2024-03-27)
+
+### Improvements
+
+- **Package Updates**: Updates to code packages, no user-facing changes.
+
 ##### [Version 1.1.3](https://github.com/Codeinwp/raft/compare/v1.1.2...v1.1.3) (2024-03-11)
 
 ### Bug Fixes
