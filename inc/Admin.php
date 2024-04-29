@@ -66,7 +66,7 @@ class Admin {
 					'learnMore'  => __( 'Learn More', 'raft' ),
 					'noticeHtml' => sprintf(
 					/* translators: %s: FSE Design Pack: */
-						__( '%s Access a collection of 50+ layout patterns ready to import to your website', 'raft' ),
+						__( '%s Access a collection of 40+ layout patterns ready to import to your website', 'raft' ),
 						'<strong>FSE Design Pack:</strong>'
 					),
 				),
