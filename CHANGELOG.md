@@ -1,3 +1,10 @@
+##### [Version 1.1.5](https://github.com/Codeinwp/raft/compare/v1.1.4...v1.1.5) (2024-04-29)
+
+### Improvements
+
+- **Color compatibility**: Add color compatibility with other Themeisle FSE themes
+- **Banner**: Adds promo banner for FSE Design Pack
+
 ##### [Version 1.1.4](https://github.com/Codeinwp/raft/compare/v1.1.3...v1.1.4) (2024-03-27)
 
 ### Improvements
