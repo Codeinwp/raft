@@ -16,9 +16,10 @@ namespace Raft;
  */
 class Assets_Manager {
 	const ASSETS_SLUGS = array(
-		'frontend-css'   => 'raft-style',
-		'editor-css'     => 'raft-editor',
-		'welcome-notice' => 'raft-welcome-notice',
+		'frontend-css'       => 'raft-style',
+		'editor-css'         => 'raft-editor',
+		'welcome-notice'     => 'raft-welcome-notice',
+		'design-pack-notice' => 'raft-design-pack-notice',
 	);
 
 	/**

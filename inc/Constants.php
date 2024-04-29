@@ -16,6 +16,7 @@ namespace Raft;
  */
 class Constants {
 	const CACHE_KEYS = array(
-		'dismissed-welcome-notice' => 'raft-welcome-notice-dismissed',
+		'dismissed-welcome-notice'         => 'raft-welcome-notice-dismissed',
+		'dismissed-fse-design-pack-notice' => 'raft-design-pack-dismissed',
 	);
 }
