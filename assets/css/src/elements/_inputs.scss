@@ -6,7 +6,7 @@ select {
 }
 
 input:read-write:not([type="search"]),
-textarea,
+textarea:not(.wc-block-editor-components-title),
 select {
 	width: 100%;
 	padding: 12px;
