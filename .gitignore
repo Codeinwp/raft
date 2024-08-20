@@ -13,3 +13,4 @@ assets/js/build
 languages/raft.pot
 
 .DS_Store
+.phpunit.result.cache
