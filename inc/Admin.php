@@ -73,8 +73,6 @@ class Admin {
 			),
 			'designPackNoticeData'
 		);
-
-		echo '<div id="raft-design-pack-notice"></div>';
 	}
 
 	/**
