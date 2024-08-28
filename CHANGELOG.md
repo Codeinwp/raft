@@ -1,3 +1,9 @@
+##### [Version 1.1.6](https://github.com/Codeinwp/raft/compare/v1.1.5...v1.1.6) (2024-08-28)
+
+### Bug Fixes
+
+- **Fix Notice Error**: Fixed an issue with the Notice causing an error when visiting the Editor.
+
 ##### [Version 1.1.5](https://github.com/Codeinwp/raft/compare/v1.1.4...v1.1.5) (2024-04-29)
 
 ### Improvements
