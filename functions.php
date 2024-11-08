@@ -67,7 +67,7 @@ function check_php() {
  * @return void
  */
 function define_constants() {
-	define( 'RAFT_VERSION', '1.1.6' );
+	define( 'RAFT_VERSION', '1.1.7' );
 	define( 'RAFT_DEBUG', defined( 'WP_DEBUG' ) && WP_DEBUG === true );
 	define( 'RAFT_DIR', trailingslashit( get_template_directory() ) );
 	define( 'RAFT_URL', trailingslashit( get_template_directory_uri() ) );
