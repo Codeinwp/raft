@@ -33,7 +33,7 @@ class Admin {
 		add_action( 'wp_ajax_raft_dismiss_welcome_notice', array( $this, 'remove_welcome_notice' ) );
 		add_action( 'wp_ajax_raft_set_otter_ref', array( $this, 'set_otter_ref' ) );
 		add_action( 'activated_plugin', array( $this, 'after_otter_activation' ) );
-		add_action( 'admin_print_scripts', array( $this, 'add_nps_form' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'register_internal_page' ) );
 
 		add_action( 'enqueue_block_editor_assets', array( $this, 'add_fse_design_pack_notice' ) );
 		add_action( 'wp_ajax_raft_dismiss_design_pack_notice', array( $this, 'remove_design_pack_notice' ) );
@@ -380,50 +380,35 @@ class Admin {
 	}
 
 	/**
-	 * Add NPS form.
+	 * Register internal pages.
 	 *
 	 * @return void
 	 */
-	public function add_nps_form() {
+	public function register_internal_page() {
 		$screen = get_current_screen();
-
-		if ( current_user_can( 'manage_options' ) && ( 'dashboard' === $screen->id || 'themes' === $screen->id ) ) {
-			$website_url = preg_replace( '/[^a-zA-Z0-9]+/', '', get_site_url() );
-
-			$config = array(
-				'environmentId' => 'clp9hp3j71oqndl2ietgq8nej',
-				'apiHost'       => 'https://app.formbricks.com',
-				'userId'        => 'raft_' . $website_url,
-				'attributes'    => array(
-					'days_since_install' => self::convert_to_category( round( ( time() - get_option( 'raft_install', time() ) ) / DAY_IN_SECONDS ) ),
-				),
-			);
-
-			echo '<script type="text/javascript">!function(){var t=document.createElement("script");t.type="text/javascript",t.async=!0,t.src="https://unpkg.com/@formbricks/js@^1.6.5/dist/index.umd.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e),setTimeout(function(){window.formbricks.init(' . wp_json_encode( $config ) . ')},500)}();</script>';
+		
+		if ( ! current_user_can( 'manage_options' ) || ( 'dashboard' !== $screen->id && 'themes' !== $screen->id ) ) {
+			return;
 		}
-	}
+		
+		add_filter(
+			'themeisle-sdk/survey/' . RAFT_PRODUCT_SLUG,
+			function( $data, $page_slug ) {
+				$install_days_number = intval( ( time() - get_option( 'raft_install', time() ) ) / DAY_IN_SECONDS );
 
-	/**
-	 * Convert a number to a category.
-	 *
-	 * @param int $number Number to convert.
-	 * @param int $scale  Scale.
-	 *
-	 * @return int
-	 */
-	public static function convert_to_category( $number, $scale = 1 ) {
-		$normalized_number = intval( round( $number / $scale ) );
+				$data = array(
+					'environmentId' => 'clp9hp3j71oqndl2ietgq8nej',
+					'attributes'    => array(
+						'install_days_number' => $install_days_number,
+						'version'             => RAFT_VERSION,
+					),
+				);
 
-		if ( 0 === $normalized_number || 1 === $normalized_number ) {
-			return 0;
-		} elseif ( $normalized_number > 1 && $normalized_number < 8 ) {
-			return 7;
-		} elseif ( $normalized_number >= 8 && $normalized_number < 31 ) {
-			return 30;
-		} elseif ( $normalized_number > 30 && $normalized_number < 90 ) {
-			return 90;
-		} elseif ( $normalized_number > 90 ) {
-			return 91;
-		}
+				return $data;
+			},
+			10,
+			2 
+		);
+		do_action( 'themeisle_internal_page', RAFT_PRODUCT_SLUG, $screen->id );
 	}
 }
