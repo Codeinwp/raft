@@ -5,18 +5,18 @@ on:
   pull_request:
     types: [opened, edited, synchronize, ready_for_review]
     branches:
-      - 'development'
+      - "development"
 
 jobs:
   translation:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Ref Base
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: raft-head
       - name: Setup node 14
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: 14.x
       - name: FRESH Makepot BASE
@@ -28,7 +28,7 @@ jobs:
           yarn run build
           ls languages/
       - name: Checkout Ref Head
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: development
           path: raft-base
@@ -45,7 +45,7 @@ jobs:
         id: find_coomment
         with:
           issue-number: ${{ github.event.pull_request.number }}
-          comment-author: 'pirate-bot'
+          comment-author: "pirate-bot"
           body-includes: PR has POT difference
       - name: Install PODiff
         run: |
@@ -71,4 +71,4 @@ jobs:
               teams:
                 - "sbs"
           status: Has translation changes, a review from SBS team is required
-          token:  ${{ secrets.BOT_TOKEN }}
+          token: ${{ secrets.BOT_TOKEN }}
