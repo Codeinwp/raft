@@ -2,8 +2,8 @@ name: Deploy
 
 on:
   push:
-    branches:
-      - main
+    tags:
+      - "*"
 jobs:
   deploy:
     name: Deploy to server
@@ -24,8 +24,7 @@ jobs:
       - name: WordPress Theme Deploy
         uses: Codeinwp/action-wordpress-theme-deploy@v1.0
         env:
-          SVN_PASSWORD: ${{ secrets.SVN_THEMEISLE_PASSWORD }}
-          VERSION: "1.1.8"
+          SVN_PASSWORD: ${{ secrets.SVN_THEMEISLE_PASSWORD }} 
           SVN_USERNAME: ${{ secrets.SVN_THEMEISLE_USERNAME }}
       - name: Upload Latest Version to S3
         uses: jakejarvis/s3-sync-action@master
