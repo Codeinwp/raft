@@ -1,0 +1,59 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "title": "Old Story",
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "raft-bg",
+          "color": "#3C3131",
+          "name": "Background"
+        },
+        {
+          "slug": "raft-fg",
+          "color": "#C2BEA8",
+          "name": "Text"
+        },
+        {
+          "slug": "raft-accent",
+          "color": "#C56A2D",
+          "name": "Accent"
+        },
+        {
+          "slug": "raft-accent-secondary",
+          "color": "#A55825",
+          "name": "Accent Secondary"
+        },
+        {
+          "slug": "raft-bg-inv",
+          "color": "#352C2C",
+          "name": "Dark Background"
+        },
+        {
+          "slug": "raft-bg-alt",
+          "color": "#463A3A",
+          "name": "Light Background"
+        },
+        {
+          "slug": "raft-fg-alt",
+          "color": "#FFFFFF",
+          "name": "Inverted Text"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--gloock)"
+        }
+      }
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--lora)",
+      "fontWeight": "400"
+    }
+  }
+}
