@@ -1,3 +1,7 @@
+##### [Version 1.1.11](https://github.com/Codeinwp/raft/compare/v1.1.10...v1.1.11) (2026-05-15)
+
+- Updated dependencies
+
 ##### [Version 1.1.10](https://github.com/Codeinwp/raft/compare/v1.1.9...v1.1.10) (2025-09-05)
 
 - Updated dependencies
