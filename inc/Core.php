@@ -155,6 +155,13 @@ class Core {
 			)
 		);
 
+		// WP < 5.9, wp_head() does NOT auto-output <title>, so we MUST declare title-tag support.
+		// WP >= 5.9, wp-includes/template-canvas.php calls wp_head() which already handles <title> natively.
+		// Adding title-tag support on top causes a second <title> injection when Yoast (or any SEO plugin using wp_title filters) is active.
+		if ( version_compare( $GLOBALS['wp_version'], '5.9', '<' ) ) {
+			add_theme_support( 'title-tag' );
+		}
+
 		remove_theme_support( 'core-block-patterns' );
 
 		register_nav_menus( array( 'primary' => esc_html__( 'Primary Menu', 'raft' ) ) );
