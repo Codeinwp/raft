@@ -180,7 +180,7 @@ class Admin {
 
 		$notice_html .= '</h1>';
 
-		$learn_more = '<a href="https://docs.themeisle.com/article/1975-fse-onboarding" target="_blank">' . __( 'Learn More', 'raft' ) . '</a>';
+		$learn_more = '<a href="https://docs.themeisle.com/otter-page-builder-blocks-extensions/fse-onboarding" target="_blank">' . __( 'Learn More', 'raft' ) . '</a>';
 
 		$notice_html .= '<p class="description">' . __( 'Install our free builder plugin for more blocks, enhanced functionality, and seamless theme setup.', 'raft' ) . ' ' . $learn_more . '</p>';
 
