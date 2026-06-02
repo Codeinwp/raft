@@ -136,7 +136,7 @@ class Core {
 							'title' => __( 'Archive Cards', 'raft' ),
 						),
 						'archive-row'   => array(
-							'file'  => RAFT_DIR . 'library/archive/archive-row.php',
+							'file'  => RAFT_DIR . 'library/archive/archive-rows.php',
 							'title' => __( 'Archive Row', 'raft' ),
 						),
 					),
