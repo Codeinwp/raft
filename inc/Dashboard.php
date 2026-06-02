@@ -136,6 +136,14 @@ class Dashboard {
 					<div class="raft-dashboard__hero-content">
 						<h2><?php esc_html_e( 'Raft Pro is active', 'raft' ); ?></h2>
 						<p><?php esc_html_e( 'All Pro patterns, styles, and templates are available in the Site Editor.', 'raft' ); ?></p>
+						<?php
+						/**
+						 * Fires inside the Pro-active hero on Appearance → Raft.
+						 * Raft Pro hooks here to render its license status as
+						 * an inline meta line below the hero description.
+						 */
+						do_action( 'raft_dashboard_pro_section' );
+						?>
 					</div>
 				</div>
 			<?php endif; ?>
