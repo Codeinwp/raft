@@ -17,6 +17,14 @@ Raft is distributed under the terms of the GNU GPLv2 or later
 
 == Changelog ==
 
+##### [Version 1.1.12](https://github.com/Codeinwp/raft/compare/v1.1.11...v1.1.12) (2026-06-03)
+
+- Add title-tag support for WP < 5.9
+- Add support for Raft Pro
+
+
+
+
 ##### [Version 1.1.11](https://github.com/Codeinwp/raft/compare/v1.1.10...v1.1.11) (2026-05-15)
 
 - Updated dependencies
