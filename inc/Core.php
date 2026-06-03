@@ -44,6 +44,9 @@ class Core {
 		new Admin();
 		new Block_Patterns();
 		new Block_Styles();
+		new Dashboard();
+		new Pro_Promotions();
+		new Wizard_Promo();
 	}
 
 	/**
@@ -56,6 +59,37 @@ class Core {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
 		add_action( 'enqueue_block_editor_assets', array( $this, 'add_editor_styles' ) );
 		add_filter( 'raft_strings', array( $this, 'strings' ) );
+		add_filter( 'home_template_hierarchy', array( $this, 'home_falls_back_to_archive' ) );
+	}
+
+	/**
+	 * Let the blog/posts page render through `archive.html` when no `home.html`
+	 * is present. WP's default hierarchy for the home/posts page is
+	 * [home, index] — archive is not in the chain — so a single archive
+	 * customization wouldn't otherwise show up on the page assigned as Posts
+	 * page. Inserting `archive` ahead of `index` keeps `home.html` winning
+	 * if a child theme ever provides one, while giving the archive template
+	 * one source of truth for all post-listing contexts.
+	 *
+	 * @param array $hierarchy Candidate template slugs in lookup order.
+	 *
+	 * @return array
+	 */
+	public function home_falls_back_to_archive( $hierarchy ) {
+		if ( in_array( 'archive.php', $hierarchy, true ) ) {
+			return $hierarchy;
+		}
+
+		$index = array_search( 'index.php', $hierarchy, true );
+
+		if ( false === $index ) {
+			$hierarchy[] = 'archive.php';
+			return $hierarchy;
+		}
+
+		array_splice( $hierarchy, $index, 0, 'archive.php' );
+
+		return $hierarchy;
 	}
 
 	/**
@@ -102,7 +136,7 @@ class Core {
 							'title' => __( 'Archive Cards', 'raft' ),
 						),
 						'archive-row'   => array(
-							'file'  => RAFT_DIR . 'library/archive/archive-row.php',
+							'file'  => RAFT_DIR . 'library/archive/archive-rows.php',
 							'title' => __( 'Archive Row', 'raft' ),
 						),
 					),
