@@ -28,7 +28,7 @@ namespace Raft;
 class Wizard_Promo {
 
 	const SCRIPT_HANDLE = 'raft-wizard-promo';
-	const UPGRADE_URL   = 'https://themeisle.com/themes/raft/upgrade/';
+	const UPGRADE_URL   = 'https://themeisle.com/themes/raft/';
 
 	/**
 	 * Wizard_Promo constructor.

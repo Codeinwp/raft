@@ -23,7 +23,7 @@ namespace Raft;
 class Pro_Promotions {
 
 	const CATEGORY_SLUG = 'raft/pro';
-	const UPGRADE_URL   = 'https://themeisle.com/themes/raft/upgrade/';
+	const UPGRADE_URL   = 'https://themeisle.com/themes/raft/';
 
 	/**
 	 * Pro_Promotions constructor.
