@@ -1,3 +1,7 @@
+##### [Version 1.1.13](https://github.com/Codeinwp/raft/compare/v1.1.12...v1.1.13) (2026-06-25)
+
+- Codebase updates.
+
 ##### [Version 1.1.12](https://github.com/Codeinwp/raft/compare/v1.1.11...v1.1.12) (2026-06-03)
 
 - Add title-tag support for WP < 5.9
