@@ -19,7 +19,7 @@ class Dashboard {
 
 	const MENU_SLUG   = 'raft-dashboard';
 	const PARENT      = 'themes.php';
-	const UPGRADE_URL = 'https://themeisle.com/themes/raft/upgrade/';
+	const UPGRADE_URL = 'https://themeisle.com/themes/raft/';
 
 	/**
 	 * Dashboard constructor.
