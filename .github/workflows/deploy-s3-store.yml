@@ -26,6 +26,8 @@ jobs:
         env:
           SVN_PASSWORD: ${{ secrets.SVN_THEMEISLE_PASSWORD }} 
           SVN_USERNAME: ${{ secrets.SVN_THEMEISLE_USERNAME }}
+      - name: Generate file checksums
+        uses: Codeinwp/action-release-checksums@main
       - name: Upload Latest Version to S3
         uses: jakejarvis/s3-sync-action@master
         with:
