@@ -38,6 +38,7 @@ class Admin {
 		add_action( 'enqueue_block_editor_assets', array( $this, 'add_fse_design_pack_notice' ) );
 		add_action( 'wp_ajax_raft_dismiss_design_pack_notice', array( $this, 'remove_design_pack_notice' ) );
 		add_filter( 'themeisle_sdk_blackfriday_data', array( $this, 'add_black_friday_data' ) );
+		add_filter( 'raft_ai_connect_metadata', array( $this, 'get_ai_connect_metadata' ) );
 	}
 
 	/**
@@ -438,5 +439,26 @@ class Admin {
 		$configs[ RAFT_PRODUCT_SLUG ] = $config;
 
 		return $configs;
+	}
+
+	/**
+	 * Get the data for the SDK "Connect your AI agent" module.
+	 *
+	 * @return array<string, string|string[]>
+	 */
+	public function get_ai_connect_metadata() {
+		return array(
+			'name'         => 'Raft',
+			'notice_cases' => array(
+				__( 'change your colors and fonts', 'raft' ),
+				__( 'edit your header and footer', 'raft' ),
+				__( 'build pages from your theme\'s patterns', 'raft' ),
+			),
+			'prompts'      => array(
+				__( 'Apply the Raft style variation with the serif headings and keep my current colors.', 'raft' ),
+				__( 'Add a call-to-action row with a button to my footer.', 'raft' ),
+				__( 'Insert a pricing pattern from Raft into my Services page.', 'raft' ),
+			),
+		);
 	}
 }
