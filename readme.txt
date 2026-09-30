@@ -17,6 +17,14 @@ Raft is distributed under the terms of the GNU GPLv2 or later
 
 == Changelog ==
 
+##### [Version 1.1.15](https://github.com/Codeinwp/raft/compare/v1.1.14...v1.1.15) (2026-09-30)
+
+ - Updated dependencies
+- Added AI agent support: connect your AI assistant and ask it to edit your sites header, footer and style.
+
+
+
+
 ##### [Version 1.1.14](https://github.com/Codeinwp/raft/compare/v1.1.13...v1.1.14) (2026-09-03)
 
 - Updated dependencies
