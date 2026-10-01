@@ -2,7 +2,7 @@
 **Contributors:** [themeisle](https://profiles.wordpress.org/themeisle/)  
 **Tags:** block-patterns  
 **Requires at least:** 5.5  
-**Tested up to:** 6.4  
+**Tested up to:** 7.1  
 **Stable tag:** trunk  
 **Requires PHP:** 7.0  
 **License:** GPLv2 or later  
@@ -16,6 +16,13 @@ Raft WordPress theme, Copyright 2022 Themeisle
 Raft is distributed under the terms of the GNU GPLv2 or later
 
 ## Changelog ##
+
+##### [Version 1.1.16](https://github.com/Codeinwp/raft/compare/v1.1.15...v1.1.16) (2026-10-01)
+
+- Retrigger failed release
+
+
+
 
 ##### [Version 1.1.15](https://github.com/Codeinwp/raft/compare/v1.1.14...v1.1.15) (2026-09-30)
 
