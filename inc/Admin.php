@@ -39,6 +39,7 @@ class Admin {
 		add_action( 'wp_ajax_raft_dismiss_design_pack_notice', array( $this, 'remove_design_pack_notice' ) );
 		add_filter( 'themeisle_sdk_blackfriday_data', array( $this, 'add_black_friday_data' ) );
 		add_filter( 'raft_ai_connect_metadata', array( $this, 'get_ai_connect_metadata' ) );
+		add_filter( 'raft_support_hub_metadata', array( $this, 'get_support_hub_metadata' ) );
 	}
 
 	/**
@@ -458,6 +459,31 @@ class Admin {
 				__( 'Apply the Raft style variation with the serif headings and keep my current colors.', 'raft' ),
 				__( 'Add a call-to-action row with a button to my footer.', 'raft' ),
 				__( 'Insert a pricing pattern from Raft into my Services page.', 'raft' ),
+			),
+		);
+	}
+
+	/**
+	 * Metadata for the Themeisle SDK Support Hub: the footer links shown in the Help form.
+	 *
+	 * Raft is a free theme with no Pro tier, so is_pro is always false.
+	 *
+	 * @return array{is_pro: bool, links: array<int, array{icon: string, text: string, url: string}>}
+	 */
+	public function get_support_hub_metadata() {
+		return array(
+			'is_pro' => false,
+			'links'  => array(
+				array(
+					'icon' => 'book-alt',
+					'text' => __( 'Documentation', 'raft' ),
+					'url'  => 'https://docs.themeisle.com/fse-themes/raft-fse-theme',
+				),
+				array(
+					'icon' => 'groups',
+					'text' => __( 'Community Forum', 'raft' ),
+					'url'  => 'https://wordpress.org/support/theme/raft/',
+				),
 			),
 		);
 	}
